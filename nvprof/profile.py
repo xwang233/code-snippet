@@ -3,8 +3,8 @@ import subprocess
 import torch
 
 def nvprof_parser_test():
-    PYTHON = '/usr/bin/python3'
-    NVPROF = '/usr/local/cuda/bin/nvprof'
+    PYTHON = 'python3'
+    NVPROF = 'nvprof'
 
     fp_python = tempfile.NamedTemporaryFile()
     fp_python.write("""
