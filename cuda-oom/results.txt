@@ -1,0 +1,320 @@
+op cudnn conv2d
+set_to_none True
+clean_in_exception True
+req_grad True
+cuda OOM at size:
+5255
+4340
+4340
+4340
+
+op cudnn conv2d
+set_to_none True
+clean_in_exception True
+req_grad False
+cuda OOM at size:
+7690
+6995
+6995
+6995
+
+op cudnn conv2d
+set_to_none True
+clean_in_exception False
+req_grad True
+cuda OOM at size:
+5255
+4340
+4340
+4340
+
+op cudnn conv2d
+set_to_none True
+clean_in_exception False
+req_grad False
+cuda OOM at size:
+7690
+6995
+6995
+6995
+
+op cudnn conv2d
+set_to_none False
+clean_in_exception True
+req_grad True
+cuda OOM at size:
+4775
+4340
+4340
+4340
+
+op cudnn conv2d
+set_to_none False
+clean_in_exception True
+req_grad False
+cuda OOM at size:
+5780
+5255
+5255
+5255
+
+op cudnn conv2d
+set_to_none False
+clean_in_exception False
+req_grad True
+cuda OOM at size:
+4775
+3945
+3945
+3945
+
+op cudnn conv2d
+set_to_none False
+clean_in_exception False
+req_grad False
+cuda OOM at size:
+5780
+4340
+4340
+4340
+
+op cuda kernel without cudnn, may have internal tensor
+set_to_none True
+clean_in_exception True
+req_grad True
+cuda OOM at size:
+6995
+6355
+6355
+6355
+
+op cuda kernel without cudnn, may have internal tensor
+set_to_none True
+clean_in_exception True
+req_grad False
+cuda OOM at size:
+9310
+9310
+9310
+9310
+
+op cuda kernel without cudnn, may have internal tensor
+set_to_none True
+clean_in_exception False
+req_grad True
+cuda OOM at size:
+6995
+6355
+6355
+6355
+
+op cuda kernel without cudnn, may have internal tensor
+set_to_none True
+clean_in_exception False
+req_grad False
+cuda OOM at size:
+9310
+8460
+8460
+8460
+
+op cuda kernel without cudnn, may have internal tensor
+set_to_none False
+clean_in_exception True
+req_grad True
+cuda OOM at size:
+5780
+5255
+5780
+5255
+
+op cuda kernel without cudnn, may have internal tensor
+set_to_none False
+clean_in_exception True
+req_grad False
+cuda OOM at size:
+7690
+7690
+7690
+7690
+
+op cuda kernel without cudnn, may have internal tensor
+set_to_none False
+clean_in_exception False
+req_grad True
+cuda OOM at size:
+5780
+5255
+5255
+5255
+
+op cuda kernel without cudnn, may have internal tensor
+set_to_none False
+clean_in_exception False
+req_grad False
+cuda OOM at size:
+7690
+7690
+7690
+7690
+
+op aten native, no weight
+set_to_none True
+clean_in_exception True
+req_grad True
+cuda OOM at size:
+5255
+5255
+5255
+5255
+
+op aten native, no weight
+set_to_none True
+clean_in_exception True
+req_grad False
+cuda OOM at size:
+7690
+7690
+7690
+7690
+
+op aten native, no weight
+set_to_none True
+clean_in_exception False
+req_grad True
+cuda OOM at size:
+5255
+5255
+5255
+5255
+
+op aten native, no weight
+set_to_none True
+clean_in_exception False
+req_grad False
+cuda OOM at size:
+7690
+6995
+6995
+6995
+
+op aten native, no weight
+set_to_none False
+clean_in_exception True
+req_grad True
+cuda OOM at size:
+4775
+4775
+4775
+4775
+
+op aten native, no weight
+set_to_none False
+clean_in_exception True
+req_grad False
+cuda OOM at size:
+6355
+6355
+6355
+6355
+
+op aten native, no weight
+set_to_none False
+clean_in_exception False
+req_grad True
+cuda OOM at size:
+4775
+3945
+3945
+3945
+
+op aten native, no weight
+set_to_none False
+clean_in_exception False
+req_grad False
+cuda OOM at size:
+6355
+6355
+6355
+6355
+
+op nn, no weight
+set_to_none True
+clean_in_exception True
+req_grad True
+cuda OOM at size:
+5255
+5255
+5255
+5255
+
+op nn, no weight
+set_to_none True
+clean_in_exception True
+req_grad False
+cuda OOM at size:
+7690
+6995
+6995
+6995
+
+op nn, no weight
+set_to_none True
+clean_in_exception False
+req_grad True
+cuda OOM at size:
+5255
+5255
+5255
+5255
+
+op nn, no weight
+set_to_none True
+clean_in_exception False
+req_grad False
+cuda OOM at size:
+7690
+6995
+6995
+6995
+
+op nn, no weight
+set_to_none False
+clean_in_exception True
+req_grad True
+cuda OOM at size:
+4775
+4340
+4775
+4340
+
+op nn, no weight
+set_to_none False
+clean_in_exception True
+req_grad False
+cuda OOM at size:
+6355
+6355
+6355
+6355
+
+op nn, no weight
+set_to_none False
+clean_in_exception False
+req_grad True
+cuda OOM at size:
+4775
+3945
+3945
+3945
+
+op nn, no weight
+set_to_none False
+clean_in_exception False
+req_grad False
+cuda OOM at size:
+6355
+6355
+6355
+6355
+
