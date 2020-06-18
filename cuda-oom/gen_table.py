@@ -32,21 +32,19 @@ def main(fn, fn_md):
             tk.append('<table>\n')
             tk.append(
                 '<tr>'
-                f'<td colspan="5" style="text-align: center;"> {k_new} </td>'
+                f'<td colspan="5"> op={k_new[0]}; set_to_none={k_new[1]} </td>'
                 '</tr>\n'
             )
             tk.append(
                 '<tr>'
-                '<td colspan="2" style="text-align: center;"> clean_in_exception True </td>'
-                '<td style="text-align: center;">---</td>'
-                '<td colspan="1" style="text-align: center;"> clean_in_exception False </td>'
+                '<td colspan="2"> clean_in_exception True </td>'
+                '<td colspan="1"> clean_in_exception False </td>'
                 '</tr>\n'
             )
             tk.append(
                 '<tr>'
-                '<td style="text-align: center;">req_grad</td><td style="text-align: center;">oom size</td>'
-                '<td style="text-align: center;">---</td>'
-                '<td style="text-align: center;">oom size</td>'
+                '<td>req_grad</td><td>oom size</td>'
+                '<td>oom size</td>'
                 '</tr>\n'
             )
 
@@ -58,7 +56,7 @@ def main(fn, fn_md):
                 '<tr>'
                 '<td>True</td><td>' +
                 ' '.join(d[(*k_new, 'True', 'True')]) +
-                '</td><td>---</td><td>' +
+                '</td><td>' +
                 ' '.join(d[(*k_new, 'False', 'True')]) +
                 '</td></tr>\n'
             )
@@ -66,7 +64,7 @@ def main(fn, fn_md):
                 '<tr>'
                 '<td>False</td><td>' + 
                 ' '.join(d[(*k_new, 'True', 'False')]) +
-                '</td><td>---</td><td>' +
+                '</td><td>' +
                 ' '.join(d[(*k_new, 'False', 'False')]) +
                 '</td></tr>\n'
             )
