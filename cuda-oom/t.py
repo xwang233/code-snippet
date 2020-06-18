@@ -35,6 +35,8 @@ def test(opi, set_to_none, clean_in_exception, req_grad):
                 g = None
 
         try:
+            torch.cuda.synchronize()
+
             x = torch.randn(n, in_channels, size, size, dtype=torch.float, device='cuda', requires_grad=req_grad)
 
             if opi == 0:
@@ -57,6 +59,8 @@ def test(opi, set_to_none, clean_in_exception, req_grad):
             if req_grad:
                 g = torch.randn_like(y)
                 y.backward(g)
+            
+            torch.cuda.synchronize()
         except RuntimeError as e:
             if not str(e).startswith('CUDA out of memory'):
                 raise
