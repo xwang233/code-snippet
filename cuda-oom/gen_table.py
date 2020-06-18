@@ -32,7 +32,7 @@ def main(fn, fn_md):
             tk.append('<table>\n')
             tk.append(
                 '<tr>'
-                f'<td colspan="5"> op={k_new[0]}; set_to_none={k_new[1]} </td>'
+                f'<td colspan="5"> set_to_none={k_new[1]} </td>'
                 '</tr>\n'
             )
             tk.append(
@@ -49,7 +49,11 @@ def main(fn, fn_md):
             )
 
     with open(fn_md, 'w') as f_md:
+        i = 0
         for k_new in tables:
+            if i % 2 == 0:
+                f_md.write(f'## op = {k_new[0]}\n')
+
             f_md.writelines(tables[k_new])
 
             f_md.write(
@@ -70,6 +74,12 @@ def main(fn, fn_md):
             )
 
             f_md.write('</table>\n')
+            
+            i += 1
+            if i % 2 == 0:
+                f_md.write('\n----\n')
+
+            f_md.write('\n')
 
 if __name__ == "__main__":
     main('results.txt', 'readme.md')
