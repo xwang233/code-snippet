@@ -1,6 +1,7 @@
+import torch
 from collections import defaultdict
 
-def main(fn, fn_md):
+def main(fn, fn_md, gpu_str):
     with open(fn, 'r') as f:
         lines = f.readlines()
     
@@ -44,7 +45,7 @@ def main(fn, fn_md):
             )
 
     with open(fn_md, 'w') as f_md:
-        f_md.write('# OOM Sizes\n')
+        f_md.write(f'# OOM Sizes ({gpu_str})\n')
         i = 0
         for k_new in tables:
             if i % 2 == 0:
@@ -78,4 +79,4 @@ def main(fn, fn_md):
             f_md.write('\n')
 
 if __name__ == "__main__":
-    main('results.txt', 'readme.md')
+    main('results.txt', 'readme.md', torch.cuda.get_device_name())

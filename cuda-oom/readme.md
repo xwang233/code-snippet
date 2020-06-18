@@ -1,4 +1,4 @@
-# OOM Sizes
+# OOM Sizes (GeForce RTX 2070 SUPER)
 ## op = cudnn conv2d
 <table>
 <tr><td colspan="5"> set_to_none=True </td></tr>
