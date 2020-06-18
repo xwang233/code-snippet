@@ -44,7 +44,7 @@ def main(fn, fn_md):
             )
 
     with open(fn_md, 'w') as f_md:
-        f_md.write('# OOM Sizes')
+        f_md.write('# OOM Sizes\n')
         i = 0
         for k_new in tables:
             if i % 2 == 0:
