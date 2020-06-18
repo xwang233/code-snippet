@@ -37,8 +37,9 @@ def main(fn, fn_md):
             )
             tk.append(
                 '<tr>'
-                '<td colspan="2"> clean_in_exception True </td>'
-                '<td colspan="1"> clean_in_exception False </td>'
+                '<td></td>'
+                '<td colspan="1"> clean_in_exception=True </td>'
+                '<td colspan="1"> clean_in_exception=False </td>'
                 '</tr>\n'
             )
             tk.append(

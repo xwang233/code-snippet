@@ -78,7 +78,7 @@ cuda OOM at size:
 4340
 4340
 
-op cuda kernel without cudnn, may have internal tensor
+op cuda max_pool2d
 set_to_none True
 clean_in_exception True
 req_grad True
@@ -88,7 +88,7 @@ cuda OOM at size:
 6355
 6355
 
-op cuda kernel without cudnn, may have internal tensor
+op cuda max_pool2d
 set_to_none True
 clean_in_exception True
 req_grad False
@@ -98,7 +98,7 @@ cuda OOM at size:
 9310
 9310
 
-op cuda kernel without cudnn, may have internal tensor
+op cuda max_pool2d
 set_to_none True
 clean_in_exception False
 req_grad True
@@ -108,7 +108,7 @@ cuda OOM at size:
 6355
 6355
 
-op cuda kernel without cudnn, may have internal tensor
+op cuda max_pool2d
 set_to_none True
 clean_in_exception False
 req_grad False
@@ -118,7 +118,7 @@ cuda OOM at size:
 8460
 8460
 
-op cuda kernel without cudnn, may have internal tensor
+op cuda max_pool2d
 set_to_none False
 clean_in_exception True
 req_grad True
@@ -128,7 +128,7 @@ cuda OOM at size:
 5780
 5255
 
-op cuda kernel without cudnn, may have internal tensor
+op cuda max_pool2d
 set_to_none False
 clean_in_exception True
 req_grad False
@@ -138,7 +138,7 @@ cuda OOM at size:
 7690
 7690
 
-op cuda kernel without cudnn, may have internal tensor
+op cuda max_pool2d
 set_to_none False
 clean_in_exception False
 req_grad True
@@ -148,7 +148,7 @@ cuda OOM at size:
 5255
 5255
 
-op cuda kernel without cudnn, may have internal tensor
+op cuda max_pool2d
 set_to_none False
 clean_in_exception False
 req_grad False
@@ -158,7 +158,7 @@ cuda OOM at size:
 7690
 7690
 
-op aten native, no weight
+op torch.log
 set_to_none True
 clean_in_exception True
 req_grad True
@@ -168,7 +168,7 @@ cuda OOM at size:
 5255
 5255
 
-op aten native, no weight
+op torch.log
 set_to_none True
 clean_in_exception True
 req_grad False
@@ -178,7 +178,7 @@ cuda OOM at size:
 7690
 7690
 
-op aten native, no weight
+op torch.log
 set_to_none True
 clean_in_exception False
 req_grad True
@@ -188,7 +188,7 @@ cuda OOM at size:
 5255
 5255
 
-op aten native, no weight
+op torch.log
 set_to_none True
 clean_in_exception False
 req_grad False
@@ -198,7 +198,7 @@ cuda OOM at size:
 6995
 6995
 
-op aten native, no weight
+op torch.log
 set_to_none False
 clean_in_exception True
 req_grad True
@@ -208,7 +208,7 @@ cuda OOM at size:
 4775
 4775
 
-op aten native, no weight
+op torch.log
 set_to_none False
 clean_in_exception True
 req_grad False
@@ -218,7 +218,7 @@ cuda OOM at size:
 6355
 6355
 
-op aten native, no weight
+op torch.log
 set_to_none False
 clean_in_exception False
 req_grad True
@@ -228,7 +228,7 @@ cuda OOM at size:
 3945
 3945
 
-op aten native, no weight
+op torch.log
 set_to_none False
 clean_in_exception False
 req_grad False
@@ -238,7 +238,7 @@ cuda OOM at size:
 6355
 6355
 
-op nn, no weight
+op torch.nn.ReLU
 set_to_none True
 clean_in_exception True
 req_grad True
@@ -248,7 +248,7 @@ cuda OOM at size:
 5255
 5255
 
-op nn, no weight
+op torch.nn.ReLU
 set_to_none True
 clean_in_exception True
 req_grad False
@@ -258,7 +258,7 @@ cuda OOM at size:
 6995
 6995
 
-op nn, no weight
+op torch.nn.ReLU
 set_to_none True
 clean_in_exception False
 req_grad True
@@ -268,7 +268,7 @@ cuda OOM at size:
 5255
 5255
 
-op nn, no weight
+op torch.nn.ReLU
 set_to_none True
 clean_in_exception False
 req_grad False
@@ -278,7 +278,7 @@ cuda OOM at size:
 6995
 6995
 
-op nn, no weight
+op torch.nn.ReLU
 set_to_none False
 clean_in_exception True
 req_grad True
@@ -288,7 +288,7 @@ cuda OOM at size:
 4775
 4340
 
-op nn, no weight
+op torch.nn.ReLU
 set_to_none False
 clean_in_exception True
 req_grad False
@@ -298,7 +298,7 @@ cuda OOM at size:
 6355
 6355
 
-op nn, no weight
+op torch.nn.ReLU
 set_to_none False
 clean_in_exception False
 req_grad True
@@ -308,7 +308,7 @@ cuda OOM at size:
 3945
 3945
 
-op nn, no weight
+op torch.nn.ReLU
 set_to_none False
 clean_in_exception False
 req_grad False

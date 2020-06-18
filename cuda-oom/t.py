@@ -13,9 +13,9 @@ sizes = [5 * int(1.1**i) for i in range(1000)]
 
 opd = {
     '0': 'cudnn conv2d',
-    '1': 'cuda kernel without cudnn, may have internal tensor',
-    '2': 'aten native, no weight',
-    '3': 'nn, no weight'
+    '1': 'cuda max_pool2d',
+    '2': 'torch.log',
+    '3': 'torch.nn.ReLU'
 }
 
 def test(opi, set_to_none, clean_in_exception, req_grad):
