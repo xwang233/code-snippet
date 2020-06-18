@@ -37,19 +37,14 @@ def main(fn, fn_md):
             )
             tk.append(
                 '<tr>'
-                '<td></td>'
+                '<td colspan="1"> req_grad </td>'
                 '<td colspan="1"> clean_in_exception=True </td>'
                 '<td colspan="1"> clean_in_exception=False </td>'
                 '</tr>\n'
             )
-            tk.append(
-                '<tr>'
-                '<td>req_grad</td><td>oom size</td>'
-                '<td>oom size</td>'
-                '</tr>\n'
-            )
 
     with open(fn_md, 'w') as f_md:
+        f_md.write('# OOM Sizes')
         i = 0
         for k_new in tables:
             if i % 2 == 0:
