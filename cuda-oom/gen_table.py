@@ -23,27 +23,55 @@ def main(fn, fn_md):
     # print(d)
 
     tables = defaultdict(list)
+    data = {}
     for key in d:
-        k_new = key[:3]
+        k_new = key[:2]
 
         if k_new not in tables:
             tk: list = tables[k_new]
             tk.append('<table>\n')
-            tk.append('<tr><td>req_grad</td><td>oom size</td></tr>\n')
-        tk: list = tables[k_new]
-        tk.append(f'<tr><td>{key[3]}</td><td>')
-        for s in d[key]:
-            tk.append(f'{s} ')
-        tk.append('</td></tr>\n')
-    
-    for k_new in tables:
-        tables[k_new].append('</table>\n')
-    
+            tk.append(
+                '<tr>'
+                f'<td colspan="5" style="text-align: center;"> {k_new} </td>'
+                '</tr>\n'
+            )
+            tk.append(
+                '<tr>'
+                '<td colspan="2" style="text-align: center;"> clean_in_exception True </td>'
+                '<td style="text-align: center;">---</td>'
+                '<td colspan="1" style="text-align: center;"> clean_in_exception False </td>'
+                '</tr>\n'
+            )
+            tk.append(
+                '<tr>'
+                '<td style="text-align: center;">req_grad</td><td style="text-align: center;">oom size</td>'
+                '<td style="text-align: center;">---</td>'
+                '<td style="text-align: center;">oom size</td>'
+                '</tr>\n'
+            )
+
     with open(fn_md, 'w') as f_md:
         for k_new in tables:
-            f_md.write(f'{k_new}\n')
             f_md.writelines(tables[k_new])
-            f_md.write('\n')
+
+            f_md.write(
+                '<tr>'
+                '<td>True</td><td>' +
+                ' '.join(d[(*k_new, 'True', 'True')]) +
+                '</td><td>---</td><td>' +
+                ' '.join(d[(*k_new, 'False', 'True')]) +
+                '</td></tr>\n'
+            )
+            f_md.write(
+                '<tr>'
+                '<td>False</td><td>' + 
+                ' '.join(d[(*k_new, 'True', 'False')]) +
+                '</td><td>---</td><td>' +
+                ' '.join(d[(*k_new, 'False', 'False')]) +
+                '</td></tr>\n'
+            )
+
+            f_md.write('</table>\n')
 
 if __name__ == "__main__":
     main('results.txt', 'readme.md')
