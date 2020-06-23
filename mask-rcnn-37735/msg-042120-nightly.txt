@@ -1,0 +1,23 @@
+$ python repro.py                
+1.6.0.dev20200421
+0.7.0a0+6e47842
+/home/xwang/.local/lib/python3.7/site-packages/torch/nn/functional.py:2892: UserWarning: The default behavior for interpolate/upsample with float scale_factor will change in 1.6.0 to align with other frameworks/libraries, and use scale_factor directly, instead of relying on the computed output size. If you wish to keep the old behavior, please set recompute_scale_factor=True. See the documentation of nn.Upsample for details. 
+  warnings.warn("The default behavior for interpolate/upsample with float scale_factor will change "
+Traceback (most recent call last):
+  File "repro.py", line 44, in <module>
+    loss_dict = model(d, tds)
+  File "/home/xwang/.local/lib/python3.7/site-packages/torch/nn/modules/module.py", line 558, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/xwang/Developer/vision/torchvision/models/detection/generalized_rcnn.py", line 70, in forward
+    proposals, proposal_losses = self.rpn(images, features, targets)
+  File "/home/xwang/.local/lib/python3.7/site-packages/torch/nn/modules/module.py", line 558, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/xwang/Developer/vision/torchvision/models/detection/rpn.py", line 488, in forward
+    boxes, scores = self.filter_proposals(proposals, objectness, images.image_sizes, num_anchors_per_level)
+  File "/home/xwang/Developer/vision/torchvision/models/detection/rpn.py", line 410, in filter_proposals
+    keep = box_ops.batched_nms(boxes, scores, lvl, self.nms_thresh)
+  File "/home/xwang/Developer/vision/torchvision/ops/boxes.py", line 75, in batched_nms
+    keep = nms(boxes_for_nms, scores, iou_threshold)
+  File "/home/xwang/Developer/vision/torchvision/ops/boxes.py", line 35, in nms
+    return torch.ops.torchvision.nms(boxes, scores, iou_threshold)
+RuntimeError: Unrecognized tensor type ID: Autocast

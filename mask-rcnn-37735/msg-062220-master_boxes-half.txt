@@ -1,0 +1,26 @@
+$ python repro.py
+1.6.0a0+18122fa
+0.7.0a0+42aa9b2
+/home/xwang/Developer/pytorch/torch/nn/functional.py:3000: UserWarning: The default behavior for interpolate/upsample with float scale_factor will change in 1.6.0 to align with other frameworks/libraries, and use scale_factor directly, instead of relying on the computed output size. If you wish to keep the old behavior, please set recompute_scale_factor=True. See the documentation of nn.Upsample for details. 
+  warnings.warn("The default behavior for interpolate/upsample with float scale_factor will change "
+/home/xwang/Developer/vision/torchvision/ops/boxes.py:102: UserWarning: This overload of nonzero is deprecated:
+        nonzero()
+Consider using one of the following signatures instead:
+        nonzero(*, bool as_tuple) (Triggered internally at  ../torch/csrc/utils/python_arg_parser.cpp:766.)
+  keep = keep.nonzero().squeeze(1)
+Traceback (most recent call last):
+  File "repro.py", line 44, in <module>
+    loss_dict = model(d, tds)
+  File "/home/xwang/Developer/pytorch/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/xwang/Developer/vision/torchvision/models/detection/generalized_rcnn.py", line 98, in forward
+    proposals, proposal_losses = self.rpn(images, features, targets)
+  File "/home/xwang/Developer/pytorch/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/xwang/Developer/vision/torchvision/models/detection/rpn.py", line 498, in forward
+    labels, matched_gt_boxes = self.assign_targets_to_anchors(anchors, targets)
+  File "/home/xwang/Developer/vision/torchvision/models/detection/rpn.py", line 340, in assign_targets_to_anchors
+    match_quality_matrix = box_ops.box_iou(gt_boxes, anchors_per_image)
+  File "/home/xwang/Developer/vision/torchvision/ops/boxes.py", line 170, in box_iou
+    lt = torch.max(boxes1[:, None, :2], boxes2[:, :2])  # [N,M,2]
+RuntimeError: Expected object of scalar type c10::Half but got scalar type float for argument 'other'

@@ -1,0 +1,28 @@
+$ python repro.py
+1.6.0a0+18122fa
+0.7.0a0+42aa9b2
+/home/xwang/Developer/pytorch/torch/nn/functional.py:3000: UserWarning: The default behavior for interpolate/upsample with float scale_factor will change in 1.6.0 to align with other frameworks/libraries, and use scale_factor directly, instead of relying on the computed output size. If you wish to keep the old behavior, please set recompute_scale_factor=True. See the documentation of nn.Upsample for details. 
+  warnings.warn("The default behavior for interpolate/upsample with float scale_factor will change "
+/home/xwang/Developer/vision/torchvision/ops/boxes.py:102: UserWarning: This overload of nonzero is deprecated:
+        nonzero()
+Consider using one of the following signatures instead:
+        nonzero(*, bool as_tuple) (Triggered internally at  ../torch/csrc/utils/python_arg_parser.cpp:766.)
+  keep = keep.nonzero().squeeze(1)
+Traceback (most recent call last):
+  File "repro.py", line 44, in <module>
+    loss_dict = model(d, tds)
+  File "/home/xwang/Developer/pytorch/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/xwang/Developer/vision/torchvision/models/detection/generalized_rcnn.py", line 99, in forward
+    detections, detector_losses = self.roi_heads(features, proposals, images.image_sizes, targets)
+  File "/home/xwang/Developer/pytorch/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/xwang/Developer/vision/torchvision/models/detection/roi_heads.py", line 752, in forward
+    box_features = self.box_roi_pool(features, proposals, image_shapes)
+  File "/home/xwang/Developer/pytorch/torch/nn/modules/module.py", line 722, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/home/xwang/Developer/vision/torchvision/ops/poolers.py", line 222, in forward
+    spatial_scale=scale, sampling_ratio=self.sampling_ratio)
+  File "/home/xwang/Developer/vision/torchvision/ops/roi_align.py", line 45, in roi_align
+    sampling_ratio, aligned)
+RuntimeError: Expected tensor for argument #1 'input' to have the same type as tensor for argument #2 'rois'; but type torch.cuda.HalfTensor does not equal torch.cuda.FloatTensor (while checking arguments for ROIAlign_forward_cuda)
