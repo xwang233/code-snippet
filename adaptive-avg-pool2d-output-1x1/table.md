@@ -1,5 +1,5 @@
 | shape | time_before (ms) | time_after (ms) |
-| --- | --- | --- | --- | 
+| --- | --- | --- | 
 | (2, 3, 4, 4), torch.contiguous_format, cpu  |  0.035 |  0.039 | 
 | (2, 3, 4, 4), torch.contiguous_format, cuda  |  0.041 |  0.037 | 
 | (2, 3, 4, 4), torch.channels_last, cpu  |  0.027 |  0.031 | 
