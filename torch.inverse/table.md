@@ -1,42 +1,42 @@
 | shape | cpu_time (ms) | gpu_time_before (magma) (ms) | gpu_time_after (ms) |
 | --- | --- | --- | --- | 
-| [] 2 torch.float32 |  0.015 |  7.446 |  0.127  | 
-| [] 4 torch.float32 |  0.010 |  7.427 |  0.118  | 
-| [] 8 torch.float32 |  0.012 |  7.571 |  0.127  | 
-| [] 16 torch.float32 |  0.016 |  7.522 |  0.123  | 
-| [] 32 torch.float32 |  0.033 |  7.548 |  0.175  | 
-| [] 64 torch.float32 |  0.073 |  7.708 |  0.256  | 
-| [] 128 torch.float32 |  0.363 |  8.024 |  0.478  | 
-| [] 256 torch.float32 |  1.094 |  11.340 |  1.053  | 
-| [] 512 torch.float32 |  5.094 |  15.010 |  2.559  | 
-| [] 1024 torch.float32 |  18.715 |  19.270 |  6.929  | 
-| [1] 2 torch.float32 |  0.009 |  0.114 |  0.146 ***regressed | 
-| [1] 4 torch.float32 |  0.010 |  0.117 |  0.145 ***regressed | 
-| [1] 8 torch.float32 |  0.011 |  0.126 |  0.145 ***regressed | 
-| [1] 16 torch.float32 |  0.017 |  0.127 |  0.134 ***regressed | 
-| [1] 32 torch.float32 |  0.033 |  0.178 |  0.178 ***regressed | 
-| [1] 64 torch.float32 |  0.071 |  0.420 |  0.276  | 
-| [1] 128 torch.float32 |  0.316 |  0.801 |  0.494  | 
-| [1] 256 torch.float32 |  1.072 |  1.674 |  1.071  | 
-| [1] 512 torch.float32 |  4.667 |  4.791 |  2.573  | 
-| [1] 1024 torch.float32 |  16.995 |  16.270 |  7.023  | 
-| [2] 2 torch.float32 |  0.012 |  0.114 |  0.236 ***regressed | 
-| [2] 4 torch.float32 |  0.012 |  0.120 |  0.235 ***regressed | 
-| [2] 8 torch.float32 |  0.015 |  0.118 |  0.235 ***regressed | 
-| [2] 16 torch.float32 |  0.024 |  0.129 |  0.218 ***regressed | 
-| [2] 32 torch.float32 |  0.055 |  0.173 |  0.289 ***regressed | 
-| [2] 64 torch.float32 |  0.129 |  0.427 |  0.418  | 
-| [2] 128 torch.float32 |  0.613 |  0.914 |  0.682  | 
-| [2] 256 torch.float32 |  2.067 |  1.799 |  1.511  | 
-| [2] 512 torch.float32 |  9.079 |  4.506 |  3.555  | 
-| [2] 1024 torch.float32 |  33.390 |  18.170 |  12.460  | 
-| [4] 2 torch.float32 |  0.010 |  0.115 |  0.332 ***regressed | 
-| [4] 4 torch.float32 |  0.011 |  0.118 |  0.346 ***regressed | 
-| [4] 8 torch.float32 |  0.014 |  0.118 |  0.334 ***regressed | 
-| [4] 16 torch.float32 |  0.028 |  0.122 |  0.337 ***regressed | 
-| [4] 32 torch.float32 |  0.086 |  0.175 |  0.390 ***regressed | 
-| [4] 64 torch.float32 |  0.226 |  0.431 |  0.673 ***regressed | 
-| [4] 128 torch.float32 |  1.111 |  0.932 |  1.103 ***regressed | 
-| [4] 256 torch.float32 |  3.954 |  1.808 |  2.162 ***regressed | 
-| [4] 512 torch.float32 |  18.265 |  4.896 |  5.526 ***regressed | 
-| [4] 1024 torch.float32 |  61.895 |  19.990 |  21.460 ***regressed | 
+| [] 2 torch.float32 |  0.066 |  7.318 |  0.124  | 
+| [] 4 torch.float32 |  0.009 |  7.370 |  0.123  | 
+| [] 8 torch.float32 |  0.011 |  7.376 |  0.136  | 
+| [] 16 torch.float32 |  0.027 |  7.359 |  0.132  | 
+| [] 32 torch.float32 |  0.067 |  7.437 |  0.185  | 
+| [] 64 torch.float32 |  0.110 |  7.568 |  0.268  | 
+| [] 128 torch.float32 |  0.408 |  7.896 |  0.491  | 
+| [] 256 torch.float32 |  1.155 |  11.620 |  1.078  | 
+| [] 512 torch.float32 |  5.128 |  14.830 |  2.636  | 
+| [] 1024 torch.float32 |  19.135 |  18.580 |  7.172  | 
+| [1] 2 torch.float32 |  0.009 |  0.110 |  0.130 ***regressed | 
+| [1] 4 torch.float32 |  0.009 |  0.113 |  0.131 ***regressed | 
+| [1] 8 torch.float32 |  0.011 |  0.113 |  0.133 ***regressed | 
+| [1] 16 torch.float32 |  0.016 |  0.119 |  0.135 ***regressed | 
+| [1] 32 torch.float32 |  0.032 |  0.196 |  0.181  | 
+| [1] 64 torch.float32 |  0.070 |  0.422 |  0.277  | 
+| [1] 128 torch.float32 |  0.340 |  0.803 |  0.500  | 
+| [1] 256 torch.float32 |  1.095 |  1.684 |  1.091  | 
+| [1] 512 torch.float32 |  4.707 |  4.262 |  2.600  | 
+| [1] 1024 torch.float32 |  16.875 |  16.350 |  6.973  | 
+| [2] 2 torch.float32 |  0.009 |  0.111 |  0.193 ***regressed | 
+| [2] 4 torch.float32 |  0.010 |  0.114 |  0.188 ***regressed | 
+| [2] 8 torch.float32 |  0.013 |  0.115 |  0.188 ***regressed | 
+| [2] 16 torch.float32 |  0.020 |  0.119 |  0.177 ***regressed | 
+| [2] 32 torch.float32 |  0.050 |  0.170 |  0.242 ***regressed | 
+| [2] 64 torch.float32 |  0.119 |  0.430 |  0.371  | 
+| [2] 128 torch.float32 |  0.633 |  0.909 |  0.674  | 
+| [2] 256 torch.float32 |  2.086 |  1.854 |  1.459  | 
+| [2] 512 torch.float32 |  8.702 |  4.579 |  3.653  | 
+| [2] 1024 torch.float32 |  33.205 |  18.420 |  12.490  | 
+| [4] 2 torch.float32 |  0.012 |  0.111 |  0.367 ***regressed | 
+| [4] 4 torch.float32 |  0.012 |  0.114 |  0.370 ***regressed | 
+| [4] 8 torch.float32 |  0.015 |  0.116 |  0.373 ***regressed | 
+| [4] 16 torch.float32 |  0.030 |  0.120 |  0.377 ***regressed | 
+| [4] 32 torch.float32 |  0.090 |  0.174 |  0.438 ***regressed | 
+| [4] 64 torch.float32 |  0.229 |  0.439 |  0.725 ***regressed | 
+| [4] 128 torch.float32 |  1.107 |  0.860 |  1.110 ***regressed | 
+| [4] 256 torch.float32 |  4.204 |  1.846 |  2.197 ***regressed | 
+| [4] 512 torch.float32 |  18.400 |  5.138 |  5.552 ***regressed | 
+| [4] 1024 torch.float32 |  68.790 |  20.070 |  21.860 ***regressed | 
