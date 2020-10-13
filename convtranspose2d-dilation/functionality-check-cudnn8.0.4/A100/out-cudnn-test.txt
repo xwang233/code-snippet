@@ -1,0 +1,150 @@
+PyTorch version 1.8.0a0+48b8fc5
+CUDA version 11.1
+cuDNN version 8004
+torch.backend.cudnn has allow_tf32? True
+
+starting convtranspose2d_fp16_nhwc_functionality
+pytorch_profiling_convtranspose2d_fp16_nhwc_functionality_2020-10-13_06_33_07.731982.csv
+ 12,500 shapes in total
+ 626/ 12,500, time spent =  23.667, time left (est) =  449.061
+ 1,251/ 12,500, time spent =  42.087, time left (est) =  369.065
+ 1,878/ 12,500, time spent =  62.808, time left (est) =  354.623
+ 2,500/ 12,500, time spent =  79.141, time left (est) =  305.518
+ 3,129/ 12,500, time spent =  96.749, time left (est) =  284.603
+ 3,754/ 12,500, time spent =  113.941, time left (est) =  260.483
+ 4,375/ 12,500, time spent =  128.868, time left (est) =  230.270
+ 5,001/ 12,500, time spent =  147.326, time left (est) =  221.025
+ 5,625/ 12,500, time spent =  164.458, time left (est) =  198.495
+ 6,250/ 12,500, time spent =  180.939, time left (est) =  177.713
+ 6,876/ 12,500, time spent =  197.057, time left (est) =  157.948
+ 7,500/ 12,500, time spent =  213.292, time left (est) =  139.733
+ 8,126/ 12,500, time spent =  232.297, time left (est) =  126.632
+ 8,750/ 12,500, time spent =  249.668, time left (est) =  106.445
+ 9,376/ 12,500, time spent =  266.305, time left (est) =  87.616
+ 10,000/ 12,500, time spent =  283.989, time left (est) =  70.945
+ 10,626/ 12,500, time spent =  301.809, time left (est) =  53.268
+ 11,250/ 12,500, time spent =  319.993, time left (est) =  35.717
+ 11,875/ 12,500, time spent =  336.726, time left (est) =  17.524
+ 12,500/ 12,500, time spent =  355.870, time left (est) =  0.000
+comparisons of 4668 (out of 12500,  37.34%) shapes were skipped due to cudnn were not used in these shapes (this is likely due to pytorch heuristics, not cudnn issue)
+
+starting convtranspose2d_fp16_nchw_functionality
+pytorch_profiling_convtranspose2d_fp16_nchw_functionality_2020-10-13_06_39_03.605775.csv
+ 12,500 shapes in total
+ 628/ 12,500, time spent =  26.082, time left (est) =  493.531
+ 1,251/ 12,500, time spent =  54.719, time left (est) =  496.712
+ 1,875/ 12,500, time spent =  78.760, time left (est) =  438.782
+ 2,502/ 12,500, time spent =  99.823, time left (est) =  386.507
+ 3,125/ 12,500, time spent =  128.429, time left (est) =  394.045
+ 3,750/ 12,500, time spent =  154.375, time left (est) =  360.817
+ 4,376/ 12,500, time spent =  175.259, time left (est) =  314.586
+ 5,000/ 12,500, time spent =  194.472, time left (est) =  279.477
+ 5,625/ 12,500, time spent =  220.329, time left (est) =  272.318
+ 6,251/ 12,500, time spent =  243.700, time left (est) =  241.631
+ 6,875/ 12,500, time spent =  268.008, time left (est) =  219.179
+ 7,500/ 12,500, time spent =  294.098, time left (est) =  198.596
+ 8,125/ 12,500, time spent =  315.414, time left (est) =  165.713
+ 8,750/ 12,500, time spent =  343.177, time left (est) =  150.977
+ 9,375/ 12,500, time spent =  366.043, time left (est) =  120.476
+ 10,000/ 12,500, time spent =  391.266, time left (est) =  98.432
+ 10,625/ 12,500, time spent =  417.450, time left (est) =  74.645
+ 11,252/ 12,500, time spent =  441.289, time left (est) =  48.676
+ 11,876/ 12,500, time spent =  463.739, time left (est) =  23.976
+ 12,500/ 12,500, time spent =  484.945, time left (est) =  0.000
+comparisons of 4731 (out of 12500,  37.85%) shapes were skipped due to cudnn were not used in these shapes (this is likely due to pytorch heuristics, not cudnn issue)
+
+starting convtranspose2d_fp32_nhwc_functionality
+pytorch_profiling_convtranspose2d_fp32_nhwc_functionality_2020-10-13_06_47_08.555184.csv
+ 12,500 shapes in total
+ 625/ 12,500, time spent =  19.131, time left (est) =  363.482
+ 1,250/ 12,500, time spent =  42.806, time left (est) =  393.436
+ 1,875/ 12,500, time spent =  66.094, time left (est) =  378.805
+ 2,500/ 12,500, time spent =  91.074, time left (est) =  371.375
+ 3,125/ 12,500, time spent =  123.992, time left (est) =  396.335
+ 3,751/ 12,500, time spent =  144.561, time left (est) =  327.329
+ 4,375/ 12,500, time spent =  171.616, time left (est) =  325.317
+ 5,000/ 12,500, time spent =  192.688, time left (est) =  281.798
+ 5,625/ 12,500, time spent =  211.836, time left (est) =  249.253
+ 6,250/ 12,500, time spent =  241.375, time left (est) =  252.179
+ 6,875/ 12,500, time spent =  271.216, time left (est) =  231.237
+ 7,500/ 12,500, time spent =  289.998, time left (est) =  184.717
+ 8,125/ 12,500, time spent =  319.222, time left (est) =  178.424
+ 8,752/ 12,500, time spent =  339.451, time left (est) =  140.558
+ 9,375/ 12,500, time spent =  365.950, time left (est) =  124.086
+ 10,000/ 12,500, time spent =  385.355, time left (est) =  92.594
+ 10,627/ 12,500, time spent =  410.806, time left (est) =  73.178
+ 11,250/ 12,500, time spent =  438.227, time left (est) =  49.922
+ 11,876/ 12,500, time spent =  457.504, time left (est) =  23.080
+ 12,500/ 12,500, time spent =  477.746, time left (est) =  0.000
+comparisons of 4718 (out of 12500,  37.74%) shapes were skipped due to cudnn were not used in these shapes (this is likely due to pytorch heuristics, not cudnn issue)
+
+starting convtranspose2d_fp32_nchw_functionality
+pytorch_profiling_convtranspose2d_fp32_nchw_functionality_2020-10-13_06_55_06.304728.csv
+ 12,500 shapes in total
+ 627/ 12,500, time spent =  15.411, time left (est) =  292.004
+ 1,251/ 12,500, time spent =  45.135, time left (est) =  431.686
+ 1,875/ 12,500, time spent =  66.007, time left (est) =  370.198
+ 2,500/ 12,500, time spent =  87.929, time left (est) =  351.525
+ 3,127/ 12,500, time spent =  109.771, time left (est) =  328.737
+ 3,750/ 12,500, time spent =  130.649, time left (est) =  302.337
+ 4,375/ 12,500, time spent =  152.388, time left (est) =  282.925
+ 5,001/ 12,500, time spent =  173.489, time left (est) =  258.754
+ 5,625/ 12,500, time spent =  193.982, time left (est) =  234.755
+ 6,251/ 12,500, time spent =  218.431, time left (est) =  223.581
+ 6,876/ 12,500, time spent =  237.141, time left (est) =  188.841
+ 7,501/ 12,500, time spent =  258.758, time left (est) =  172.539
+ 8,125/ 12,500, time spent =  276.275, time left (est) =  143.534
+ 8,751/ 12,500, time spent =  297.515, time left (est) =  127.448
+ 9,375/ 12,500, time spent =  319.763, time left (est) =  107.518
+ 10,000/ 12,500, time spent =  340.838, time left (est) =  85.027
+ 10,625/ 12,500, time spent =  361.373, time left (est) =  63.338
+ 11,250/ 12,500, time spent =  383.258, time left (est) =  42.822
+ 11,875/ 12,500, time spent =  406.108, time left (est) =  21.669
+comparisons of 4716 (out of 12500,  37.73%) shapes were skipped due to cudnn were not used in these shapes (this is likely due to pytorch heuristics, not cudnn issue)
+Collecting environment information...
+PyTorch version: 1.8.0a0+48b8fc5
+Is debug build: True
+CUDA used to build PyTorch: 11.1
+ROCM used to build PyTorch: N/A
+
+OS: Ubuntu 18.04.5 LTS (x86_64)
+GCC version: (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
+Clang version: Could not collect
+CMake version: version 3.14.0
+
+Python version: 3.8 (64-bit runtime)
+Is CUDA available: True
+CUDA runtime version: Could not collect
+GPU models and configuration: 
+GPU 0: A100-PCIE-40GB
+GPU 1: A100-PCIE-40GB
+
+Nvidia driver version: 450.51.06
+cuDNN version: Probably one of the following:
+/usr/lib/x86_64-linux-gnu/libcudnn.so.8.0.4
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_infer.so.8.0.4
+/usr/lib/x86_64-linux-gnu/libcudnn_adv_train.so.8.0.4
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_infer.so.8.0.4
+/usr/lib/x86_64-linux-gnu/libcudnn_cnn_train.so.8.0.4
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_infer.so.8.0.4
+/usr/lib/x86_64-linux-gnu/libcudnn_ops_train.so.8.0.4
+HIP runtime version: N/A
+MIOpen runtime version: N/A
+
+Versions of relevant libraries:
+[pip] numpy==1.19.1
+[pip] torch==1.8.0a0
+[pip] torchvision==0.8.0a0+42e7f1f
+[conda] magma-cuda110             2.5.2                         1    pytorch
+[conda] mkl                       2019.1                      144  
+[conda] mkl-include               2019.1                      144  
+[conda] nomkl                     3.0                           0  
+[conda] numpy                     1.19.1           py38h30dfecb_0  
+[conda] numpy-base                1.19.1           py38h75fe3a5_0  
+[conda] torch                     1.8.0a0                   dev_0    <develop>
+[conda] torchvision               0.8.0a0+42e7f1f          pypi_0    pypi
+
+GPU 0: A100-PCIE-40GB 
+GPU 1: A100-PCIE-40GB 
+CUDNN_VERSION: 8.0.4.30
+CUDA_VERSION: 11.1.0.024
