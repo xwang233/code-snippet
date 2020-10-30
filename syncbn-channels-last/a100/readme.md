@@ -2,9 +2,17 @@ before commit **5e2f17d**
 
 after commit **feabdaf**
 
-time is in **ms** (10^-3 s), negative percentage is better
+time is in **ms** (10^-3 s), negative percentage means better performance
 
-|shape|native_contiguous_before|native_channels_last_after|apex_channels_last|native_channels_last_after vs native_contiguous_before|native_channels_last_after vs apex_channels_last|
+profiling time doesn't include kernel launch time or tensor memorf_format transform time
+
+nat_cont[b4]: native contiguous before PR
+
+nat_chnl_lst[new]: native channels_last after PR
+
+apex_chnl_lst: apex channels_last
+
+|shape|nat_cont[b4]|nat_chnl_lst[new]|apex_chnl_lst|[new] vs nat_cont[b4]|[new] vs apex_chnl_lst|
 |---:|---:|---:|---:|---:|---:|
 |(4, 4, 16, 16)| 0.011| 0.016| 0.016| 42.56% | 0.23% |
 |(4, 4, 32, 32)| 0.015| 0.022| 0.023|<div style="color:red;"> 52.98%</div> |-3.14% |

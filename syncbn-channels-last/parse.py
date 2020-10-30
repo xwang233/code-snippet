@@ -36,11 +36,11 @@ def main():
     # print(js)
 
     columns = [
-        'native_contiguous_before',
-        'native_channels_last_after',
-        'apex_channels_last',
-        'native_channels_last_after vs native_contiguous_before',
-        'native_channels_last_after vs apex_channels_last'
+        'nat_cont[b4]', # 'native_contiguous_before',
+        'nat_chnl_lst[new]', # 'native_channels_last_after',
+        'apex_chnl_lst', #'apex_channels_last',
+        '[new] vs nat_cont[b4]',
+        '[new] vs apex_chnl_lst'
     ]
 
     # res -> shape -> column -> time
@@ -74,7 +74,11 @@ def main():
     md = Markdown()
     md.write('before commit **' + BEFORE + '**\n\n')
     md.write('after commit **' + AFTER + '**\n\n')
-    md.write('time is in **ms** (10^-3 s), negative percentage is better\n\n')
+    md.write('time is in **ms** (10^-3 s), negative percentage means better performance\n\n')
+    md.write("profiling time doesn't include kernel launch time or tensor memorf_format transform time\n\n")
+    md.write('nat_cont[b4]: native contiguous before PR\n\n')
+    md.write('nat_chnl_lst[new]: native channels_last after PR\n\n')
+    md.write('apex_chnl_lst: apex channels_last\n\n')
     md.write('|shape|' + '|'.join(columns) + '|\n')
     md.write('|---:' * (len(columns)+1) + '|\n')
     for shape in sorted(res.keys(), key=lambda x: eval(x)):
