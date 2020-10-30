@@ -12,7 +12,7 @@ BEFORE = '5e2f17d'
 class Markdown:
     def __init__(self):
         self.buffer = io.BufferedRandom(io.BytesIO())
-        self.enc = 'ascii'
+        self.enc = 'utf-8'
     
     def write(self, s: str):
         self.buffer.write(s.encode(self.enc))
@@ -82,17 +82,17 @@ def main():
     md.write('|shape|' + '|'.join(columns) + '|\n')
     md.write('|---:' * (len(columns)+1) + '|\n')
     for shape in sorted(res.keys(), key=lambda x: eval(x)):
-        md.write('|' + shape + '|' + '|'.join(f'{res[shape][s] : .3f}' for s in columns[:-2]) + '|')
         ncb  = res[shape][columns[0]]
         ncla = res[shape][columns[1]]
         acl  = res[shape][columns[2]]
 
         d1 = (ncla-ncb)/ncb*100
         d2 = (ncla-acl)/acl*100
-        if d1 < 50:
-            md.write(f'{d1 : .2f}% |')
-        else:
-            md.write(f'<font color="red">{d1 : .2f}%</font> |')
+
+        regression = u'📉' if d1 >= 50 else ''
+
+        md.write(f'| {regression}' + shape + '|' + '|'.join(f'{res[shape][s] : .3f}' for s in columns[:-2]) + '|')
+        md.write(f'{regression} {d1 : .2f}% |')
         md.write(f'{d2 : .2f}% |\n')
 
         diff1.append(d1)
