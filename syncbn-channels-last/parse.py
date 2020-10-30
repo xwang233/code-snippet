@@ -92,7 +92,7 @@ def main():
         if d1 < 50:
             md.write(f'{d1 : .2f}% |')
         else:
-            md.write(f'<div style="color:red;">{d1 : .2f}%</div> |')
+            md.write(f'<font color="red">{d1 : .2f}%</font> |')
         md.write(f'{d2 : .2f}% |\n')
 
         diff1.append(d1)
