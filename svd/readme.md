@@ -4,6 +4,8 @@ before master commit 19f4c5110e8bcad5e7e75375194262fca0a6293a
 
 after commit 9c08a67c5f33567e53cc30cc30b334aa49d4803e
 
+This page was tested on E5-2680 v3 and RTX 2070 Super. Libraries: intel-mkl 2020.2.254-1 and cuda 11.1
+
 time is in **ms** (10^-3 s)
 
 |shape|cpu|before_magma|after_1_gesvd|after_2_gesvdj|after_3_gesvdj_and_gesvdjbatched|
