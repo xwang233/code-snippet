@@ -1,0 +1,136 @@
+batch_size, matrix_size, dtype     cpu_time(ms), gpu_time(ms)
+[] 2 torch.float32                  0.021   0.266
+[] 4 torch.float32                  0.018   0.496
+[] 8 torch.float32                  0.023   0.520
+[] 16 torch.float32                 0.048   0.657
+[] 32 torch.float32                 1.633   0.714
+[] 64 torch.float32                 2.207   1.554
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 42 element(s) (out of 16384) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0017740726470947266 (-0.7517696022987366 vs. -0.7535436749458313), which occurred at index (21, 102).
+[] 128 torch.float32                6.870   3.723
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 115 element(s) (out of 65536) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0019034147262573242 (-0.21595779061317444 vs. -0.21786120533943176), which occurred at index (176, 103).
+[] 256 torch.float32                26.754   10.342
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 486 element(s) (out of 262144) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.002305449917912483 (-0.024909280240535736 vs. -0.022603830322623253), which occurred at index (188, 485).
+[] 512 torch.float32                129.734   28.456
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 2233 element(s) (out of 1048576) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.002516031265258789 (1.0285873413085938 vs. 1.0311033725738525), which occurred at index (104, 672).
+[] 1024 torch.float32               393.992   85.292
+[1] 2 torch.float32                 0.015   0.238
+[1] 4 torch.float32                 0.018   0.438
+[1] 8 torch.float32                 0.025   0.528
+[1] 16 torch.float32                0.048   0.650
+[1] 32 torch.float32                1.127   0.715
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 12 element(s) (out of 4096) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0015743672847747803 (0.2774485647678375 vs. 0.2790229320526123), which occurred at index (0, 59, 22).
+[1] 64 torch.float32                2.072   1.548
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 24 element(s) (out of 16384) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0015753209590911865 (0.12915754318237305 vs. 0.12758222222328186), which occurred at index (0, 35, 33).
+[1] 128 torch.float32               6.905   3.877
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 108 element(s) (out of 65536) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0016648173332214355 (-0.600295901298523 vs. -0.6019607186317444), which occurred at index (0, 65, 7).
+[1] 256 torch.float32               21.622   10.354
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 561 element(s) (out of 262144) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.002227306365966797 (0.6083577871322632 vs. 0.61058509349823), which occurred at index (0, 123, 424).
+[1] 512 torch.float32               129.791   27.904
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 2193 element(s) (out of 1048576) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0023099184036254883 (-1.252197265625 vs. -1.2545071840286255), which occurred at index (0, 800, 153).
+[1] 1024 torch.float32              396.639   84.698
+[2] 2 torch.float32                 0.018   0.089
+[2] 4 torch.float32                 0.022   0.157
+[2] 8 torch.float32                 0.037   0.212
+[2] 16 torch.float32                0.081   0.305
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 14 element(s) (out of 2048) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0018265694379806519 (-0.23447628319263458 vs. -0.23264971375465393), which occurred at index (0, 22, 1).
+[2] 32 torch.float32                1.274   0.400
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 18 element(s) (out of 8192) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0019060373306274414 (-0.593418538570404 vs. -0.5953245759010315), which occurred at index (1, 35, 31).
+[2] 64 torch.float32                4.277   3.044
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 93 element(s) (out of 32768) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0018854737281799316 (0.3103976249694824 vs. 0.31228309869766235), which occurred at index (0, 91, 113).
+[2] 128 torch.float32               20.424   7.341
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 213 element(s) (out of 131072) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0017854273319244385 (-0.14178349077701569 vs. -0.14356891810894012), which occurred at index (1, 132, 81).
+[2] 256 torch.float32               54.593   20.574
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 1081 element(s) (out of 524288) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.002110123634338379 (0.8803566694259644 vs. 0.8824667930603027), which occurred at index (0, 326, 211).
+[2] 512 torch.float32               294.545   56.966
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 4603 element(s) (out of 2097152) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.002456068992614746 (-1.0568162202835083 vs. -1.059272289276123), which occurred at index (0, 959, 355).
+[2] 1024 torch.float32              788.591   167.924
+[4] 2 torch.float32                 0.021   0.089
+[4] 4 torch.float32                 0.031   0.156
+[4] 8 torch.float32                 0.057   0.211
+[4] 16 torch.float32                0.157   0.309
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 9 element(s) (out of 4096) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0017733126878738403 (-0.19891239702701569 vs. -0.20068570971488953), which occurred at index (1, 31, 1).
+[4] 32 torch.float32                1.922   0.408
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 28 element(s) (out of 16384) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0019695162773132324 (-0.7167074680328369 vs. -0.7186769843101501), which occurred at index (3, 61, 50).
+[4] 64 torch.float32                6.779   6.001
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 168 element(s) (out of 65536) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.003026634454727173 (0.3204282224178314 vs. 0.31740158796310425), which occurred at index (3, 5, 86).
+[4] 128 torch.float32               22.822   14.796
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 437 element(s) (out of 262144) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00202101469039917 (-0.3762306272983551 vs. -0.37420961260795593), which occurred at index (1, 185, 129).
+[4] 256 torch.float32               119.649   40.707
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 2182 element(s) (out of 1048576) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0021821260452270508 (0.5114874839782715 vs. 0.5136696100234985), which occurred at index (0, 172, 296).
+[4] 512 torch.float32               570.388   112.429
+[8] 2 torch.float32                 0.029   0.090
+[8] 4 torch.float32                 0.047   0.154
+[8] 8 torch.float32                 0.104   0.211
+[8] 16 torch.float32                0.300   0.302
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 11 element(s) (out of 8192) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0026602745056152344 (0.8266105651855469 vs. 0.8292708396911621), which occurred at index (0, 19, 31).
+[8] 32 torch.float32                4.959   0.412
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 59 element(s) (out of 32768) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0018488764762878418 (-0.06884071975946426 vs. -0.06699184328317642), which occurred at index (0, 12, 4).
+[8] 64 torch.float32                20.434   11.850
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 263 element(s) (out of 131072) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001957431435585022 (-0.2514099180698395 vs. -0.24945248663425446), which occurred at index (7, 40, 83).
+[8] 128 torch.float32               60.400   29.454
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 945 element(s) (out of 524288) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.002207636833190918 (1.2016128301620483 vs. 1.1994051933288574), which occurred at index (7, 206, 166).
+[8] 256 torch.float32               243.854   81.512
+[16] 2 torch.float32                0.042   0.089
+[16] 4 torch.float32                0.081   0.162
+[16] 8 torch.float32                0.194   0.212
+[16] 16 torch.float32               0.594   0.303
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 34 element(s) (out of 16384) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0022611618041992188 (0.4791219234466553 vs. 0.4813830852508545), which occurred at index (15, 20, 22).
+[16] 32 torch.float32               10.433   0.408
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 113 element(s) (out of 65536) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0020897984504699707 (-0.6232672333717346 vs. -0.6253570318222046), which occurred at index (4, 23, 2).
+[16] 64 torch.float32               39.491   23.812
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 551 element(s) (out of 262144) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0021780729293823242 (-0.934861421585083 vs. -0.9370394945144653), which occurred at index (13, 92, 95).
+[16] 128 torch.float32              106.846   59.406
+[32] 2 torch.float32                0.069   0.113
+[32] 4 torch.float32                0.150   0.158
+[32] 8 torch.float32                0.382   0.212
+[32] 16 torch.float32               1.168   0.311
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 73 element(s) (out of 32768) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0020436644554138184 (-0.7367690205574036 vs. -0.7388126850128174), which occurred at index (25, 24, 17).
+[32] 32 torch.float32               20.807   0.512
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 251 element(s) (out of 131072) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0026172101497650146 (0.48418647050857544 vs. 0.4815692603588104), which occurred at index (26, 2, 56).
+[32] 64 torch.float32               71.280   47.251
+[64] 2 torch.float32                0.122   0.090
+[64] 4 torch.float32                0.285   0.158
+[64] 8 torch.float32                0.763   0.213
+[64] 16 torch.float32               2.332   0.310
+numerical mismatch: svd value compare
+With rtol=0.001 and atol=0.001, found 138 element(s) (out of 65536) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0035201311111450195 (-1.7633321285247803 vs. -1.7668522596359253), which occurred at index (34, 17, 14).
+[64] 32 torch.float32               48.052   0.519
+[128] 2 torch.float32               0.237   0.127
+[128] 4 torch.float32               0.561   0.207
+[128] 8 torch.float32               1.483   0.279
+[128] 16 torch.float32              4.735   0.410
+[256] 2 torch.float32               0.451   0.130
+[256] 4 torch.float32               1.086   0.281
+[256] 8 torch.float32               2.939   0.436
+[512] 2 torch.float32               0.875   0.189
+[512] 4 torch.float32               2.189   0.393
+[1024] 2 torch.float32              1.743   0.272

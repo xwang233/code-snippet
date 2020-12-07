@@ -12,7 +12,8 @@ SORT_KEY = {
     "before_magma": 0,
     "after_1_gesvd": 1,
     "after_2_gesvdj": 2,
-    "after_3_gesvdj_and_gesvdjbatched": 3
+    "after_3_gesvdj_and_gesvdjbatched": 3,
+    "after_3": 3
 }
 
 class Markdown:

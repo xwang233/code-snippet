@@ -1,3 +1,9 @@
+See pytorch PR https://github.com/pytorch/pytorch/pull/48436
+
+before master commit 19f4c5110e8bcad5e7e75375194262fca0a6293a
+
+after commit 9c08a67c5f33567e53cc30cc30b334aa49d4803e
+
 time is in **ms** (10^-3 s)
 
 |shape|cpu|before_magma|after_1_gesvd|after_2_gesvdj|after_3_gesvdj_and_gesvdjbatched|
