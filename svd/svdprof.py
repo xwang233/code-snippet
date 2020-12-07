@@ -119,16 +119,17 @@ def main(s: str):
     #     prof([2], 512, p=p1, dtype=dtype)
     #     prof([2], 1024, p=p1, dtype=dtype)
 
-    # for b, n in itertools.product(
-    #     [[]] + [[2**i] for i in range(11)],
-    #     [2**j for j in range(1, 11, 1)]
-    # ):
-    #     if b and b[0] * n >= 2**12:
-    #         continue
-    #     prof(b, n, p=torch.svd)
-    prof([], 1536, p=torch.svd)
-    prof([], 2048, p=torch.svd)
-    prof([], 4096, p=torch.svd)
+    for b, n in itertools.product(
+        [[]] + [[2**i] for i in range(11)],
+        [2**j for j in range(1, 11, 1)]
+    ):
+        if b and b[0] * n >= 2**12:
+            continue
+        prof(b, n, p=torch.svd)
+
+    # prof([], 1536, p=torch.svd)
+    # prof([], 2048, p=torch.svd)
+    # prof([], 4096, p=torch.svd)
 
     # b = [2, 3]
     # n = 256
