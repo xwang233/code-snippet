@@ -13,7 +13,9 @@ SORT_KEY = {
     "after_1_gesvd": 1,
     "after_2_gesvdj": 2,
     "after_3_gesvdj_and_gesvdjbatched": 3,
-    "after_3": 3
+    "after_3": 3,
+    "after_3x_parallel_for": 4,
+    "after_3x": 4,
 }
 
 class Markdown:
