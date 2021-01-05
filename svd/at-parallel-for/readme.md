@@ -1,6 +1,6 @@
 time is in **ms** (10^-3 s)
 
-|shape|cpu|after_3|for_inner_1|for_outer_1|for_inner_div4|for_outer_div4|for_inner_div8|for_outer_div8|for_inner_div16|for_outer_div16|
+|shape|cpu|after_3|inner_1|outer_1|inner_div4|outer_div4|inner_div8|outer_div8|inner_div16|outer_div16|
 |---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | [] 2 torch.float32 |  0.025 |  0.255 |  0.221 |  0.220 |  0.254 |  0.224 |  0.223 |  0.220 |  0.222 |  0.220 |
 | [] 4 torch.float32 |  0.029 |  0.359 |  0.321 |  0.315 |  0.358 |  0.326 |  0.377 |  0.321 |  0.379 |  0.318 |

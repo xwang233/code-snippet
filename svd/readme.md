@@ -6,9 +6,15 @@ after commit 72edde61d803fd917343c676b013805da2ab2b43
 
 This page was tested on E5-2680 v3 and RTX 2070 Super. Libraries: intel-mkl 2020.2.254-1 and cuda 11.1
 
+- before: magma
+- after_1: gesvd
+- after_2: gesvdj
+- after_3: gesvdj + gesvdjBatched (when both dims <= 32)
+- after_3x: after_3 + updated at::parallel_for (inner div 4, See ./at-parallel-for/sample-macro-code.cpp)
+
 time is in **ms** (10^-3 s)
 
-|shape|cpu|before_magma|after_1_gesvd|after_2_gesvdj|after_3_gesvdj_and_gesvdjbatched|after_3x_parallel_for|
+|shape|cpu|before|after_1|after_2|after_3|after_3x|
 |---:|---:|---:|---:|---:|---:|---:|
 | [] 2 torch.float32 |  0.026 |  1.624 |  0.206 |  0.215 |  0.255 |  0.254 |
 | [] 4 torch.float32 |  0.029 |  1.381 |  0.299 |  0.312 |  0.359 |  0.358 |
