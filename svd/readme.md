@@ -9,8 +9,7 @@ This page was tested on E5-2680 v3 and RTX 2070 Super. Libraries: intel-mkl 2020
 - before: magma
 - after_1: gesvd
 - after_2: gesvdj
-- after_3: gesvdj + gesvdjBatched (when both dims <= 32)
-- after_3x: after_3 + updated at::parallel_for (inner div 4, See ./at-parallel-for/sample-macro-code.cpp)
+- after_3: gesvdj + gesvdjBatched (when both dims <= 32) **[this PR]**
 
 time is in **ms** (10^-3 s)
 
