@@ -16,6 +16,7 @@ SORT_KEY = {
     "after_3": 3,
     "after_3x_parallel_for": 4,
     "after_3x": 4,
+    "after_3x_parallel_for_taskset_c4": 5,
 }
 
 class Markdown:
