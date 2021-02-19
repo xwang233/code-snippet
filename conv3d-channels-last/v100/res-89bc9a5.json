@@ -1,0 +1,146 @@
+{
+    "torch-ver": "89bc9a5",
+    "cudnn-ver": "8005",
+    "device": "Tesla V100-SXM2-16GB",
+    "dtype": "torch.float16",
+    "memory_format": "torch.channels_last_3d",
+    "operator": "<class 'torch.nn.modules.conv.Conv3d'>",
+    "(2, 4, 128, 32, 3, 1, 1)": {
+        "contiguous-forward": 5.527392625808716,
+        "contiguous-backward": 16.750380992889404,
+        "channels-last-3d-forward": 5.720489025115967,
+        "channels-last-3d-backward": 27.44648575782776
+    },
+    "(2, 32, 128, 32, 3, 1, 1)": {
+        "contiguous-forward": 8.5197114944458,
+        "contiguous-backward": 19.57166314125061,
+        "channels-last-3d-forward": 19.002320766448975,
+        "channels-last-3d-backward": 30.18967628479004
+    },
+    "(2, 32, 128, 64, 3, 1, 2)": {
+        "contiguous-forward": 2.438911199569702,
+        "contiguous-backward": 8.178489208221436,
+        "channels-last-3d-forward": 13.247361183166504,
+        "channels-last-3d-backward": 13.987759351730347
+    },
+    "(2, 64, 64, 64, 3, 1, 1)": {
+        "contiguous-forward": 2.357872724533081,
+        "contiguous-backward": 5.342495441436768,
+        "channels-last-3d-forward": 7.405942678451538,
+        "channels-last-3d-backward": 10.526931285858154
+    },
+    "(2, 64, 64, 128, 3, 1, 2)": {
+        "contiguous-forward": 0.7276046276092529,
+        "contiguous-backward": 2.3667514324188232,
+        "channels-last-3d-forward": 5.8657097816467285,
+        "channels-last-3d-backward": 2.878086566925049
+    },
+    "(2, 128, 32, 128, 3, 1, 1)": {
+        "contiguous-forward": 1.027061939239502,
+        "contiguous-backward": 2.0026743412017822,
+        "channels-last-3d-forward": 1.2075138092041016,
+        "channels-last-3d-backward": 2.267775535583496
+    },
+    "(2, 128, 32, 256, 3, 1, 2)": {
+        "contiguous-forward": 0.26348352432250977,
+        "contiguous-backward": 0.7996749877929688,
+        "channels-last-3d-forward": 0.43302416801452637,
+        "channels-last-3d-backward": 0.8633029460906982
+    },
+    "(2, 256, 16, 256, 3, 1, 1)": {
+        "contiguous-forward": 0.4102146625518799,
+        "contiguous-backward": 0.9374463558197021,
+        "channels-last-3d-forward": 0.4470360279083252,
+        "channels-last-3d-backward": 1.0100877285003662
+    },
+    "(2, 256, 16, 512, 3, 1, 2)": {
+        "contiguous-forward": 0.19550681114196777,
+        "contiguous-backward": 0.5196774005889893,
+        "channels-last-3d-forward": 0.2300584316253662,
+        "channels-last-3d-backward": 0.5631875991821289
+    },
+    "(2, 512, 8, 512, 3, 1, 1)": {
+        "contiguous-forward": 0.3498721122741699,
+        "contiguous-backward": 0.6818974018096924,
+        "channels-last-3d-forward": 0.3631269931793213,
+        "channels-last-3d-backward": 0.700763463973999
+    },
+    "(2, 512, 8, 512, 3, 1, 2)": {
+        "contiguous-forward": 0.1492452621459961,
+        "contiguous-backward": 0.30628323554992676,
+        "channels-last-3d-forward": 0.17733454704284668,
+        "channels-last-3d-backward": 0.34592151641845703
+    },
+    "(2, 512, 4, 512, 3, 1, 1)": {
+        "contiguous-forward": 0.12771844863891602,
+        "contiguous-backward": 0.2682662010192871,
+        "channels-last-3d-forward": 0.14710187911987305,
+        "channels-last-3d-backward": 0.28887152671813965
+    },
+    "(2, 1024, 8, 512, 3, 1, 1)": {
+        "contiguous-forward": 0.6412708759307861,
+        "contiguous-backward": 1.239469051361084,
+        "channels-last-3d-forward": 0.6644940376281738,
+        "channels-last-3d-backward": 1.2926220893859863
+    },
+    "(2, 512, 16, 256, 3, 1, 1)": {
+        "contiguous-forward": 0.7847785949707031,
+        "contiguous-backward": 1.7599284648895264,
+        "channels-last-3d-forward": 0.8561205863952637,
+        "channels-last-3d-backward": 1.84706449508667
+    },
+    "(2, 256, 32, 128, 3, 1, 1)": {
+        "contiguous-forward": 1.7632508277893066,
+        "contiguous-backward": 3.4901583194732666,
+        "channels-last-3d-forward": 2.092316150665283,
+        "channels-last-3d-backward": 3.8301491737365723
+    },
+    "(2, 128, 64, 64, 3, 1, 1)": {
+        "contiguous-forward": 4.097627401351929,
+        "contiguous-backward": 9.257891178131104,
+        "channels-last-3d-forward": 14.219565391540527,
+        "channels-last-3d-backward": 15.670889616012575
+    },
+    "(2, 64, 128, 32, 3, 1, 1)": {
+        "contiguous-forward": 11.80788516998291,
+        "contiguous-backward": 35.24694561958313,
+        "channels-last-3d-forward": 53.0337655544281,
+        "channels-last-3d-backward": 49.45038437843323
+    },
+    "(2, 32, 128, 4, 1, 0, 1)": {
+        "contiguous-forward": 1.7344439029693604,
+        "contiguous-backward": 4.205509424209595,
+        "channels-last-3d-forward": 12.565033435821533,
+        "channels-last-3d-backward": 5.06350040435791
+    },
+    "(2, 32, 128, 64, 2, 0, 2)": {
+        "contiguous-forward": 1.8489563465118408,
+        "contiguous-backward": 5.435003042221069,
+        "channels-last-3d-forward": 12.638003826141357,
+        "channels-last-3d-backward": 11.264971494674683
+    },
+    "(2, 64, 64, 128, 2, 0, 2)": {
+        "contiguous-forward": 0.5293405055999756,
+        "contiguous-backward": 1.8896281719207764,
+        "channels-last-3d-forward": 5.701538324356079,
+        "channels-last-3d-backward": 2.4361658096313477
+    },
+    "(2, 128, 32, 256, 2, 0, 2)": {
+        "contiguous-forward": 0.14702200889587402,
+        "contiguous-backward": 0.49463868141174316,
+        "channels-last-3d-forward": 0.31842947006225586,
+        "channels-last-3d-backward": 0.5822455883026123
+    },
+    "(2, 256, 16, 512, 2, 0, 2)": {
+        "contiguous-forward": 0.1584029197692871,
+        "contiguous-backward": 0.24771928787231445,
+        "channels-last-3d-forward": 0.17513275146484375,
+        "channels-last-3d-backward": 0.3193545341491699
+    },
+    "(2, 512, 8, 512, 2, 0, 2)": {
+        "contiguous-forward": 0.14838814735412598,
+        "contiguous-backward": 0.2540111541748047,
+        "channels-last-3d-forward": 0.17302513122558594,
+        "channels-last-3d-backward": 0.2867746353149414
+    }
+}

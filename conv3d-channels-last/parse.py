@@ -75,31 +75,34 @@ for shape in set_shapes:
     l_shapes.append(shape)
 l_shapes.sort()
 
-def parse(mft: str, out_fn: str):
-    assert mft in m_mfts, f'memory format to be analyzed: {mft}, is not in {m_mfts}'
+def parse(mft_: str, out_fn: str):
+    mft = m_mfts[mft_]
+    mft_cont = m_mfts[mft_ - 2]
+    # assert mft in m_mfts, f'memory format to be analyzed: {mft}, is not in {m_mfts}'
 
     md = Markdown()
 
     md.write(f'### {mft}\n\n')
 
-    md.write(f'| shape ')
+    md.write(f'| shape | contiguous ')
     for cmt in d_cmts:
-        md.write(f'| {d_cmts[cmt]} ')
-    md.write('| speed improvement |\n')
+        md.write(f'| {d_cmts[cmt]} (ch-last) ')
+    md.write('| PR > master (ch-last)? | PR > contiguous? |\n')
 
-    md.write('| --- ')
+    md.write('| --- | --- ')
     for cmt in d_cmts:
         md.write(f'| --- ')
-    md.write('| --- |\n')
+    md.write('| --- | --- |\n')
 
     for shape in l_shapes:
         md.write(f'| {shape}')
+        md.write(f'| {js[cmt][shape][mft_cont] :.3f} ')
         for cmt in d_cmts:
             md.write(f'| {js[cmt][shape][mft] :.3f} ')
         
         perfx = js[d_cmts_rev['master']][shape][mft] / js[d_cmts_rev['PR']][shape][mft]
-        md.write(f'| {perfx :.2f}')
-        md.write('|\n')
+        perfy = js[d_cmts_rev['master']][shape][mft_cont] / js[d_cmts_rev['PR']][shape][mft]
+        md.write(f'| {perfx :.2f}x | {perfy :.2f}x |\n')
 
     md.write('\n' * 3)
     md.to_file(out_fn)
@@ -132,5 +135,5 @@ net(x)
 '''.encode('ascii'))
 
 
-    parse(m_mfts[2], out_f)
-    parse(m_mfts[3], out_f)
+    parse(2, out_f)
+    parse(3, out_f)
