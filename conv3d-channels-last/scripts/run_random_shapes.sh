@@ -65,9 +65,10 @@ cd $WORKSPACE
 git clone --recursive https://github.com/xwang233/code-snippet.git
 cd code-snippet/conv3d-channels-last/scripts
 
+log_file=`date +%s`-$first_device_name.txt
 first_device_name=`nvidia-smi -L | cut -d '(' -f 1 | cut -d ':' -f 2 | head -n 1 | xargs | tr -s ' ' '_'`
 python -m torch.distributed.launch --nproc_per_node `nvidia-smi -L | wc -l` \
-    random_shapes.py --total-shapes $TOTAL_SHAPES | tee `date +%s`-$first_device_name.txt
+    random_shapes.py --total-shapes $TOTAL_SHAPES | tee $log_file
 
 # copy this $tmpdir to save the benchmark results
-cp -r $tmpdir $DESTINATION
+cp -r $log_file $DESTINATION
