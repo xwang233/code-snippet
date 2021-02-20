@@ -65,8 +65,8 @@ cd $WORKSPACE
 git clone --recursive https://github.com/xwang233/code-snippet.git
 cd code-snippet/conv3d-channels-last/scripts
 
-log_file=`date +%s`-$first_device_name.txt
 first_device_name=`nvidia-smi -L | cut -d '(' -f 1 | cut -d ':' -f 2 | head -n 1 | xargs | tr -s ' ' '_'`
+log_file=`date +%s`-$first_device_name.txt
 python -m torch.distributed.launch --nproc_per_node `nvidia-smi -L | wc -l` \
     random_shapes.py --total-shapes $TOTAL_SHAPES 2>&1 | tee $log_file
 
