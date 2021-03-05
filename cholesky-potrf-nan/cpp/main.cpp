@@ -64,7 +64,7 @@ struct Tensor {
     void copy_from_host(T* that_ptr, size_t nelem) {
         CUDA_CHECK(cudaMemcpy(ptr, that_ptr, sizeof(T) * nelem, cudaMemcpyHostToDevice));
     }
-    void copy_to_cpu(T* host_ptr, size_t nelem) {
+    void copy_to_cpu(T* host_ptr, size_t nelem) const {
         CUDA_CHECK(cudaMemcpy(host_ptr, ptr, sizeof(T) * nelem, cudaMemcpyDeviceToHost));
     }
 };
