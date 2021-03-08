@@ -13,7 +13,7 @@
     do {                                                            \
         cudaError_t __expr = EXPR;                                  \
         if (__expr != cudaSuccess) {                                \
-            printf("CUDA failure at line: %s\n", __LINE__);         \
+            printf("CUDA failure at line: %d\n", __LINE__);         \
             throw std::runtime_error(cudaGetErrorString(__expr));   \
         }                                                           \
     } while(0)
@@ -22,7 +22,7 @@
     do {                                                        \
         cusolverStatus_t __expr = EXPR;                         \
         if (__expr != CUSOLVER_STATUS_SUCCESS) {                \
-            printf("cusolver failure at line: %s\n", __LINE__); \
+            printf("cusolver failure at line: %d\n", __LINE__); \
             throw std::runtime_error(std::to_string(__expr));   \
         }                                                       \
     } while(0)
