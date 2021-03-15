@@ -10,7 +10,8 @@ AFTER = 'after-commit'
 SORT_KEY = {
     "cpu": -1,
     "before_magma": 0,
-    "after_potrf_and_batched": 1,
+    # "after_potrf_and_batched": 1,
+    "after_potrf64bit_and_magma": 2,
 }
 
 class Markdown:
