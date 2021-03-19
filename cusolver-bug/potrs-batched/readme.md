@@ -1,0 +1,1 @@
+not a bug, cusolver potrs batched currently only supports nrhs == 1
