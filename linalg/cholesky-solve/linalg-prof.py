@@ -3,6 +3,8 @@ import time
 import itertools
 import gc
 import json
+import multiprocessing
+import threading
 
 from torch.testing._internal.common_utils import random_hermitian_pd_matrix
 
@@ -45,8 +47,8 @@ def main(s: str = ''):
 
         # print(b_, n_)
         # x = torch.randn(*b_, n_, n_, device='cuda', dtype=dtype)
-        zo = random_hermitian_pd_matrix(n_, *b_, device='cuda', dtype=torch.float64)
-        z = torch.cholesky(zo).to(dtype=dtype)
+        zo = random_hermitian_pd_matrix(n_, *b_, device='cpu', dtype=torch.float64).cuda()
+        z = torch.cholesky(zo.cpu()).to(dtype=dtype, device='cuda')
         x = torch.randn(*b_, n_, n_, device='cuda').to(dtype=dtype)
         # x = torch.randn(*b_, n_, 1, device='cuda').to(dtype=dtype)
 
@@ -125,7 +127,9 @@ def main(s: str = ''):
          f'cpu_time({TIME_UNIT}), gpu_time({TIME_UNIT})')
 
     for b, n in itertools.product(
-        [[]] + [[2**i] for i in range(11)],
+        # [[]] + [[2**i] for i in range(11)],
+        [[], [1]],
+        # [[2**i] for i in range(1, 11)],
         [2**j for j in range(1, 12, 1)]
     ):
         if b and b[0] * n >= 2**14:
