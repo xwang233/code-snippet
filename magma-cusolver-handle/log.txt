@@ -1,0 +1,4 @@
+root@e742c43197eb:/workspace/magma-cusolver-handle# python a.py
+1.8.0a0+1606899
+time_magma_1 =  0.177
+time_magma_2 =  0.401
