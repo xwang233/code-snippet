@@ -273,12 +273,21 @@ int main()
 
     magma_inverse(da_f);
 
-    cusolverDnHandle_t handle;
-    CUSOLVER_CHECK(cusolverDnCreate(&handle));
+    // cusolverDnHandle_t handle;
+    // CUSOLVER_CHECK(cusolverDnCreate(&handle));
+
+    // we may replace cusolver handle create/destroy to simply cudaMalloc/cudaFree
+    // the performance regression still exists
+    // so it's not cusolver handle's fault, it's probably any cudaMalloc
+    void* ptr;
+    CUDA_CHECK(cudaMalloc(&ptr, (size_t)1e6));
+    CUDA_CHECK(cudaDeviceSynchronize());
 
     magma_inverse(da_f);
 
-    CUSOLVER_CHECK(cusolverDnDestroy(handle));
+    // CUSOLVER_CHECK(cusolverDnDestroy(handle));
+
+    CUDA_CHECK(cudaFree(ptr));
 
     magma_inverse(da_f);
 
