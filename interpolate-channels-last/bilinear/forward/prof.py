@@ -43,7 +43,7 @@ def compare(x, y, *, rtol, atol):
 
 
 def main(s: str = ''):
-    def prof(b_, m_, n_, dtype=torch.float, p=None, key=None, out_file=None):
+    def prof(b_, m_, n_, dtype=torch.float, p=None, key=None, out_file=None, out_js=None):
         gc.collect()
         torch.cuda.empty_cache()
 
@@ -122,11 +122,21 @@ def main(s: str = ''):
 
         print(f'{key}'.ljust(55) +
               f'{cpu_time :>10.3f} {gpu_time :>10.3f} {gpu_time_2 :>10.3f} {gpu_time_2 / gpu_time :>10.2f}')
+
         if out_file is not None:
             out_file.write(
               f'| {key}'
               f'| {cpu_time :>10.3f} | {gpu_time :>10.3f} | {gpu_time_2 :>10.3f} '
               f'| {gpu_time_2 / gpu_time :>10.2f} |\n')
+        
+        if out_js is not None:
+            assert key not in out_js
+            out_js[key] = {
+                'cpu_time': cpu_time,
+                'gpu_time': gpu_time,
+                'gpu_time_2': gpu_time_2,
+            }
+
         torch.cuda.synchronize()
     
     print(s)
@@ -135,7 +145,10 @@ def main(s: str = ''):
     print('shapes'.ljust(40) +
          f'cont({TIME_UNIT}),   cl({TIME_UNIT}),   cl-cont-cl({TIME_UNIT}),   speed_up')
 
-    with open('readme.md', 'w') as out_file:
+    name = 'before'
+
+    out_js = {}
+    with open(f'{name}.md', 'w') as out_file:
         out_file.write(
             f'| shapes | cont({TIME_UNIT}) | cl({TIME_UNIT}) | cl-cont-cl({TIME_UNIT}) | speed_up |\n')
         out_file.write('|' + '---|' * 5 + '\n')
@@ -159,12 +172,17 @@ def main(s: str = ''):
                 dtype=torch.half,
                 p=lambda x: torch.nn.functional.interpolate(x, (om, on), mode=mode, align_corners=False),
                 key=f'{(b, m, n, om, on)} half, AC False',
-                out_file=out_file)
+                out_file=out_file,
+                out_js=out_js)
             prof(b, m, n,
                 dtype=torch.float,
                 p=lambda x: torch.nn.functional.interpolate(x, (om, on), mode=mode, align_corners=False),
                 key=f'{(b, m, n, om, on)} float, AC False',
-                out_file=out_file)
+                out_file=out_file,
+                out_js=out_js)
+    
+    with open(f'{name}.json', 'w') as fj:
+        json.dump(out_js, fj, indent=2)
 
 if __name__ == "__main__":
     main()
