@@ -70,8 +70,7 @@ def main(s: str = ''):
 
         # warmup
         for _ in range(nb):
-            # y_warmup = p(x)
-            y_warmup = p(x.contiguous()).to(memory_format=torch.channels_last)
+            y_warmup = p(x)
         torch.cuda.synchronize()
 
         c, d = compare(xc, x, rtol=1e-7, atol=1e-7)
@@ -91,7 +90,6 @@ def main(s: str = ''):
         # gpu timing
         t1 = time.time()
         for _ in range(nb):
-            # y = torch.cholesky(x)
             y = p(x)
         torch.cuda.synchronize()
         t2 = time.time()
@@ -102,8 +100,7 @@ def main(s: str = ''):
         # gpu timing 2
         t1 = time.time()
         for _ in range(nb):
-            # y = torch.cholesky(x)
-            y = p(x.contiguous()).to(memory_format=torch.channels_last)
+            y_second = p(x.contiguous()).to(memory_format=torch.channels_last)
         torch.cuda.synchronize()
         t2 = time.time()
         gpu_time_2 = (t2-t1)/nb*TIME_MULTIPLIER
