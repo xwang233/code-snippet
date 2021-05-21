@@ -89,19 +89,24 @@ for i in range(len(dd)):
 
     def profile(p):
         start = time.time()
-        for _ in range(niter): p()
+        for _ in range(niter):
+            p()
         torch.cuda.synchronize()
         end = time.time()
         gc.collect()
         torch.cuda.empty_cache()
         torch.cuda.synchronize()
-        return (end-start) / niter * 1000
+        return (end - start) / niter * 1000
 
     oom = False
     try:
         with torch.backends.cudnn.flags(enabled=True, benchmark=False, deterministic=False):
             out = conv(x)
             ref_out = ref_conv(ref_x)
+
+            if not out.is_contiguous(memory_format=mf):
+                print('out is not in the correct memory format!')
+
             go = torch.randn_like(out).to(memory_format=mf, device=de, dtype=dt)
             ref_go = torch.randn_like(ref_out)
             for _ in range(niter):
@@ -109,14 +114,18 @@ for i in range(len(dd)):
                 ref_out = ref_conv(ref_x)
                 out.backward(go, retain_graph=True)
                 ref_out.backward(ref_go, retain_graph=True)
+
+            if not x.grad.is_contiguous(memory_format=mf):
+                print('input grad is not in the correct memory format!')
+
+            if not conv.weight.grad.is_contiguous(memory_format=mf):
+                print('weight grad is not in the correct memory format!')
+
             gc.collect()
             torch.cuda.empty_cache()
             torch.cuda.synchronize()
 
-            time_channels_last += [
-                profile(lambda: conv(x)),
-                profile(lambda: out.backward(go, retain_graph=True))
-            ]
+            time_channels_last += [profile(lambda: conv(x)), profile(lambda: out.backward(go, retain_graph=True))]
             time_contiguous += [
                 profile(lambda: ref_conv(ref_x)),
                 profile(lambda: ref_out.backward(ref_go, retain_graph=True))
@@ -133,13 +142,15 @@ for i in range(len(dd)):
             oom = True
         else:
             raise
-        
+
     torch.cuda.synchronize()
 
     if oom:
         gc.collect()
         torch.cuda.empty_cache()
         torch.cuda.synchronize()
+        print("OOM, continue")
+        continue
 
     # print(out.size(), out.stride())
     # print(ref_out.size(), ref_out.stride())
@@ -161,7 +172,7 @@ for i in range(len(dd)):
     try:
         _a = None
         _b = None
-        _a, _b = torch.testing._compare_tensors_internal(out, ref_out, rtol=1e-5, atol=2e-5, equal_nan=False)
+        _a, _b = torch.testing._core._compare_tensors_internal(out, ref_out, rtol=1e-5, atol=2e-5, equal_nan=False)
         # assert _a, _b
     except RuntimeError as e:
         if str(e).startswith('CUDA out of memory'):
