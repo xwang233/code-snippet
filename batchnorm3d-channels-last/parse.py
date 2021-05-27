@@ -27,8 +27,8 @@ cudnn_ver = None
 
 set_shapes = set()
 d_cmts = {
-    'gitac07c64-before': 'master',
-    'gitac07c64-after': 'PR'
+    'git7317dba': 'PR',
+    'gitac07c64': 'master'
 }
 d_cmts_rev = {}
 for k, v in d_cmts.items():
