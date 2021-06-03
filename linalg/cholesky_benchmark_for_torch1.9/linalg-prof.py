@@ -19,7 +19,7 @@ print(torch_ver)
 j = {}
 
 def main(s: str = ''):
-    def prof(b_, n_, dtype=torch.float, p=None, flag=None):
+    def prof(b_, n_, dtype=torch.double, p=None, flag=None):
         gc.collect()
         torch.cuda.empty_cache()
 
@@ -48,7 +48,7 @@ def main(s: str = ''):
         key = str([b_[0], n_])
         value = gpu_time
 
-        assert key not in j
+        # assert key not in j
         j[key] = value
         
 
@@ -58,13 +58,15 @@ def main(s: str = ''):
     print('batch_size, matrix_size, dtype'.ljust(35) + f'gpu_time({TIME_UNIT})')
 
 
-    for n in range(2, 12):
-        prof([], 2**n, p=torch.linalg.cholesky)
+    for _n in range(20, 101):
+        n = _n / 10
+        prof([], int(2**n), p=torch.linalg.cholesky)
     
-    for b in range(0, 11):
-        prof([2**b], 4, p=torch.linalg.cholesky)
-        prof([2**b], 32, p=torch.linalg.cholesky)
-        prof([2**b], 128, p=torch.linalg.cholesky)
+    for _b in range(0, 101):
+        b = int(2**(_b / 10))
+        prof([b], 4, p=torch.linalg.cholesky)
+        prof([b], 32, p=torch.linalg.cholesky)
+        prof([b], 128, p=torch.linalg.cholesky)
     
     # print(json.dumps(j, indent=2))
     with open(f'res-{torch_ver}.json', 'w') as f:
