@@ -7,7 +7,7 @@ import json
 TIME_MULTIPLIER = 1e6
 TIME_UNIT = 'us'
 
-nb = 200
+nb = 1000
 
 torch.manual_seed(42)
 torch.cuda.manual_seed(42)
