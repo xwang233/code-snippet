@@ -60,7 +60,7 @@ def main(s: str = ''):
 
     for _n in range(20, 101):
         n = _n / 10
-        prof([], int(2**n), p=torch.linalg.cholesky)
+        prof([1], int(2**n), p=torch.linalg.cholesky)
     
     for _b in range(0, 101):
         b = int(2**(_b / 10))
