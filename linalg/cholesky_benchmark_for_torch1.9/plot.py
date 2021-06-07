@@ -44,10 +44,11 @@ sy19 = [j['1.9'][str(list(k))] for k in single_matrix]
 
 plt.plot(sx18, sy18)
 plt.plot(sx19, sy19)
-plt.xlim(min(sx19) - 10, max(sx19) + 10)
+plt.xlim(0, max(*sx18, *sx19))
+plt.ylim(0, max(*sy18, *sy19) * 1.05)
 plt.legend(['1.8', '1.9'])
 plt.title(f'Cholesky decomposition on single matrix (GPU)')
-plt.xlabel('matrix_size')
+plt.xlabel('matrix_size n of a square matrix (n x n)')
 plt.ylabel(u'execution_time (μs)')
 plt.savefig('single.png', transparent=True)
 
@@ -68,7 +69,8 @@ for mat_size in (4, 32, 128):
 
     plt.plot(sx18_b, sy18_b)
     plt.plot(sx19_b, sy19_b)
-    plt.xlim(min(sx19_b) - 10, max(sx19_b) + 10)
+    plt.xlim(0, max(*sx18_b, *sx19_b))
+    plt.ylim(0, max(*sy18_b, *sy19_b) * 1.05)
     plt.legend(['1.8', '1.9'])
     plt.title(f'Cholesky decomposition on batched matrices of {mat_size}x{mat_size} (GPU)')
     plt.xlabel('batch_size')
