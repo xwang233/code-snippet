@@ -2,8 +2,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import json
 import collections
+import os
 
 THRESHOLD = 30000
+_full_path = os.getcwd()
+GPU = _full_path[_full_path.rfind('/')+1:]
 
 d = {
     "1.8": "res-56b43f4",
@@ -47,7 +50,7 @@ plt.plot(sx19, sy19)
 plt.xlim(0, max(*sx18, *sx19))
 plt.ylim(0, max(*sy18, *sy19) * 1.05)
 plt.legend(['1.8', '1.9'])
-plt.title(f'Cholesky decomposition on single matrix (GPU)')
+plt.title(f'Cholesky decomposition on single matrix ({GPU})')
 plt.xlabel('matrix_size n of a square matrix (n x n)')
 plt.ylabel(u'execution_time (μs)')
 plt.savefig('single.png', transparent=True)
@@ -72,7 +75,7 @@ for mat_size in (4, 32, 128):
     plt.xlim(0, max(*sx18_b, *sx19_b))
     plt.ylim(0, max(*sy18_b, *sy19_b) * 1.05)
     plt.legend(['1.8', '1.9'])
-    plt.title(f'Cholesky decomposition on batched matrices of {mat_size}x{mat_size} (GPU)')
+    plt.title(f'Cholesky decomposition on batched matrices of {mat_size}x{mat_size} ({GPU})')
     plt.xlabel('batch_size')
     plt.ylabel(u'execution_time (μs)')
     plt.savefig(f'batch_{mat_size}.png', transparent=True)
