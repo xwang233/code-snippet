@@ -155,8 +155,8 @@ def main(args):
         for b, n, mmul, omul in itertools.product(
             [[2**i1, 2**i2] for i1 in range(0, 2) for i2 in range(0, 7, 2)],
             [2**j for j in range(5, 9)],
-            [0.5, 1, 2],
-            [0.5, 1, 2]
+            [0.5, 2],
+            [0.5, 2]
         ):
             if b and b[0] * n >= 2**14:
                 continue
