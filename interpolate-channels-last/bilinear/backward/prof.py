@@ -6,6 +6,7 @@ import json
 import multiprocessing
 import threading
 import math
+import argparse
 
 from torch.testing._internal.common_utils import random_hermitian_pd_matrix
 from torch.testing._core import _compare_tensors_internal
@@ -42,7 +43,7 @@ def compare(x, y, *, rtol, atol):
     return a, json.dumps(b, indent=2)
 
 
-def main(s: str = ''):
+def main(args):
     def prof(b_, m_, n_, dtype=torch.float, p=None, key=None, out_file=None, out_js=None, c_op=None):
         pygc.collect()
         torch.cuda.empty_cache()
@@ -148,13 +149,13 @@ def main(s: str = ''):
 
         torch.cuda.synchronize()
     
-    print(s)
+    print(args.s)
     print(torch.__version__)
     print()
     print('shapes'.ljust(40) +
          f'cont({TIME_UNIT}),   cl({TIME_UNIT})')
 
-    name = 'before'
+    name = args.name
 
     out_js = {}
     with open(f'{name}.md', 'w') as out_file:
@@ -196,5 +197,9 @@ def main(s: str = ''):
         json.dump(out_js, fj, indent=2)
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--name', type=str, required=True, choices=['before', 'after'])
+    parser.add_argument('--s', type=str, default='')
+    args = parser.parse_args()
+    main(args)
 
