@@ -10,6 +10,7 @@ from collections import Counter
 import json
 import os
 
+from torch.testing._core import _compare_tensors_internal
 
 def main(rank: int, num_random_shapes: int):
     if rank == 0:
@@ -84,13 +85,13 @@ def main(rank: int, num_random_shapes: int):
             out.sum().backward()
             ref_cont_out.sum().backward()
 
-            _a, _b = torch.testing._compare_tensors_internal(out, ref_cont_out, atol=1e-3, rtol=1e-3, equal_nan=False)
+            _a, _b = _compare_tensors_internal(out, ref_cont_out, atol=1e-3, rtol=1e-3, equal_nan=False)
             if not _a:
                 mismatches[0] += 1
-            _c, _d = torch.testing._compare_tensors_internal(x.grad, ref_cont_x.grad, atol=1e-3, rtol=1e-3, equal_nan=False)
+            _c, _d = _compare_tensors_internal(x.grad, ref_cont_x.grad, atol=1e-3, rtol=1e-3, equal_nan=False)
             if not _c:
                 mismatches[1] += 1
-            _e, _f = torch.testing._compare_tensors_internal(conv.weight.grad, ref_cont_conv.weight.grad, atol=1e-3, rtol=1e-3, equal_nan=False)
+            _e, _f = _compare_tensors_internal(conv.weight.grad, ref_cont_conv.weight.grad, atol=1e-3, rtol=1e-3, equal_nan=False)
             if not _e:
                 mismatches[2] += 1
         except RuntimeError as e:
