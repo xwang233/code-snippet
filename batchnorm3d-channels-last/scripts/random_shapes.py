@@ -43,21 +43,13 @@ def main(rank: int, num_random_shapes: int):
         h = d
         w = d
 
-        if random.random() > 0.5:
-            c = random.choice([4, 8, 16, 32, 64, 128, 256])
-            oc = c
-            g = c
-        else:
-            oc = random.randint(4, 1024)
-            g = 1
-
         ks = random.choice([1, 2, 3, 5])
         dtype = random.choice([torch.half, torch.float])
 
         tensor_size = (
             2 * 2 * n * c * d * h * w + # (input + input.grad) and ref
-            2 * 2 * oc * c * ks **3 +  # (weight + weight.grad) and ref
-            2 * 2 * n * oc * d * h * w # (output (est) + output.grad) and ref
+            2 * 2 * n * c +  # (weight + weight.grad) and ref
+            2 * 2 * n * c * d * h * w # (output (est) + output.grad) and ref
             ) * d_size[dtype] / 1e9
         if tensor_size > 4.0:
             # print('tensor too large, continue')
@@ -70,17 +62,17 @@ def main(rank: int, num_random_shapes: int):
             x.to(memory_format=torch.channels_last_3d)
             ref_cont_x = x.detach().clone().contiguous().requires_grad_()
 
-            conv = torch.nn.Conv3d(c, oc, kernel_size=ks, stride=1, padding=0, dilation=1, groups=g)
-            conv = conv.to(dtype=dtype, device=device, memory_format=torch.channels_last_3d)
-            ref_cont_conv = torch.nn.Conv3d(c, oc, kernel_size=ks, stride=1, padding=0, dilation=1, groups=g)
-            ref_cont_conv = ref_cont_conv.to(dtype=dtype, device=device, memory_format=torch.channels_last_3d)
+            net = torch.nn.BatchNorm3d(c)
+            net = net.to(dtype=dtype, device=device, memory_format=torch.channels_last_3d)
+            ref_cont_net = torch.nn.BatchNorm3d(c)
+            ref_cont_net = ref_cont_net.to(dtype=dtype, device=device, memory_format=torch.channels_last_3d)
 
             with torch.no_grad():
-                for p, rp in zip(conv.parameters(), ref_cont_conv.parameters()):
+                for p, rp in zip(net.parameters(), ref_cont_net.parameters()):
                     rp.copy_(p)
 
-            out = conv(x)
-            ref_cont_out = ref_cont_conv(ref_cont_x)
+            out = net(x)
+            ref_cont_out = ref_cont_net(ref_cont_x)
 
             out.sum().backward()
             ref_cont_out.sum().backward()
@@ -91,16 +83,15 @@ def main(rank: int, num_random_shapes: int):
             _c, _d = _compare_tensors_internal(x.grad, ref_cont_x.grad, atol=1e-3, rtol=1e-3, equal_nan=False)
             if not _c:
                 mismatches[1] += 1
-            _e, _f = _compare_tensors_internal(conv.weight.grad, ref_cont_conv.weight.grad, atol=1e-3, rtol=1e-3, equal_nan=False)
+            _e, _f = _compare_tensors_internal(net.weight.grad, ref_cont_net.weight.grad, atol=1e-3, rtol=1e-3, equal_nan=False)
             if not _e:
                 mismatches[2] += 1
         except RuntimeError as e:
             exc_type, exc_value, exc_traceback = sys.exc_info()
             if str(e).startswith('CUDA out of memory'):
                 oom = True
-                # print(f'******************OOM {n=} {c=} {d=} {h=} {w=} {oc=} {g=} {ks=} {dtype=}')
             else:
-                print(f'*************** {rank=} {n=} {c=} {d=} {h=} {w=} {oc=} {g=} {ks=}\n'
+                print(f'*************** {rank=} {n=} {c=} {d=} {h=} {w=} \n'
                       f'*************** {dtype=} {tensor_size=:.3f} GB\n'
                       f'*************** {exc_type}: {exc_value}')
                 con_exceptions[str(exc_value)] += 1

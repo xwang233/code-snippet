@@ -8,7 +8,8 @@ TOTAL_SHAPES=100000
 unset PYTORCH_VERSION
 unset PYTORCH_BUILD_VERSION
 
-CURRENT_COMMIT='c8cd8838e98dd7ed96dabc7121fb7af2aac68c9d'
+# https://github.com/pytorch/pytorch/pull/59129/commits/5dbbc5f8ef7b64af5c845d2d4fbb34b3bbeeb80c
+CURRENT_COMMIT='5dbbc5f8ef7b64af5c845d2d4fbb34b3bbeeb80c'
 
 function build {
     pushd $PYTORCH;
