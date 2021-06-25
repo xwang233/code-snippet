@@ -55,9 +55,8 @@ function ccache {
 ccache
 
 cd $PYTORCH
-git remote add gh https://github.com/pytorch/pytorch
-git fetch gh $CURRENT_COMMIT
-git checkout $CURRENT_COMMIT
+git remote add xw https://github.com/xwang233/pytorch
+git checkout xw/ci-all/batchnorm3d-channels-last-cudnn-spatial-persistent
 build
 
 mkdir -p $WORKSPACE
