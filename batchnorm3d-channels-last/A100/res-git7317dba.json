@@ -1,0 +1,1394 @@
+{
+    "torch-ver": "git7317dba",
+    "cudnn-ver": "8200",
+    "device": "A100-SXM4-40GB",
+    "dtype": "torch.float16",
+    "memory_format": "torch.channels_last_3d",
+    "operator": "<class 'torch.nn.modules.batchnorm.BatchNorm3d'>",
+    "(1, 2, 2, 2, 2)": {
+        "contiguous-forward": 0.05118608474731445,
+        "contiguous-backward": 0.07249832153320312,
+        "channels-last-3d-forward": 0.05754232406616211,
+        "channels-last-3d-backward": 0.07598161697387695
+    },
+    "(1, 2, 4, 4, 4)": {
+        "contiguous-forward": 0.05160331726074219,
+        "contiguous-backward": 0.0706791877746582,
+        "channels-last-3d-forward": 0.05747556686401367,
+        "channels-last-3d-backward": 0.08034229278564453
+    },
+    "(1, 2, 8, 8, 8)": {
+        "contiguous-forward": 0.05144357681274414,
+        "contiguous-backward": 0.07083654403686523,
+        "channels-last-3d-forward": 0.058135986328125,
+        "channels-last-3d-backward": 0.0762629508972168
+    },
+    "(1, 2, 16, 16, 16)": {
+        "contiguous-forward": 0.051610469818115234,
+        "contiguous-backward": 0.07388114929199219,
+        "channels-last-3d-forward": 0.05753278732299805,
+        "channels-last-3d-backward": 0.07864236831665039,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 1 element(s) (out of 8192) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (-1.603515625 vs. -1.6025390625), which occurred at index (0, 1, 14, 11, 1)."
+    },
+    "(1, 2, 32, 32, 32)": {
+        "contiguous-forward": 0.05096912384033203,
+        "contiguous-backward": 0.07158041000366211,
+        "channels-last-3d-forward": 0.05728721618652344,
+        "channels-last-3d-backward": 0.07743597030639648
+    },
+    "(1, 2, 64, 64, 64)": {
+        "contiguous-forward": 0.09006023406982422,
+        "contiguous-backward": 0.23139715194702148,
+        "channels-last-3d-forward": 0.056915283203125,
+        "channels-last-3d-backward": 0.07515907287597656,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 107 element(s) (out of 524288) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (-1.2421875 vs. -1.2431640625), which occurred at index (0, 0, 2, 10, 18)."
+    },
+    "(1, 2, 112, 112, 112)": {
+        "contiguous-forward": 0.336763858795166,
+        "contiguous-backward": 1.1190438270568848,
+        "channels-last-3d-forward": 0.056705474853515625,
+        "channels-last-3d-backward": 0.0761556625366211
+    },
+    "(1, 4, 2, 2, 2)": {
+        "contiguous-forward": 0.05118131637573242,
+        "contiguous-backward": 0.07306098937988281,
+        "channels-last-3d-forward": 0.05681753158569336,
+        "channels-last-3d-backward": 0.07623672485351562
+    },
+    "(1, 4, 4, 4, 4)": {
+        "contiguous-forward": 0.05081892013549805,
+        "contiguous-backward": 0.0705265998840332,
+        "channels-last-3d-forward": 0.0568699836730957,
+        "channels-last-3d-backward": 0.07556676864624023
+    },
+    "(1, 4, 8, 8, 8)": {
+        "contiguous-forward": 0.0504755973815918,
+        "contiguous-backward": 0.07470130920410156,
+        "channels-last-3d-forward": 0.05651712417602539,
+        "channels-last-3d-backward": 0.07491827011108398
+    },
+    "(1, 4, 16, 16, 16)": {
+        "contiguous-forward": 0.051369667053222656,
+        "contiguous-backward": 0.07272481918334961,
+        "channels-last-3d-forward": 0.057103633880615234,
+        "channels-last-3d-backward": 0.07594108581542969
+    },
+    "(1, 4, 32, 32, 32)": {
+        "contiguous-forward": 0.05135536193847656,
+        "contiguous-backward": 0.07359027862548828,
+        "channels-last-3d-forward": 0.05728483200073242,
+        "channels-last-3d-backward": 0.0762939453125,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 5 element(s) (out of 131072) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0001220703125 (0.13916015625 vs. 0.1392822265625), which occurred at index (0, 2, 5, 10, 7)."
+    },
+    "(1, 4, 64, 64, 64)": {
+        "contiguous-forward": 0.07149934768676758,
+        "contiguous-backward": 0.18335342407226562,
+        "channels-last-3d-forward": 0.05758047103881836,
+        "channels-last-3d-backward": 0.0754094123840332,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 5 element(s) (out of 1048576) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 3.0517578125e-05 (-0.0433349609375 vs. -0.043304443359375), which occurred at index (0, 0, 3, 14, 54)."
+    },
+    "(1, 4, 112, 112, 112)": {
+        "contiguous-forward": 0.3455352783203125,
+        "contiguous-backward": 1.6906166076660156,
+        "channels-last-3d-forward": 0.17920255661010742,
+        "channels-last-3d-backward": 0.2494716644287109,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 146 element(s) (out of 5619712) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (-2.380859375 vs. -2.3828125), which occurred at index (0, 0, 1, 37, 15)."
+    },
+    "(1, 8, 2, 2, 2)": {
+        "contiguous-forward": 0.049610137939453125,
+        "contiguous-backward": 0.07176637649536133,
+        "channels-last-3d-forward": 0.0553441047668457,
+        "channels-last-3d-backward": 0.07610082626342773
+    },
+    "(1, 8, 4, 4, 4)": {
+        "contiguous-forward": 0.04935264587402344,
+        "contiguous-backward": 0.0707697868347168,
+        "channels-last-3d-forward": 0.05607128143310547,
+        "channels-last-3d-backward": 0.07499933242797852
+    },
+    "(1, 8, 8, 8, 8)": {
+        "contiguous-forward": 0.05053997039794922,
+        "contiguous-backward": 0.0692296028137207,
+        "channels-last-3d-forward": 0.05633831024169922,
+        "channels-last-3d-backward": 0.0745534896850586
+    },
+    "(1, 8, 16, 16, 16)": {
+        "contiguous-forward": 0.09292364120483398,
+        "contiguous-backward": 0.07302999496459961,
+        "channels-last-3d-forward": 0.05620241165161133,
+        "channels-last-3d-backward": 0.0752878189086914,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 2 element(s) (out of 32768) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (1.9814453125 vs. 1.98046875), which occurred at index (0, 4, 15, 10, 4)."
+    },
+    "(1, 8, 32, 32, 32)": {
+        "contiguous-forward": 0.04987001419067383,
+        "contiguous-backward": 0.07256746292114258,
+        "channels-last-3d-forward": 0.055756568908691406,
+        "channels-last-3d-backward": 0.07539033889770508,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 5 element(s) (out of 262144) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00048828125 (0.9892578125 vs. 0.98876953125), which occurred at index (0, 7, 7, 16, 7)."
+    },
+    "(1, 8, 64, 64, 64)": {
+        "contiguous-forward": 0.07215023040771484,
+        "contiguous-backward": 0.18930673599243164,
+        "channels-last-3d-forward": 0.05621671676635742,
+        "channels-last-3d-backward": 0.07493734359741211,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 66 element(s) (out of 2097152) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00048828125 (-0.8447265625 vs. -0.84521484375), which occurred at index (0, 3, 1, 27, 34)."
+    },
+    "(1, 8, 112, 112, 112)": {
+        "contiguous-forward": 0.8137416839599609,
+        "contiguous-backward": 2.2164082527160645,
+        "channels-last-3d-forward": 0.19504308700561523,
+        "channels-last-3d-backward": 0.29907703399658203,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 502 element(s) (out of 11239424) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.000244140625 (-0.4755859375 vs. -0.475341796875), which occurred at index (0, 2, 0, 97, 75)."
+    },
+    "(1, 16, 2, 2, 2)": {
+        "contiguous-forward": 0.05121946334838867,
+        "contiguous-backward": 0.07429122924804688,
+        "channels-last-3d-forward": 0.05653858184814453,
+        "channels-last-3d-backward": 0.076141357421875
+    },
+    "(1, 16, 4, 4, 4)": {
+        "contiguous-forward": 0.05093812942504883,
+        "contiguous-backward": 0.07410287857055664,
+        "channels-last-3d-forward": 0.05681037902832031,
+        "channels-last-3d-backward": 0.07694005966186523
+    },
+    "(1, 16, 8, 8, 8)": {
+        "contiguous-forward": 0.05926370620727539,
+        "contiguous-backward": 0.07865428924560547,
+        "channels-last-3d-forward": 0.05700826644897461,
+        "channels-last-3d-backward": 0.07678747177124023,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 1 element(s) (out of 8192) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00048828125 (0.71142578125 vs. 0.7109375), which occurred at index (0, 15, 4, 7, 7)."
+    },
+    "(1, 16, 16, 16, 16)": {
+        "contiguous-forward": 0.05022764205932617,
+        "contiguous-backward": 0.08113622665405273,
+        "channels-last-3d-forward": 0.056176185607910156,
+        "channels-last-3d-backward": 0.08522272109985352,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 3 element(s) (out of 65536) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (1.1533203125 vs. 1.15234375), which occurred at index (0, 4, 5, 10, 11)."
+    },
+    "(1, 16, 32, 32, 32)": {
+        "contiguous-forward": 0.050683021545410156,
+        "contiguous-backward": 0.07925271987915039,
+        "channels-last-3d-forward": 0.05587339401245117,
+        "channels-last-3d-backward": 0.08646011352539062,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 24 element(s) (out of 524288) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (-1.0341796875 vs. -1.033203125), which occurred at index (0, 7, 3, 1, 19)."
+    },
+    "(1, 16, 64, 64, 64)": {
+        "contiguous-forward": 0.07942438125610352,
+        "contiguous-backward": 0.27652978897094727,
+        "channels-last-3d-forward": 0.06396293640136719,
+        "channels-last-3d-backward": 0.090484619140625,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 71 element(s) (out of 4194304) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (-1.4775390625 vs. -1.478515625), which occurred at index (0, 1, 5, 1, 53)."
+    },
+    "(1, 16, 112, 112, 112)": {
+        "contiguous-forward": 0.8684206008911133,
+        "contiguous-backward": 2.319793701171875,
+        "channels-last-3d-forward": 0.21010637283325195,
+        "channels-last-3d-backward": 0.3806185722351074,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 2298 element(s) (out of 22478848) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00390625 (-4.1953125 vs. -4.19921875), which occurred at index (0, 5, 83, 55, 49)."
+    },
+    "(1, 32, 2, 2, 2)": {
+        "contiguous-forward": 0.04978179931640625,
+        "contiguous-backward": 0.06076335906982422,
+        "channels-last-3d-forward": 0.05586385726928711,
+        "channels-last-3d-backward": 0.06588220596313477
+    },
+    "(1, 32, 4, 4, 4)": {
+        "contiguous-forward": 0.049767494201660156,
+        "contiguous-backward": 0.0610041618347168,
+        "channels-last-3d-forward": 0.05536794662475586,
+        "channels-last-3d-backward": 0.06624698638916016
+    },
+    "(1, 32, 8, 8, 8)": {
+        "contiguous-forward": 0.04950284957885742,
+        "contiguous-backward": 0.0656890869140625,
+        "channels-last-3d-forward": 0.055921077728271484,
+        "channels-last-3d-backward": 0.06655454635620117
+    },
+    "(1, 32, 16, 16, 16)": {
+        "contiguous-forward": 0.049932003021240234,
+        "contiguous-backward": 0.06295919418334961,
+        "channels-last-3d-forward": 0.05555152893066406,
+        "channels-last-3d-backward": 0.07047176361083984,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 7 element(s) (out of 131072) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (2.015625 vs. 2.013671875), which occurred at index (0, 18, 11, 10, 1)."
+    },
+    "(1, 32, 32, 32, 32)": {
+        "contiguous-forward": 0.050814151763916016,
+        "contiguous-backward": 0.06082296371459961,
+        "channels-last-3d-forward": 0.05606651306152344,
+        "channels-last-3d-backward": 0.06670951843261719,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 51 element(s) (out of 1048576) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (2.478515625 vs. 2.4765625), which occurred at index (0, 29, 31, 14, 23)."
+    },
+    "(1, 32, 64, 64, 64)": {
+        "contiguous-forward": 0.14760732650756836,
+        "contiguous-backward": 0.47991514205932617,
+        "channels-last-3d-forward": 0.0634455680847168,
+        "channels-last-3d-backward": 0.12130498886108398,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 163 element(s) (out of 8388608) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (2.787109375 vs. 2.78515625), which occurred at index (0, 3, 29, 43, 14)."
+    },
+    "(1, 32, 112, 112, 112)": {
+        "contiguous-forward": 0.9236288070678711,
+        "contiguous-backward": 2.5043630599975586,
+        "channels-last-3d-forward": 0.26715755462646484,
+        "channels-last-3d-backward": 0.5787777900695801,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 2955 element(s) (out of 44957696) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (3.52734375 vs. 3.529296875), which occurred at index (0, 5, 99, 101, 106)."
+    },
+    "(1, 64, 2, 2, 2)": {
+        "contiguous-forward": 0.049796104431152344,
+        "contiguous-backward": 0.06119966506958008,
+        "channels-last-3d-forward": 0.0555109977722168,
+        "channels-last-3d-backward": 0.06650924682617188
+    },
+    "(1, 64, 4, 4, 4)": {
+        "contiguous-forward": 0.04958391189575195,
+        "contiguous-backward": 0.061287879943847656,
+        "channels-last-3d-forward": 0.05538225173950195,
+        "channels-last-3d-backward": 0.066375732421875
+    },
+    "(1, 64, 8, 8, 8)": {
+        "contiguous-forward": 0.05005359649658203,
+        "contiguous-backward": 0.0612497329711914,
+        "channels-last-3d-forward": 0.05585432052612305,
+        "channels-last-3d-backward": 0.06650209426879883,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 2 element(s) (out of 32768) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00048828125 (0.640625 vs. 0.64111328125), which occurred at index (0, 5, 4, 2, 2)."
+    },
+    "(1, 64, 16, 16, 16)": {
+        "contiguous-forward": 0.04993915557861328,
+        "contiguous-backward": 0.0617218017578125,
+        "channels-last-3d-forward": 0.05578279495239258,
+        "channels-last-3d-backward": 0.06685495376586914,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 12 element(s) (out of 262144) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (-1.66015625 vs. -1.6591796875), which occurred at index (0, 24, 5, 15, 1)."
+    },
+    "(1, 64, 32, 32, 32)": {
+        "contiguous-forward": 0.049767494201660156,
+        "contiguous-backward": 0.05936622619628906,
+        "channels-last-3d-forward": 0.05604982376098633,
+        "channels-last-3d-backward": 0.06606817245483398,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 91 element(s) (out of 2097152) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (2.666015625 vs. 2.6640625), which occurred at index (0, 11, 6, 4, 27)."
+    },
+    "(1, 64, 64, 64, 64)": {
+        "contiguous-forward": 0.19931316375732422,
+        "contiguous-backward": 0.5431580543518066,
+        "channels-last-3d-forward": 0.08251428604125977,
+        "channels-last-3d-backward": 0.20481586456298828,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 786 element(s) (out of 16777216) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (2.486328125 vs. 2.48828125), which occurred at index (0, 9, 1, 7, 37)."
+    },
+    "(1, 64, 112, 112, 112)": {
+        "contiguous-forward": 0.9827613830566406,
+        "contiguous-backward": 2.863624095916748,
+        "channels-last-3d-forward": 0.43770551681518555,
+        "channels-last-3d-backward": 1.086118221282959,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 5221 element(s) (out of 89915392) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (-2.890625 vs. -2.892578125), which occurred at index (0, 0, 0, 53, 50)."
+    },
+    "(2, 2, 2, 2, 2)": {
+        "contiguous-forward": 0.050520896911621094,
+        "contiguous-backward": 0.06114006042480469,
+        "channels-last-3d-forward": 0.05525350570678711,
+        "channels-last-3d-backward": 0.06705045700073242
+    },
+    "(2, 2, 4, 4, 4)": {
+        "contiguous-forward": 0.049402713775634766,
+        "contiguous-backward": 0.06100177764892578,
+        "channels-last-3d-forward": 0.055904388427734375,
+        "channels-last-3d-backward": 0.06657123565673828
+    },
+    "(2, 2, 8, 8, 8)": {
+        "contiguous-forward": 0.04981517791748047,
+        "contiguous-backward": 0.06124734878540039,
+        "channels-last-3d-forward": 0.05596160888671875,
+        "channels-last-3d-backward": 0.06662368774414062
+    },
+    "(2, 2, 16, 16, 16)": {
+        "contiguous-forward": 0.04952669143676758,
+        "contiguous-backward": 0.060935020446777344,
+        "channels-last-3d-forward": 0.05597352981567383,
+        "channels-last-3d-backward": 0.06670236587524414
+    },
+    "(2, 2, 32, 32, 32)": {
+        "contiguous-forward": 0.05071878433227539,
+        "contiguous-backward": 0.060820579528808594,
+        "channels-last-3d-forward": 0.05614042282104492,
+        "channels-last-3d-backward": 0.0701451301574707,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 5 element(s) (out of 131072) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.000244140625 (0.37109375 vs. 0.371337890625), which occurred at index (0, 0, 11, 15, 23)."
+    },
+    "(2, 2, 64, 64, 64)": {
+        "contiguous-forward": 0.13094186782836914,
+        "contiguous-backward": 0.34468889236450195,
+        "channels-last-3d-forward": 0.05622148513793945,
+        "channels-last-3d-backward": 0.06582975387573242,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 4 element(s) (out of 1048576) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 3.0517578125e-05 (-0.039703369140625 vs. -0.0396728515625), which occurred at index (0, 1, 24, 38, 20)."
+    },
+    "(2, 2, 112, 112, 112)": {
+        "contiguous-forward": 0.7610678672790527,
+        "contiguous-backward": 3.5885047912597656,
+        "channels-last-3d-forward": 0.07580280303955078,
+        "channels-last-3d-backward": 0.12917280197143555,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 2077 element(s) (out of 5619712) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (3.126953125 vs. 3.12890625), which occurred at index (0, 0, 33, 26, 28)."
+    },
+    "(2, 4, 2, 2, 2)": {
+        "contiguous-forward": 0.04971027374267578,
+        "contiguous-backward": 0.060553550720214844,
+        "channels-last-3d-forward": 0.05537748336791992,
+        "channels-last-3d-backward": 0.06617307662963867
+    },
+    "(2, 4, 4, 4, 4)": {
+        "contiguous-forward": 0.04966020584106445,
+        "contiguous-backward": 0.060935020446777344,
+        "channels-last-3d-forward": 0.05557060241699219,
+        "channels-last-3d-backward": 0.06717681884765625
+    },
+    "(2, 4, 8, 8, 8)": {
+        "contiguous-forward": 0.049593448638916016,
+        "contiguous-backward": 0.06116390228271485,
+        "channels-last-3d-forward": 0.05543708801269531,
+        "channels-last-3d-backward": 0.06603240966796875,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 1 element(s) (out of 4096) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00048828125 (0.6318359375 vs. 0.63232421875), which occurred at index (0, 2, 0, 2, 0)."
+    },
+    "(2, 4, 16, 16, 16)": {
+        "contiguous-forward": 0.050024986267089844,
+        "contiguous-backward": 0.06066322326660156,
+        "channels-last-3d-forward": 0.05547046661376953,
+        "channels-last-3d-backward": 0.06659269332885742
+    },
+    "(2, 4, 32, 32, 32)": {
+        "contiguous-forward": 0.04993915557861328,
+        "contiguous-backward": 0.0594639778137207,
+        "channels-last-3d-forward": 0.055730342864990234,
+        "channels-last-3d-backward": 0.06714582443237305
+    },
+    "(2, 4, 64, 64, 64)": {
+        "contiguous-forward": 0.13277292251586914,
+        "contiguous-backward": 0.3508186340332031,
+        "channels-last-3d-forward": 0.08095026016235352,
+        "channels-last-3d-backward": 0.10500669479370117,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 29 element(s) (out of 2097152) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0001220703125 (-0.19189453125 vs. -0.1917724609375), which occurred at index (0, 0, 0, 17, 58)."
+    },
+    "(2, 4, 112, 112, 112)": {
+        "contiguous-forward": 1.4805388450622559,
+        "contiguous-backward": 4.276020526885986,
+        "channels-last-3d-forward": 0.33730268478393555,
+        "channels-last-3d-backward": 0.4942917823791504,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 1577 element(s) (out of 11239424) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00390625 (-4.3046875 vs. -4.30859375), which occurred at index (0, 2, 48, 69, 85)."
+    },
+    "(2, 8, 2, 2, 2)": {
+        "contiguous-forward": 0.049266815185546875,
+        "contiguous-backward": 0.06078004837036133,
+        "channels-last-3d-forward": 0.05534648895263672,
+        "channels-last-3d-backward": 0.06595373153686523
+    },
+    "(2, 8, 4, 4, 4)": {
+        "contiguous-forward": 0.04961967468261719,
+        "contiguous-backward": 0.0609278678894043,
+        "channels-last-3d-forward": 0.05554676055908203,
+        "channels-last-3d-backward": 0.06608247756958008
+    },
+    "(2, 8, 8, 8, 8)": {
+        "contiguous-forward": 0.04941225051879883,
+        "contiguous-backward": 0.06156682968139649,
+        "channels-last-3d-forward": 0.055861473083496094,
+        "channels-last-3d-backward": 0.06576299667358398
+    },
+    "(2, 8, 16, 16, 16)": {
+        "contiguous-forward": 0.04964113235473633,
+        "contiguous-backward": 0.06094217300415039,
+        "channels-last-3d-forward": 0.05591869354248047,
+        "channels-last-3d-backward": 0.06632089614868164,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 3 element(s) (out of 65536) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00048828125 (-0.68505859375 vs. -0.6845703125), which occurred at index (0, 1, 4, 15, 2)."
+    },
+    "(2, 8, 32, 32, 32)": {
+        "contiguous-forward": 0.0490260124206543,
+        "contiguous-backward": 0.05919456481933594,
+        "channels-last-3d-forward": 0.056138038635253906,
+        "channels-last-3d-backward": 0.06571054458618164,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 15 element(s) (out of 524288) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (1.8837890625 vs. 1.884765625), which occurred at index (0, 1, 2, 21, 4)."
+    },
+    "(2, 8, 64, 64, 64)": {
+        "contiguous-forward": 0.13914108276367188,
+        "contiguous-backward": 0.4687023162841797,
+        "channels-last-3d-forward": 0.09069442749023438,
+        "channels-last-3d-backward": 0.12341737747192383,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 70 element(s) (out of 4194304) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (2.900390625 vs. 2.90234375), which occurred at index (0, 6, 7, 51, 33)."
+    },
+    "(2, 8, 112, 112, 112)": {
+        "contiguous-forward": 1.652064323425293,
+        "contiguous-backward": 4.4025444984436035,
+        "channels-last-3d-forward": 0.35921812057495117,
+        "channels-last-3d-backward": 0.5758786201477051,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 2026 element(s) (out of 22478848) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (-2.580078125 vs. -2.58203125), which occurred at index (0, 3, 0, 17, 78)."
+    },
+    "(2, 16, 2, 2, 2)": {
+        "contiguous-forward": 0.04943370819091797,
+        "contiguous-backward": 0.06356477737426758,
+        "channels-last-3d-forward": 0.0553584098815918,
+        "channels-last-3d-backward": 0.06575584411621094
+    },
+    "(2, 16, 4, 4, 4)": {
+        "contiguous-forward": 0.049571990966796875,
+        "contiguous-backward": 0.06096363067626953,
+        "channels-last-3d-forward": 0.05570650100708008,
+        "channels-last-3d-backward": 0.06595373153686523
+    },
+    "(2, 16, 8, 8, 8)": {
+        "contiguous-forward": 0.04974365234375,
+        "contiguous-backward": 0.0610041618347168,
+        "channels-last-3d-forward": 0.05599260330200195,
+        "channels-last-3d-backward": 0.06608724594116211,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 1 element(s) (out of 16384) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (1.947265625 vs. 1.9462890625), which occurred at index (1, 15, 3, 3, 0)."
+    },
+    "(2, 16, 16, 16, 16)": {
+        "contiguous-forward": 0.05008220672607422,
+        "contiguous-backward": 0.06061553955078125,
+        "channels-last-3d-forward": 0.056624412536621094,
+        "channels-last-3d-backward": 0.0667572021484375,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 7 element(s) (out of 131072) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (1.1416015625 vs. 1.142578125), which occurred at index (0, 14, 15, 4, 0)."
+    },
+    "(2, 16, 32, 32, 32)": {
+        "contiguous-forward": 0.0491786003112793,
+        "contiguous-backward": 0.06431341171264648,
+        "channels-last-3d-forward": 0.05599021911621094,
+        "channels-last-3d-backward": 0.06580591201782227,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 11 element(s) (out of 1048576) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (2.5546875 vs. 2.556640625), which occurred at index (1, 15, 22, 20, 20)."
+    },
+    "(2, 16, 64, 64, 64)": {
+        "contiguous-forward": 0.23807287216186523,
+        "contiguous-backward": 0.8825469017028809,
+        "channels-last-3d-forward": 0.09315729141235352,
+        "channels-last-3d-backward": 0.15437602996826172,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 440 element(s) (out of 8388608) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (-1.89453125 vs. -1.8955078125), which occurred at index (0, 7, 5, 34, 29)."
+    },
+    "(2, 16, 112, 112, 112)": {
+        "contiguous-forward": 1.7270445823669434,
+        "contiguous-backward": 4.618082046508789,
+        "channels-last-3d-forward": 0.3951430320739746,
+        "channels-last-3d-backward": 0.7436537742614746,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 9082 element(s) (out of 44957696) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (-3.35546875 vs. -3.357421875), which occurred at index (0, 5, 23, 71, 17)."
+    },
+    "(2, 32, 2, 2, 2)": {
+        "contiguous-forward": 0.050835609436035156,
+        "contiguous-backward": 0.06451129913330078,
+        "channels-last-3d-forward": 0.05574941635131836,
+        "channels-last-3d-backward": 0.06589412689208984
+    },
+    "(2, 32, 4, 4, 4)": {
+        "contiguous-forward": 0.049386024475097656,
+        "contiguous-backward": 0.06350040435791016,
+        "channels-last-3d-forward": 0.05617856979370117,
+        "channels-last-3d-backward": 0.06584405899047852,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 1 element(s) (out of 4096) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00048828125 (0.990234375 vs. 0.99072265625), which occurred at index (0, 22, 2, 1, 0)."
+    },
+    "(2, 32, 8, 8, 8)": {
+        "contiguous-forward": 0.050148963928222656,
+        "contiguous-backward": 0.06391763687133789,
+        "channels-last-3d-forward": 0.05550384521484375,
+        "channels-last-3d-backward": 0.06601810455322266,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 4 element(s) (out of 32768) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (-1.412109375 vs. -1.4111328125), which occurred at index (0, 18, 2, 1, 1)."
+    },
+    "(2, 32, 16, 16, 16)": {
+        "contiguous-forward": 0.049664974212646484,
+        "contiguous-backward": 0.060677528381347656,
+        "channels-last-3d-forward": 0.05595684051513672,
+        "channels-last-3d-backward": 0.06594657897949219,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 15 element(s) (out of 262144) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (-1.634765625 vs. -1.6337890625), which occurred at index (0, 26, 6, 10, 3)."
+    },
+    "(2, 32, 32, 32, 32)": {
+        "contiguous-forward": 0.05016803741455078,
+        "contiguous-backward": 0.06535768508911133,
+        "channels-last-3d-forward": 0.056099891662597656,
+        "channels-last-3d-backward": 0.06608724594116211,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 64 element(s) (out of 2097152) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (-3.25 vs. -3.248046875), which occurred at index (1, 31, 5, 4, 14)."
+    },
+    "(2, 32, 64, 64, 64)": {
+        "contiguous-forward": 0.3525376319885254,
+        "contiguous-backward": 0.9431815147399902,
+        "channels-last-3d-forward": 0.1091623306274414,
+        "channels-last-3d-backward": 0.22692203521728516,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 747 element(s) (out of 16777216) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (1.9287109375 vs. 1.927734375), which occurred at index (0, 0, 0, 17, 6)."
+    },
+    "(2, 32, 112, 112, 112)": {
+        "contiguous-forward": 1.8130946159362793,
+        "contiguous-backward": 4.9910759925842285,
+        "channels-last-3d-forward": 0.5115151405334473,
+        "channels-last-3d-backward": 1.132190227508545,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 14797 element(s) (out of 89915392) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (3.083984375 vs. 3.0859375), which occurred at index (0, 0, 6, 71, 18)."
+    },
+    "(2, 64, 2, 2, 2)": {
+        "contiguous-forward": 0.05026102066040039,
+        "contiguous-backward": 0.06420373916625977,
+        "channels-last-3d-forward": 0.05584001541137695,
+        "channels-last-3d-backward": 0.06604671478271484
+    },
+    "(2, 64, 4, 4, 4)": {
+        "contiguous-forward": 0.05003690719604492,
+        "contiguous-backward": 0.06093263626098633,
+        "channels-last-3d-forward": 0.055882930755615234,
+        "channels-last-3d-backward": 0.06635665893554688
+    },
+    "(2, 64, 8, 8, 8)": {
+        "contiguous-forward": 0.049800872802734375,
+        "contiguous-backward": 0.060901641845703125,
+        "channels-last-3d-forward": 0.05571603775024414,
+        "channels-last-3d-backward": 0.06645679473876953,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 3 element(s) (out of 65536) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00048828125 (-0.88037109375 vs. -0.880859375), which occurred at index (1, 0, 7, 3, 7)."
+    },
+    "(2, 64, 16, 16, 16)": {
+        "contiguous-forward": 0.049643516540527344,
+        "contiguous-backward": 0.06203413009643555,
+        "channels-last-3d-forward": 0.05553483963012695,
+        "channels-last-3d-backward": 0.06680965423583984,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 23 element(s) (out of 524288) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (-2.041015625 vs. -2.04296875), which occurred at index (0, 51, 6, 10, 0)."
+    },
+    "(2, 64, 32, 32, 32)": {
+        "contiguous-forward": 0.05517005920410156,
+        "contiguous-backward": 0.10337352752685547,
+        "channels-last-3d-forward": 0.06171226501464843,
+        "channels-last-3d-backward": 0.07169961929321289,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 115 element(s) (out of 4194304) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (2.37109375 vs. 2.369140625), which occurred at index (0, 5, 13, 6, 8)."
+    },
+    "(2, 64, 64, 64, 64)": {
+        "contiguous-forward": 0.3824615478515625,
+        "contiguous-backward": 1.0749483108520508,
+        "channels-last-3d-forward": 0.17688274383544922,
+        "channels-last-3d-backward": 0.414731502532959,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 1010 element(s) (out of 33554432) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (2.859375 vs. 2.857421875), which occurred at index (0, 2, 35, 53, 39)."
+    },
+    "(2, 64, 112, 112, 112)": {
+        "contiguous-forward": 1.9521570205688477,
+        "contiguous-backward": 5.709586143493652,
+        "channels-last-3d-forward": 0.849606990814209,
+        "channels-last-3d-backward": 2.1485424041748047,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 29228 element(s) (out of 179830784) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00390625 (4.16015625 vs. 4.1640625), which occurred at index (1, 61, 12, 41, 70)."
+    },
+    "(4, 2, 2, 2, 2)": {
+        "contiguous-forward": 0.0494384765625,
+        "contiguous-backward": 0.06392240524291992,
+        "channels-last-3d-forward": 0.05534172058105469,
+        "channels-last-3d-backward": 0.0659632682800293
+    },
+    "(4, 2, 4, 4, 4)": {
+        "contiguous-forward": 0.04939556121826172,
+        "contiguous-backward": 0.06086587905883789,
+        "channels-last-3d-forward": 0.05549907684326172,
+        "channels-last-3d-backward": 0.06569147109985352
+    },
+    "(4, 2, 8, 8, 8)": {
+        "contiguous-forward": 0.04936933517456055,
+        "contiguous-backward": 0.06125926971435547,
+        "channels-last-3d-forward": 0.0558924674987793,
+        "channels-last-3d-backward": 0.06583929061889648
+    },
+    "(4, 2, 16, 16, 16)": {
+        "contiguous-forward": 0.04992246627807617,
+        "contiguous-backward": 0.060498714447021484,
+        "channels-last-3d-forward": 0.05585432052612305,
+        "channels-last-3d-backward": 0.0664377212524414
+    },
+    "(4, 2, 32, 32, 32)": {
+        "contiguous-forward": 0.049462318420410156,
+        "contiguous-backward": 0.09843111038208008,
+        "channels-last-3d-forward": 0.055506229400634766,
+        "channels-last-3d-backward": 0.06624698638916016
+    },
+    "(4, 2, 64, 64, 64)": {
+        "contiguous-forward": 0.2540016174316406,
+        "contiguous-backward": 0.6722807884216309,
+        "channels-last-3d-forward": 0.05641937255859375,
+        "channels-last-3d-backward": 0.06606817245483398
+    },
+    "(4, 2, 112, 112, 112)": {
+        "contiguous-forward": 2.6240015029907227,
+        "contiguous-backward": 8.356082439422607,
+        "channels-last-3d-forward": 0.14903545379638672,
+        "channels-last-3d-backward": 0.2453112602233887,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 6417 element(s) (out of 11239424) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00390625 (4.234375 vs. 4.23828125), which occurred at index (1, 1, 22, 55, 106)."
+    },
+    "(4, 4, 2, 2, 2)": {
+        "contiguous-forward": 0.04929065704345703,
+        "contiguous-backward": 0.06081104278564453,
+        "channels-last-3d-forward": 0.055909156799316406,
+        "channels-last-3d-backward": 0.06601333618164062
+    },
+    "(4, 4, 4, 4, 4)": {
+        "contiguous-forward": 0.04956960678100586,
+        "contiguous-backward": 0.06073951721191406,
+        "channels-last-3d-forward": 0.05524873733520508,
+        "channels-last-3d-backward": 0.06893157958984375
+    },
+    "(4, 4, 8, 8, 8)": {
+        "contiguous-forward": 0.050301551818847656,
+        "contiguous-backward": 0.06049394607543945,
+        "channels-last-3d-forward": 0.05587577819824219,
+        "channels-last-3d-backward": 0.06623029708862305
+    },
+    "(4, 4, 16, 16, 16)": {
+        "contiguous-forward": 0.049932003021240234,
+        "contiguous-backward": 0.06102561950683594,
+        "channels-last-3d-forward": 0.05528688430786133,
+        "channels-last-3d-backward": 0.06799936294555664
+    },
+    "(4, 4, 32, 32, 32)": {
+        "contiguous-forward": 0.049347877502441406,
+        "contiguous-backward": 0.09983539581298828,
+        "channels-last-3d-forward": 0.05566120147705078,
+        "channels-last-3d-backward": 0.06901025772094727
+    },
+    "(4, 4, 64, 64, 64)": {
+        "contiguous-forward": 0.26111364364624023,
+        "contiguous-backward": 0.8922743797302246,
+        "channels-last-3d-forward": 0.1402902603149414,
+        "channels-last-3d-backward": 0.19220352172851562,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 307 element(s) (out of 4194304) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (2.966796875 vs. 2.96875), which occurred at index (0, 1, 25, 17, 5)."
+    },
+    "(4, 4, 112, 112, 112)": {
+        "contiguous-forward": 3.1897997856140137,
+        "contiguous-backward": 8.509800434112549,
+        "channels-last-3d-forward": 0.6522440910339355,
+        "channels-last-3d-backward": 0.9634613990783691,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 5658 element(s) (out of 22478848) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00390625 (4.53515625 vs. 4.5390625), which occurred at index (2, 0, 53, 106, 6)."
+    },
+    "(4, 8, 2, 2, 2)": {
+        "contiguous-forward": 0.04962921142578125,
+        "contiguous-backward": 0.06064891815185547,
+        "channels-last-3d-forward": 0.05527973175048828,
+        "channels-last-3d-backward": 0.06613731384277344
+    },
+    "(4, 8, 4, 4, 4)": {
+        "contiguous-forward": 0.049588680267333984,
+        "contiguous-backward": 0.06095409393310547,
+        "channels-last-3d-forward": 0.0554347038269043,
+        "channels-last-3d-backward": 0.06883621215820312
+    },
+    "(4, 8, 8, 8, 8)": {
+        "contiguous-forward": 0.049512386322021484,
+        "contiguous-backward": 0.06064414978027344,
+        "channels-last-3d-forward": 0.05497932434082031,
+        "channels-last-3d-backward": 0.06622314453125,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 1 element(s) (out of 16384) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (1.6875 vs. 1.6865234375), which occurred at index (0, 6, 6, 5, 0)."
+    },
+    "(4, 8, 16, 16, 16)": {
+        "contiguous-forward": 0.04967927932739258,
+        "contiguous-backward": 0.06194114685058594,
+        "channels-last-3d-forward": 0.0559544563293457,
+        "channels-last-3d-backward": 0.06640195846557617,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 17 element(s) (out of 131072) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (-2.2578125 vs. -2.259765625), which occurred at index (0, 2, 0, 2, 3)."
+    },
+    "(4, 8, 32, 32, 32)": {
+        "contiguous-forward": 0.049796104431152344,
+        "contiguous-backward": 0.10282039642333984,
+        "channels-last-3d-forward": 0.05638837814331055,
+        "channels-last-3d-backward": 0.06571531295776367
+    },
+    "(4, 8, 64, 64, 64)": {
+        "contiguous-forward": 0.3516387939453125,
+        "contiguous-backward": 1.6599845886230469,
+        "channels-last-3d-forward": 0.14528274536132812,
+        "channels-last-3d-backward": 0.22999286651611328,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 233 element(s) (out of 8388608) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (-1.9951171875 vs. -1.994140625), which occurred at index (0, 0, 0, 48, 50)."
+    },
+    "(4, 8, 112, 112, 112)": {
+        "contiguous-forward": 3.3068156242370605,
+        "contiguous-backward": 8.793067932128906,
+        "channels-last-3d-forward": 0.6758737564086914,
+        "channels-last-3d-backward": 1.1145353317260742,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 15598 element(s) (out of 44957696) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00390625 (-4.05859375 vs. -4.0625), which occurred at index (0, 4, 3, 14, 100)."
+    },
+    "(4, 16, 2, 2, 2)": {
+        "contiguous-forward": 0.0494837760925293,
+        "contiguous-backward": 0.060782432556152344,
+        "channels-last-3d-forward": 0.05522489547729492,
+        "channels-last-3d-backward": 0.06878376007080078
+    },
+    "(4, 16, 4, 4, 4)": {
+        "contiguous-forward": 0.04921436309814453,
+        "contiguous-backward": 0.06303548812866211,
+        "channels-last-3d-forward": 0.05510091781616211,
+        "channels-last-3d-backward": 0.06611108779907227
+    },
+    "(4, 16, 8, 8, 8)": {
+        "contiguous-forward": 0.049474239349365234,
+        "contiguous-backward": 0.06096839904785156,
+        "channels-last-3d-forward": 0.055849552154541016,
+        "channels-last-3d-backward": 0.06617069244384766,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 4 element(s) (out of 32768) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00048828125 (0.892578125 vs. 0.89208984375), which occurred at index (1, 10, 4, 6, 5)."
+    },
+    "(4, 16, 16, 16, 16)": {
+        "contiguous-forward": 0.04959583282470703,
+        "contiguous-backward": 0.0606846809387207,
+        "channels-last-3d-forward": 0.055260658264160156,
+        "channels-last-3d-backward": 0.07022619247436523,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 18 element(s) (out of 262144) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (2.017578125 vs. 2.015625), which occurred at index (2, 12, 13, 0, 2)."
+    },
+    "(4, 16, 32, 32, 32)": {
+        "contiguous-forward": 0.04949331283569336,
+        "contiguous-backward": 0.10851860046386719,
+        "channels-last-3d-forward": 0.05589485168457031,
+        "channels-last-3d-backward": 0.06947755813598633,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 197 element(s) (out of 2097152) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (-2.134765625 vs. -2.1328125), which occurred at index (0, 2, 10, 14, 21)."
+    },
+    "(4, 16, 64, 64, 64)": {
+        "contiguous-forward": 0.6511235237121582,
+        "contiguous-backward": 1.7369508743286133,
+        "channels-last-3d-forward": 0.16466617584228516,
+        "channels-last-3d-backward": 0.2890181541442871,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 997 element(s) (out of 16777216) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (-2.720703125 vs. -2.71875), which occurred at index (0, 8, 4, 44, 19)."
+    },
+    "(4, 16, 112, 112, 112)": {
+        "contiguous-forward": 3.4348177909851074,
+        "contiguous-backward": 9.224975109100342,
+        "channels-last-3d-forward": 0.7542061805725098,
+        "channels-last-3d-backward": 1.4565706253051758,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 49950 element(s) (out of 89915392) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00390625 (4.3828125 vs. 4.38671875), which occurred at index (1, 14, 97, 86, 51)."
+    },
+    "(4, 32, 2, 2, 2)": {
+        "contiguous-forward": 0.04954814910888672,
+        "contiguous-backward": 0.060677528381347656,
+        "channels-last-3d-forward": 0.055603981018066406,
+        "channels-last-3d-backward": 0.06577253341674805
+    },
+    "(4, 32, 4, 4, 4)": {
+        "contiguous-forward": 0.04959583282470703,
+        "contiguous-backward": 0.06547689437866211,
+        "channels-last-3d-forward": 0.055446624755859375,
+        "channels-last-3d-backward": 0.06615638732910156,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 3 element(s) (out of 8192) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (1.8642578125 vs. 1.865234375), which occurred at index (0, 7, 1, 1, 1)."
+    },
+    "(4, 32, 8, 8, 8)": {
+        "contiguous-forward": 0.04990339279174805,
+        "contiguous-backward": 0.06487369537353516,
+        "channels-last-3d-forward": 0.055260658264160156,
+        "channels-last-3d-backward": 0.0662994384765625
+    },
+    "(4, 32, 16, 16, 16)": {
+        "contiguous-forward": 0.0508570671081543,
+        "contiguous-backward": 0.06049394607543945,
+        "channels-last-3d-forward": 0.05509614944458008,
+        "channels-last-3d-backward": 0.06551980972290039,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 35 element(s) (out of 524288) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (-1.15625 vs. -1.1552734375), which occurred at index (0, 14, 3, 4, 8)."
+    },
+    "(4, 32, 32, 32, 32)": {
+        "contiguous-forward": 0.055389404296875,
+        "contiguous-backward": 0.171661376953125,
+        "channels-last-3d-forward": 0.061433315277099616,
+        "channels-last-3d-backward": 0.0718379020690918,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 176 element(s) (out of 4194304) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (-2.486328125 vs. -2.48828125), which occurred at index (0, 3, 15, 8, 11)."
+    },
+    "(4, 32, 64, 64, 64)": {
+        "contiguous-forward": 0.6917786598205566,
+        "contiguous-backward": 1.8719291687011719,
+        "channels-last-3d-forward": 0.20728111267089844,
+        "channels-last-3d-backward": 0.43859243392944336,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 1342 element(s) (out of 33554432) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (3.80078125 vs. 3.802734375), which occurred at index (0, 11, 43, 13, 35)."
+    },
+    "(4, 32, 112, 112, 112)": {
+        "contiguous-forward": 3.619225025177002,
+        "contiguous-backward": 9.963011741638184,
+        "channels-last-3d-forward": 0.9864330291748046,
+        "channels-last-3d-backward": 2.258479595184326,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 64317 element(s) (out of 179830784) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00390625 (-4.82421875 vs. -4.828125), which occurred at index (0, 13, 65, 85, 83)."
+    },
+    "(4, 64, 2, 2, 2)": {
+        "contiguous-forward": 0.05034685134887695,
+        "contiguous-backward": 0.06107807159423828,
+        "channels-last-3d-forward": 0.05580425262451172,
+        "channels-last-3d-backward": 0.06634235382080078
+    },
+    "(4, 64, 4, 4, 4)": {
+        "contiguous-forward": 0.04939556121826172,
+        "contiguous-backward": 0.06169319152832031,
+        "channels-last-3d-forward": 0.05548715591430664,
+        "channels-last-3d-backward": 0.06654977798461914
+    },
+    "(4, 64, 8, 8, 8)": {
+        "contiguous-forward": 0.04961729049682617,
+        "contiguous-backward": 0.06254911422729492,
+        "channels-last-3d-forward": 0.055713653564453125,
+        "channels-last-3d-backward": 0.0666499137878418,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 4 element(s) (out of 131072) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (-1.1337890625 vs. -1.1328125), which occurred at index (0, 8, 4, 4, 4)."
+    },
+    "(4, 64, 16, 16, 16)": {
+        "contiguous-forward": 0.049567222595214844,
+        "contiguous-backward": 0.06113529205322266,
+        "channels-last-3d-forward": 0.055942535400390625,
+        "channels-last-3d-backward": 0.06687641143798828,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 38 element(s) (out of 1048576) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (2.37109375 vs. 2.369140625), which occurred at index (2, 57, 11, 2, 11)."
+    },
+    "(4, 64, 32, 32, 32)": {
+        "contiguous-forward": 0.08375406265258789,
+        "contiguous-backward": 0.2773857116699219,
+        "channels-last-3d-forward": 0.06127595901489258,
+        "channels-last-3d-backward": 0.10742902755737305,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 183 element(s) (out of 8388608) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (2.08203125 vs. 2.083984375), which occurred at index (0, 61, 12, 27, 25)."
+    },
+    "(4, 64, 64, 64, 64)": {
+        "contiguous-forward": 0.7303428649902344,
+        "contiguous-backward": 2.1318674087524414,
+        "channels-last-3d-forward": 0.33554792404174805,
+        "channels-last-3d-backward": 0.8187198638916016,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 3412 element(s) (out of 67108864) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (2.154296875 vs. 2.15625), which occurred at index (0, 27, 2, 11, 32)."
+    },
+    "(4, 64, 112, 112, 112)": {
+        "contiguous-forward": 3.9018774032592773,
+        "contiguous-backward": 11.453766822814941,
+        "channels-last-3d-forward": 1.6548562049865723,
+        "channels-last-3d-backward": 4.2829155921936035,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 155968 element(s) (out of 359661568) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00390625 (-4.3984375 vs. -4.40234375), which occurred at index (0, 6, 14, 82, 67)."
+    },
+    "(8, 2, 2, 2, 2)": {
+        "contiguous-forward": 0.04942178726196289,
+        "contiguous-backward": 0.061314105987548835,
+        "channels-last-3d-forward": 0.055637359619140625,
+        "channels-last-3d-backward": 0.06622314453125
+    },
+    "(8, 2, 4, 4, 4)": {
+        "contiguous-forward": 0.0499725341796875,
+        "contiguous-backward": 0.06148099899291992,
+        "channels-last-3d-forward": 0.05563020706176758,
+        "channels-last-3d-backward": 0.06630659103393555
+    },
+    "(8, 2, 8, 8, 8)": {
+        "contiguous-forward": 0.049681663513183594,
+        "contiguous-backward": 0.061178207397460944,
+        "channels-last-3d-forward": 0.05612611770629883,
+        "channels-last-3d-backward": 0.06656646728515625
+    },
+    "(8, 2, 16, 16, 16)": {
+        "contiguous-forward": 0.05005836486816406,
+        "contiguous-backward": 0.06015777587890625,
+        "channels-last-3d-forward": 0.05553483963012695,
+        "channels-last-3d-backward": 0.06694555282592773,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 7 element(s) (out of 65536) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00048828125 (0.50634765625 vs. 0.505859375), which occurred at index (1, 1, 14, 3, 6)."
+    },
+    "(8, 2, 32, 32, 32)": {
+        "contiguous-forward": 0.07203102111816406,
+        "contiguous-backward": 0.18157005310058594,
+        "channels-last-3d-forward": 0.05592823028564453,
+        "channels-last-3d-backward": 0.06632566452026367
+    },
+    "(8, 2, 64, 64, 64)": {
+        "contiguous-forward": 0.5058622360229492,
+        "contiguous-backward": 2.305436134338379,
+        "channels-last-3d-forward": 0.06165504455566407,
+        "channels-last-3d-backward": 0.09961366653442383
+    },
+    "(8, 2, 112, 112, 112)": {
+        "contiguous-forward": 6.244704723358154,
+        "contiguous-backward": 16.78215742111206,
+        "channels-last-3d-forward": 0.2772212028503418,
+        "channels-last-3d-backward": 0.47026634216308594,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 41912 element(s) (out of 22478848) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00390625 (-4.4609375 vs. -4.46484375), which occurred at index (0, 1, 92, 42, 49)."
+    },
+    "(8, 4, 2, 2, 2)": {
+        "contiguous-forward": 0.049533843994140625,
+        "contiguous-backward": 0.06429672241210938,
+        "channels-last-3d-forward": 0.05493640899658203,
+        "channels-last-3d-backward": 0.06628990173339844
+    },
+    "(8, 4, 4, 4, 4)": {
+        "contiguous-forward": 0.049872398376464844,
+        "contiguous-backward": 0.06485700607299805,
+        "channels-last-3d-forward": 0.05558013916015625,
+        "channels-last-3d-backward": 0.06935834884643555,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 1 element(s) (out of 2048) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 3.0517578125e-05 (0.043304443359375 vs. 0.0433349609375), which occurred at index (1, 1, 1, 1, 1)."
+    },
+    "(8, 4, 8, 8, 8)": {
+        "contiguous-forward": 0.04950761795043945,
+        "contiguous-backward": 0.0610804557800293,
+        "channels-last-3d-forward": 0.055811405181884766,
+        "channels-last-3d-backward": 0.06636857986450195
+    },
+    "(8, 4, 16, 16, 16)": {
+        "contiguous-forward": 0.049779415130615234,
+        "contiguous-backward": 0.06345748901367188,
+        "channels-last-3d-forward": 0.0557255744934082,
+        "channels-last-3d-backward": 0.0664663314819336,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 6 element(s) (out of 131072) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (-1.5205078125 vs. -1.521484375), which occurred at index (2, 3, 0, 1, 13)."
+    },
+    "(8, 4, 32, 32, 32)": {
+        "contiguous-forward": 0.07271051406860352,
+        "contiguous-backward": 0.18505573272705078,
+        "channels-last-3d-forward": 0.056138038635253906,
+        "channels-last-3d-backward": 0.06615877151489258,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 4 element(s) (out of 1048576) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 3.0517578125e-05 (0.0625 vs. 0.062469482421875), which occurred at index (2, 2, 8, 12, 5)."
+    },
+    "(8, 4, 64, 64, 64)": {
+        "contiguous-forward": 0.7102632522583008,
+        "contiguous-backward": 3.189971446990967,
+        "channels-last-3d-forward": 0.25368213653564453,
+        "channels-last-3d-backward": 0.3715085983276367,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 844 element(s) (out of 8388608) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (3.689453125 vs. 3.69140625), which occurred at index (3, 1, 14, 41, 14)."
+    },
+    "(8, 4, 112, 112, 112)": {
+        "contiguous-forward": 6.373493671417236,
+        "contiguous-backward": 16.976375579833984,
+        "channels-last-3d-forward": 1.2636017799377441,
+        "channels-last-3d-backward": 1.8984770774841309,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 92534 element(s) (out of 44957696) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (2.787109375 vs. 2.7890625), which occurred at index (0, 0, 0, 111, 72)."
+    },
+    "(8, 8, 2, 2, 2)": {
+        "contiguous-forward": 0.04967212677001953,
+        "contiguous-backward": 0.061364173889160156,
+        "channels-last-3d-forward": 0.055718421936035156,
+        "channels-last-3d-backward": 0.06670713424682617
+    },
+    "(8, 8, 4, 4, 4)": {
+        "contiguous-forward": 0.04954814910888672,
+        "contiguous-backward": 0.06133556365966797,
+        "channels-last-3d-forward": 0.05528450012207031,
+        "channels-last-3d-backward": 0.06662130355834961
+    },
+    "(8, 8, 8, 8, 8)": {
+        "contiguous-forward": 0.04973411560058594,
+        "contiguous-backward": 0.06127595901489258,
+        "channels-last-3d-forward": 0.0556635856628418,
+        "channels-last-3d-backward": 0.06684064865112305,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 1 element(s) (out of 32768) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.000244140625 (0.345947265625 vs. 0.34619140625), which occurred at index (5, 5, 1, 2, 5)."
+    },
+    "(8, 8, 16, 16, 16)": {
+        "contiguous-forward": 0.049643516540527344,
+        "contiguous-backward": 0.06006002426147461,
+        "channels-last-3d-forward": 0.055718421936035156,
+        "channels-last-3d-backward": 0.06899118423461914,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 1 element(s) (out of 262144) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0001220703125 (0.1541748046875 vs. 0.154052734375), which occurred at index (0, 5, 4, 14, 3)."
+    },
+    "(8, 8, 32, 32, 32)": {
+        "contiguous-forward": 0.0733494758605957,
+        "contiguous-backward": 0.19128799438476562,
+        "channels-last-3d-forward": 0.05584001541137695,
+        "channels-last-3d-backward": 0.06968498229980469,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 39 element(s) (out of 2097152) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (-3.162109375 vs. -3.16015625), which occurred at index (4, 4, 0, 6, 27)."
+    },
+    "(8, 8, 64, 64, 64)": {
+        "contiguous-forward": 1.2354803085327148,
+        "contiguous-backward": 3.3016443252563477,
+        "channels-last-3d-forward": 0.2756977081298828,
+        "channels-last-3d-backward": 0.4359269142150879,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 2565 element(s) (out of 16777216) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (-3.947265625 vs. -3.94921875), which occurred at index (2, 4, 23, 46, 20)."
+    },
+    "(8, 8, 112, 112, 112)": {
+        "contiguous-forward": 6.594333648681641,
+        "contiguous-backward": 17.577428817749023,
+        "channels-last-3d-forward": 1.30112886428833,
+        "channels-last-3d-backward": 2.1970534324645996,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 84539 element(s) (out of 89915392) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (2.453125 vs. 2.455078125), which occurred at index (0, 1, 0, 3, 36)."
+    },
+    "(8, 16, 2, 2, 2)": {
+        "contiguous-forward": 0.049190521240234375,
+        "contiguous-backward": 0.06230354309082031,
+        "channels-last-3d-forward": 0.05487203598022461,
+        "channels-last-3d-backward": 0.06645441055297852
+    },
+    "(8, 16, 4, 4, 4)": {
+        "contiguous-forward": 0.049910545349121094,
+        "contiguous-backward": 0.06107568740844727,
+        "channels-last-3d-forward": 0.055594444274902344,
+        "channels-last-3d-backward": 0.06644964218139648
+    },
+    "(8, 16, 8, 8, 8)": {
+        "contiguous-forward": 0.050301551818847656,
+        "contiguous-backward": 0.061218738555908196,
+        "channels-last-3d-forward": 0.05549907684326172,
+        "channels-last-3d-backward": 0.06658077239990234,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 5 element(s) (out of 65536) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (-1.845703125 vs. -1.8447265625), which occurred at index (3, 10, 0, 3, 0)."
+    },
+    "(8, 16, 16, 16, 16)": {
+        "contiguous-forward": 0.04925727844238281,
+        "contiguous-backward": 0.059659481048583984,
+        "channels-last-3d-forward": 0.05518674850463867,
+        "channels-last-3d-backward": 0.06568670272827148,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 23 element(s) (out of 524288) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (-2.00390625 vs. -2.001953125), which occurred at index (0, 8, 3, 14, 15)."
+    },
+    "(8, 16, 32, 32, 32)": {
+        "contiguous-forward": 0.0800013542175293,
+        "contiguous-backward": 0.2661418914794922,
+        "channels-last-3d-forward": 0.06278038024902344,
+        "channels-last-3d-backward": 0.08457422256469727,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 88 element(s) (out of 4194304) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (2.5078125 vs. 2.509765625), which occurred at index (2, 10, 23, 23, 26)."
+    },
+    "(8, 16, 64, 64, 64)": {
+        "contiguous-forward": 1.2851452827453613,
+        "contiguous-backward": 3.458113670349121,
+        "channels-last-3d-forward": 0.30209779739379883,
+        "channels-last-3d-backward": 0.5567431449890137,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 4967 element(s) (out of 33554432) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (2.279296875 vs. 2.28125), which occurred at index (0, 6, 6, 39, 57)."
+    },
+    "(8, 16, 112, 112, 112)": {
+        "contiguous-forward": 6.884810924530029,
+        "contiguous-backward": 18.494105339050293,
+        "channels-last-3d-forward": 1.500716209411621,
+        "channels-last-3d-backward": 2.9167556762695312,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 189590 element(s) (out of 179830784) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00390625 (-4.96484375 vs. -4.96875), which occurred at index (6, 6, 88, 111, 50)."
+    },
+    "(8, 32, 2, 2, 2)": {
+        "contiguous-forward": 0.049359798431396484,
+        "contiguous-backward": 0.061545372009277344,
+        "channels-last-3d-forward": 0.05537986755371094,
+        "channels-last-3d-backward": 0.06757497787475586
+    },
+    "(8, 32, 4, 4, 4)": {
+        "contiguous-forward": 0.04986763000488281,
+        "contiguous-backward": 0.06131172180175782,
+        "channels-last-3d-forward": 0.05530834197998047,
+        "channels-last-3d-backward": 0.06634712219238281
+    },
+    "(8, 32, 8, 8, 8)": {
+        "contiguous-forward": 0.0500941276550293,
+        "contiguous-backward": 0.060923099517822266,
+        "channels-last-3d-forward": 0.055832862854003906,
+        "channels-last-3d-backward": 0.06658315658569336,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 5 element(s) (out of 131072) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (1.490234375 vs. 1.4892578125), which occurred at index (4, 7, 6, 0, 5)."
+    },
+    "(8, 32, 16, 16, 16)": {
+        "contiguous-forward": 0.04998445510864258,
+        "contiguous-backward": 0.05978822708129883,
+        "channels-last-3d-forward": 0.055828094482421875,
+        "channels-last-3d-backward": 0.06633281707763672,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 47 element(s) (out of 1048576) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (-2.599609375 vs. -2.6015625), which occurred at index (4, 18, 6, 10, 1)."
+    },
+    "(8, 32, 32, 32, 32)": {
+        "contiguous-forward": 0.14054536819458008,
+        "contiguous-backward": 0.47725677490234375,
+        "channels-last-3d-forward": 0.06351470947265625,
+        "channels-last-3d-backward": 0.12012004852294922,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 173 element(s) (out of 8388608) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (-2.703125 vs. -2.705078125), which occurred at index (0, 15, 4, 9, 24)."
+    },
+    "(8, 32, 64, 64, 64)": {
+        "contiguous-forward": 1.3530778884887695,
+        "contiguous-backward": 3.7233757972717285,
+        "channels-last-3d-forward": 0.3889751434326172,
+        "channels-last-3d-backward": 0.854489803314209,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 4183 element(s) (out of 67108864) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (-2.6796875 vs. -2.681640625), which occurred at index (0, 17, 0, 7, 57)."
+    },
+    "(8, 32, 112, 112, 112)": {
+        "contiguous-forward": 7.242610454559326,
+        "contiguous-backward": 19.943959712982178,
+        "channels-last-3d-forward": 1.9696736335754395,
+        "channels-last-3d-backward": 4.480321407318115,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 349717 element(s) (out of 359661568) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00390625 (-4.13671875 vs. -4.140625), which occurred at index (0, 14, 49, 35, 6)."
+    },
+    "(8, 64, 2, 2, 2)": {
+        "contiguous-forward": 0.04950523376464844,
+        "contiguous-backward": 0.06426095962524414,
+        "channels-last-3d-forward": 0.055518150329589844,
+        "channels-last-3d-backward": 0.06642341613769531
+    },
+    "(8, 64, 4, 4, 4)": {
+        "contiguous-forward": 0.04990577697753906,
+        "contiguous-backward": 0.06418466567993164,
+        "channels-last-3d-forward": 0.05561113357543945,
+        "channels-last-3d-backward": 0.06674051284790039,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 1 element(s) (out of 32768) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.000244140625 (-0.341552734375 vs. -0.341796875), which occurred at index (6, 12, 3, 3, 2)."
+    },
+    "(8, 64, 8, 8, 8)": {
+        "contiguous-forward": 0.049834251403808594,
+        "contiguous-backward": 0.06096363067626953,
+        "channels-last-3d-forward": 0.05551576614379883,
+        "channels-last-3d-backward": 0.06639719009399414,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 17 element(s) (out of 262144) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (2.009765625 vs. 2.01171875), which occurred at index (0, 37, 2, 3, 2)."
+    },
+    "(8, 64, 16, 16, 16)": {
+        "contiguous-forward": 0.04987478256225586,
+        "contiguous-backward": 0.06033897399902344,
+        "channels-last-3d-forward": 0.05595207214355469,
+        "channels-last-3d-backward": 0.06593704223632812,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 101 element(s) (out of 2097152) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (-2.490234375 vs. -2.4921875), which occurred at index (1, 7, 13, 14, 11)."
+    },
+    "(8, 64, 32, 32, 32)": {
+        "contiguous-forward": 0.2042675018310547,
+        "contiguous-backward": 0.5649256706237793,
+        "channels-last-3d-forward": 0.09042739868164062,
+        "channels-last-3d-backward": 0.2232503890991211,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 634 element(s) (out of 16777216) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (2.9921875 vs. 2.994140625), which occurred at index (1, 30, 27, 13, 29)."
+    },
+    "(8, 64, 64, 64, 64)": {
+        "contiguous-forward": 1.4462828636169434,
+        "contiguous-backward": 4.25814151763916,
+        "channels-last-3d-forward": 0.6319475173950195,
+        "channels-last-3d-backward": 1.6067028045654297,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 13050 element(s) (out of 134217728) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (-3.41015625 vs. -3.412109375), which occurred at index (0, 18, 41, 30, 16)."
+    },
+    "(8, 64, 112, 112, 112)": {
+        "contiguous-forward": 7.807810306549072,
+        "contiguous-backward": 22.929794788360596,
+        "channels-last-3d-forward": 3.2792043685913086,
+        "channels-last-3d-backward": 8.54405403137207
+    },
+    "(16, 2, 2, 2, 2)": {
+        "contiguous-forward": 0.04948139190673828,
+        "contiguous-backward": 0.06105422973632812,
+        "channels-last-3d-forward": 0.05550861358642578,
+        "channels-last-3d-backward": 0.06659269332885742
+    },
+    "(16, 2, 4, 4, 4)": {
+        "contiguous-forward": 0.04944324493408203,
+        "contiguous-backward": 0.06140708923339844,
+        "channels-last-3d-forward": 0.05558490753173828,
+        "channels-last-3d-backward": 0.06659269332885742
+    },
+    "(16, 2, 8, 8, 8)": {
+        "contiguous-forward": 0.04976034164428711,
+        "contiguous-backward": 0.06130695343017578,
+        "channels-last-3d-forward": 0.05562305450439453,
+        "channels-last-3d-backward": 0.06676673889160156,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 3 element(s) (out of 16384) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (1.58203125 vs. 1.5830078125), which occurred at index (2, 0, 4, 3, 5)."
+    },
+    "(16, 2, 16, 16, 16)": {
+        "contiguous-forward": 0.049343109130859375,
+        "contiguous-backward": 0.06345748901367188,
+        "channels-last-3d-forward": 0.055174827575683594,
+        "channels-last-3d-backward": 0.06669759750366211
+    },
+    "(16, 2, 32, 32, 32)": {
+        "contiguous-forward": 0.13489246368408203,
+        "contiguous-backward": 0.34789323806762695,
+        "channels-last-3d-forward": 0.05568504333496094,
+        "channels-last-3d-backward": 0.06606101989746094
+    },
+    "(16, 2, 64, 64, 64)": {
+        "contiguous-forward": 1.6847991943359375,
+        "contiguous-backward": 5.820930004119873,
+        "channels-last-3d-forward": 0.11213302612304688,
+        "channels-last-3d-backward": 0.18824100494384766,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 1729 element(s) (out of 8388608) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (1.9033203125 vs. 1.904296875), which occurred at index (0, 0, 1, 1, 32)."
+    },
+    "(16, 2, 112, 112, 112)": {
+        "contiguous-forward": 12.50330924987793,
+        "contiguous-backward": 33.472325801849365,
+        "channels-last-3d-forward": 0.5342817306518555,
+        "channels-last-3d-backward": 0.9255385398864746,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 154846 element(s) (out of 44957696) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00048828125 (-0.99951171875 vs. -1.0), which occurred at index (0, 0, 0, 2, 19)."
+    },
+    "(16, 4, 2, 2, 2)": {
+        "contiguous-forward": 0.04894256591796875,
+        "contiguous-backward": 0.06155967712402344,
+        "channels-last-3d-forward": 0.055489540100097656,
+        "channels-last-3d-backward": 0.06623029708862305
+    },
+    "(16, 4, 4, 4, 4)": {
+        "contiguous-forward": 0.049076080322265625,
+        "contiguous-backward": 0.06506681442260742,
+        "channels-last-3d-forward": 0.05511760711669922,
+        "channels-last-3d-backward": 0.06625890731811523
+    },
+    "(16, 4, 8, 8, 8)": {
+        "contiguous-forward": 0.04992246627807617,
+        "contiguous-backward": 0.06124258041381836,
+        "channels-last-3d-forward": 0.05554676055908203,
+        "channels-last-3d-backward": 0.06672382354736328,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 2 element(s) (out of 32768) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (-1.2265625 vs. -1.2255859375), which occurred at index (1, 1, 2, 6, 2)."
+    },
+    "(16, 4, 16, 16, 16)": {
+        "contiguous-forward": 0.04939079284667969,
+        "contiguous-backward": 0.060541629791259766,
+        "channels-last-3d-forward": 0.05594015121459961,
+        "channels-last-3d-backward": 0.06692171096801758
+    },
+    "(16, 4, 32, 32, 32)": {
+        "contiguous-forward": 0.136260986328125,
+        "contiguous-backward": 0.3533816337585449,
+        "channels-last-3d-forward": 0.08037805557250977,
+        "channels-last-3d-backward": 0.10504007339477539
+    },
+    "(16, 4, 64, 64, 64)": {
+        "contiguous-forward": 2.372744083404541,
+        "contiguous-backward": 6.348361968994141,
+        "channels-last-3d-forward": 0.49439907073974604,
+        "channels-last-3d-backward": 0.724029541015625,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 3593 element(s) (out of 16777216) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00390625 (-4.0078125 vs. -4.01171875), which occurred at index (15, 2, 29, 49, 23)."
+    },
+    "(16, 4, 112, 112, 112)": {
+        "contiguous-forward": 12.762370109558105,
+        "contiguous-backward": 33.939664363861084,
+        "channels-last-3d-forward": 2.4743032455444336,
+        "channels-last-3d-backward": 3.759746551513672,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 224498 element(s) (out of 89915392) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (3.298828125 vs. 3.30078125), which occurred at index (0, 1, 0, 60, 15)."
+    },
+    "(16, 8, 2, 2, 2)": {
+        "contiguous-forward": 0.04983186721801758,
+        "contiguous-backward": 0.06114006042480469,
+        "channels-last-3d-forward": 0.055348873138427734,
+        "channels-last-3d-backward": 0.06609678268432617
+    },
+    "(16, 8, 4, 4, 4)": {
+        "contiguous-forward": 0.04954099655151367,
+        "contiguous-backward": 0.06144762039184571,
+        "channels-last-3d-forward": 0.055751800537109375,
+        "channels-last-3d-backward": 0.06676435470581055,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 1 element(s) (out of 8192) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.000244140625 (-0.36865234375 vs. -0.368408203125), which occurred at index (7, 4, 2, 0, 3)."
+    },
+    "(16, 8, 8, 8, 8)": {
+        "contiguous-forward": 0.049762725830078125,
+        "contiguous-backward": 0.061373710632324226,
+        "channels-last-3d-forward": 0.05586862564086914,
+        "channels-last-3d-backward": 0.06683826446533203,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 6 element(s) (out of 65536) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (-1.7919921875 vs. -1.79296875), which occurred at index (0, 3, 0, 2, 2)."
+    },
+    "(16, 8, 16, 16, 16)": {
+        "contiguous-forward": 0.04925727844238281,
+        "contiguous-backward": 0.06175756454467773,
+        "channels-last-3d-forward": 0.055925846099853516,
+        "channels-last-3d-backward": 0.0657510757446289
+    },
+    "(16, 8, 32, 32, 32)": {
+        "contiguous-forward": 0.14304161071777344,
+        "contiguous-backward": 0.48270702362060547,
+        "channels-last-3d-forward": 0.08952140808105469,
+        "channels-last-3d-backward": 0.12209892272949219,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 70 element(s) (out of 4194304) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (3.94921875 vs. 3.951171875), which occurred at index (8, 6, 18, 10, 0)."
+    },
+    "(16, 8, 64, 64, 64)": {
+        "contiguous-forward": 2.4660158157348633,
+        "contiguous-backward": 6.574230194091797,
+        "channels-last-3d-forward": 0.5143094062805176,
+        "channels-last-3d-backward": 0.8363533020019531,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 6437 element(s) (out of 33554432) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00390625 (-4.76171875 vs. -4.765625), which occurred at index (15, 5, 57, 31, 51)."
+    },
+    "(16, 8, 112, 112, 112)": {
+        "contiguous-forward": 13.231093883514404,
+        "contiguous-backward": 35.150146484375,
+        "channels-last-3d-forward": 2.5596165657043457,
+        "channels-last-3d-backward": 4.357097148895264,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 305606 element(s) (out of 179830784) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00390625 (-5.28125 vs. -5.28515625), which occurred at index (12, 3, 39, 94, 80)."
+    },
+    "(16, 16, 2, 2, 2)": {
+        "contiguous-forward": 0.04998445510864258,
+        "contiguous-backward": 0.0615072250366211,
+        "channels-last-3d-forward": 0.05549192428588867,
+        "channels-last-3d-backward": 0.06642580032348633,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 1 element(s) (out of 2048) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00048828125 (-0.9560546875 vs. -0.95654296875), which occurred at index (14, 9, 1, 0, 1)."
+    },
+    "(16, 16, 4, 4, 4)": {
+        "contiguous-forward": 0.049932003021240234,
+        "contiguous-backward": 0.061373710632324226,
+        "channels-last-3d-forward": 0.056192874908447266,
+        "channels-last-3d-backward": 0.06662845611572266,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 1 element(s) (out of 16384) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00048828125 (-0.775390625 vs. -0.77587890625), which occurred at index (6, 3, 1, 1, 3)."
+    },
+    "(16, 16, 8, 8, 8)": {
+        "contiguous-forward": 0.04976511001586914,
+        "contiguous-backward": 0.061321258544921875,
+        "channels-last-3d-forward": 0.05543231964111328,
+        "channels-last-3d-backward": 0.07010698318481445,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 3 element(s) (out of 131072) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0001220703125 (-0.2117919921875 vs. -0.2119140625), which occurred at index (5, 1, 1, 1, 0)."
+    },
+    "(16, 16, 16, 16, 16)": {
+        "contiguous-forward": 0.04993915557861328,
+        "contiguous-backward": 0.06448745727539062,
+        "channels-last-3d-forward": 0.0561976432800293,
+        "channels-last-3d-backward": 0.0662088394165039,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 39 element(s) (out of 1048576) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (-2.10546875 vs. -2.103515625), which occurred at index (8, 6, 7, 6, 3)."
+    },
+    "(16, 16, 32, 32, 32)": {
+        "contiguous-forward": 0.25393247604370117,
+        "contiguous-backward": 0.8780765533447266,
+        "channels-last-3d-forward": 0.09275436401367188,
+        "channels-last-3d-backward": 0.1525259017944336,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 334 element(s) (out of 8388608) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (-3.97265625 vs. -3.974609375), which occurred at index (6, 5, 25, 11, 17)."
+    },
+    "(16, 16, 64, 64, 64)": {
+        "contiguous-forward": 2.573113441467285,
+        "contiguous-backward": 6.899969577789307,
+        "channels-last-3d-forward": 0.5712389945983887,
+        "channels-last-3d-backward": 1.0897135734558105,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 13914 element(s) (out of 67108864) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (-3.251953125 vs. -3.25390625), which occurred at index (0, 0, 13, 5, 11)."
+    },
+    "(16, 16, 112, 112, 112)": {
+        "contiguous-forward": 13.79122018814087,
+        "contiguous-backward": 36.93049430847168,
+        "channels-last-3d-forward": 2.9984164237976074,
+        "channels-last-3d-backward": 5.885293483734131,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 618592 element(s) (out of 359661568) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00390625 (-4.47265625 vs. -4.4765625), which occurred at index (0, 10, 13, 49, 10)."
+    },
+    "(16, 32, 2, 2, 2)": {
+        "contiguous-forward": 0.04936695098876953,
+        "contiguous-backward": 0.060961246490478516,
+        "channels-last-3d-forward": 0.0555729866027832,
+        "channels-last-3d-backward": 0.0663447380065918
+    },
+    "(16, 32, 4, 4, 4)": {
+        "contiguous-forward": 0.04954099655151367,
+        "contiguous-backward": 0.06098508834838867,
+        "channels-last-3d-forward": 0.05575895309448242,
+        "channels-last-3d-backward": 0.06628990173339844
+    },
+    "(16, 32, 8, 8, 8)": {
+        "contiguous-forward": 0.04981040954589844,
+        "contiguous-backward": 0.060977935791015625,
+        "channels-last-3d-forward": 0.055849552154541016,
+        "channels-last-3d-backward": 0.06639719009399414,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 11 element(s) (out of 262144) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (-1.3125 vs. -1.3115234375), which occurred at index (1, 5, 5, 2, 2)."
+    },
+    "(16, 32, 16, 16, 16)": {
+        "contiguous-forward": 0.049719810485839844,
+        "contiguous-backward": 0.06841421127319336,
+        "channels-last-3d-forward": 0.056285858154296875,
+        "channels-last-3d-backward": 0.06581306457519531,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 12 element(s) (out of 2097152) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (-2.51171875 vs. -2.513671875), which occurred at index (4, 19, 10, 8, 0)."
+    },
+    "(16, 32, 32, 32, 32)": {
+        "contiguous-forward": 0.36498546600341797,
+        "contiguous-backward": 0.9684967994689941,
+        "channels-last-3d-forward": 0.12039899826049805,
+        "channels-last-3d-backward": 0.2451896667480469,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 379 element(s) (out of 16777216) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00048828125 (0.52490234375 vs. 0.525390625), which occurred at index (0, 31, 2, 30, 16)."
+    },
+    "(16, 32, 64, 64, 64)": {
+        "contiguous-forward": 2.698667049407959,
+        "contiguous-backward": 7.417967319488525,
+        "channels-last-3d-forward": 0.7462334632873535,
+        "channels-last-3d-backward": 1.6723203659057617,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 22977 element(s) (out of 134217728) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00390625 (-4.23828125 vs. -4.2421875), which occurred at index (1, 16, 55, 18, 23)."
+    },
+    "(16, 32, 112, 112, 112)": {
+        "contiguous-forward": 14.5176362991333,
+        "contiguous-backward": 39.916298389434814,
+        "channels-last-3d-forward": 3.9461731910705566,
+        "channels-last-3d-backward": 8.987922668457031
+    },
+    "(16, 64, 2, 2, 2)": {
+        "contiguous-forward": 0.05026102066040039,
+        "contiguous-backward": 0.0612497329711914,
+        "channels-last-3d-forward": 0.056056976318359375,
+        "channels-last-3d-backward": 0.06738901138305664,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 1 element(s) (out of 8192) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.00048828125 (0.69384765625 vs. 0.693359375), which occurred at index (5, 28, 1, 1, 1)."
+    },
+    "(16, 64, 4, 4, 4)": {
+        "contiguous-forward": 0.05012035369873047,
+        "contiguous-backward": 0.06084442138671875,
+        "channels-last-3d-forward": 0.05565643310546875,
+        "channels-last-3d-backward": 0.06652116775512695,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 2 element(s) (out of 65536) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (1.759765625 vs. 1.7587890625), which occurred at index (3, 27, 1, 1, 1)."
+    },
+    "(16, 64, 8, 8, 8)": {
+        "contiguous-forward": 0.049271583557128906,
+        "contiguous-backward": 0.06025075912475586,
+        "channels-last-3d-forward": 0.05579948425292969,
+        "channels-last-3d-backward": 0.06574153900146484,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 25 element(s) (out of 524288) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.0009765625 (-1.140625 vs. -1.1396484375), which occurred at index (5, 25, 6, 4, 4)."
+    },
+    "(16, 64, 16, 16, 16)": {
+        "contiguous-forward": 0.05970001220703125,
+        "contiguous-backward": 0.1174783706665039,
+        "channels-last-3d-forward": 0.06403207778930664,
+        "channels-last-3d-backward": 0.07981061935424805,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 77 element(s) (out of 4194304) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (2.734375 vs. 2.736328125), which occurred at index (6, 52, 14, 5, 7)."
+    },
+    "(16, 64, 32, 32, 32)": {
+        "contiguous-forward": 0.38266897201538086,
+        "contiguous-backward": 1.0736775398254395,
+        "channels-last-3d-forward": 0.1769709587097168,
+        "channels-last-3d-backward": 0.41242122650146484,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 1323 element(s) (out of 33554432) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (2.509765625 vs. 2.51171875), which occurred at index (0, 24, 11, 23, 3)."
+    },
+    "(16, 64, 64, 64, 64)": {
+        "contiguous-forward": 2.898375988006592,
+        "contiguous-backward": 8.521723747253418,
+        "channels-last-3d-forward": 1.2439203262329102,
+        "channels-last-3d-backward": 3.2033920288085938,
+        "mismatch": "With rtol=1e-05 and atol=2e-05, found 81283 element(s) (out of 268435456) whose difference(s) exceeded the margin of error (including 0 nan comparisons). The greatest difference was 0.001953125 (3.662109375 vs. 3.6640625), which occurred at index (0, 8, 47, 32, 9)."
+    },
+    "(16, 64, 112, 112, 112)": {
+        "contiguous-forward": 15.658137798309328,
+        "contiguous-backward": 45.94963073730469,
+        "channels-last-3d-forward": 6.516163349151611,
+        "channels-last-3d-backward": 17.063512802124023
+    }
+}
