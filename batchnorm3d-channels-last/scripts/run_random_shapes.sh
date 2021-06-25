@@ -63,7 +63,7 @@ mkdir -p $WORKSPACE
 
 cd $WORKSPACE
 git clone --recursive https://github.com/xwang233/code-snippet.git
-cd code-snippet/conv3d-channels-last/scripts
+cd code-snippet/batchnorm3d-channels-last/scripts
 
 first_device_name=`nvidia-smi -L | cut -d '(' -f 1 | cut -d ':' -f 2 | head -n 1 | xargs | tr -s ' ' '_'`
 log_file=`date +%s`-$first_device_name.txt
