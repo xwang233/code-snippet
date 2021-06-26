@@ -1,0 +1,1121 @@
+/opt/pytorch/pytorch/torch/distributed/launch.py:163: DeprecationWarning: The 'warn' method is deprecated, use 'warning' instead
+  logger.warn(
+The module torch.distributed.launch is deprecated and going to be removed in future.Migrate to torch.distributed.run
+WARNING:torch.distributed.run:`torch.distributed.launch` is Deprecated. Use torch.distributed.run
+INFO:torch.distributed.launcher.api:Starting elastic_operator with launch configs:
+  entrypoint       : random_shapes.py
+  min_nodes        : 1
+  max_nodes        : 1
+  nproc_per_node   : 8
+  run_id           : none
+  rdzv_backend     : static
+  rdzv_endpoint    : 127.0.0.1:29500
+  rdzv_configs     : {'rank': 0, 'timeout': 900}
+  max_restarts     : 3
+  monitor_interval : 5
+  log_dir          : None
+  metrics_cfg      : {}
+
+INFO:torch.distributed.elastic.agent.server.local_elastic_agent:log directory set to: /tmp/torchelastic_teinayuk/none_8383jd10
+INFO:torch.distributed.elastic.agent.server.api:[default] starting workers for entrypoint: python
+INFO:torch.distributed.elastic.agent.server.api:[default] Rendezvous'ing worker group
+/opt/pytorch/pytorch/torch/distributed/elastic/utils/store.py:52: FutureWarning: This is an experimental API and will be changed in future.
+  warnings.warn(
+INFO:torch.distributed.elastic.agent.server.api:[default] Rendezvous complete for workers. Result:
+  restart_count=0
+  master_addr=127.0.0.1
+  master_port=29500
+  group_rank=0
+  group_world_size=1
+  local_ranks=[0, 1, 2, 3, 4, 5, 6, 7]
+  role_ranks=[0, 1, 2, 3, 4, 5, 6, 7]
+  global_ranks=[0, 1, 2, 3, 4, 5, 6, 7]
+  role_world_sizes=[8, 8, 8, 8, 8, 8, 8, 8]
+  global_world_sizes=[8, 8, 8, 8, 8, 8, 8, 8]
+
+INFO:torch.distributed.elastic.agent.server.api:[default] Starting worker group
+INFO:torch.distributed.elastic.multiprocessing:Setting worker0 reply file to: /tmp/torchelastic_teinayuk/none_8383jd10/attempt_0/0/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker1 reply file to: /tmp/torchelastic_teinayuk/none_8383jd10/attempt_0/1/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker2 reply file to: /tmp/torchelastic_teinayuk/none_8383jd10/attempt_0/2/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker3 reply file to: /tmp/torchelastic_teinayuk/none_8383jd10/attempt_0/3/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker4 reply file to: /tmp/torchelastic_teinayuk/none_8383jd10/attempt_0/4/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker5 reply file to: /tmp/torchelastic_teinayuk/none_8383jd10/attempt_0/5/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker6 reply file to: /tmp/torchelastic_teinayuk/none_8383jd10/attempt_0/6/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker7 reply file to: /tmp/torchelastic_teinayuk/none_8383jd10/attempt_0/7/error.json
+Namespace(local_rank=2, total_shapes=1000000)
+Namespace(local_rank=1, total_shapes=1000000)
+Namespace(local_rank=3, total_shapes=1000000)
+Namespace(local_rank=4, total_shapes=1000000)
+Namespace(local_rank=0, total_shapes=1000000)
+Namespace(local_rank=7, total_shapes=1000000)
+Namespace(local_rank=5, total_shapes=1000000)
+Namespace(local_rank=6, total_shapes=1000000)
+1.9.0a0+git6df25ba
+cudnn_ver: 8201
+#7 Tesla V100-SXM2-32GB
+#2 Tesla V100-SXM2-32GB
+#3 Tesla V100-SXM2-32GB
+#6 Tesla V100-SXM2-32GB
+#1 Tesla V100-SXM2-32GB
+#4 Tesla V100-SXM2-32GB
+#5 Tesla V100-SXM2-32GB
+#0 Tesla V100-SXM2-32GB
+#7 time cost = 21.931, calculated_shapes = 1000, time left (est) = 2719.475
+#2 time cost = 22.734, calculated_shapes = 1000, time left (est) = 2819.009
+#5 time cost = 22.914, calculated_shapes = 1000, time left (est) = 2841.340
+#4 time cost = 23.162, calculated_shapes = 1000, time left (est) = 2872.077
+#6 time cost = 23.224, calculated_shapes = 1000, time left (est) = 2879.749
+#3 time cost = 23.873, calculated_shapes = 1000, time left (est) = 2960.247
+#0 time cost = 23.912, calculated_shapes = 1000, time left (est) = 2965.077
+#1 time cost = 24.602, calculated_shapes = 1000, time left (est) = 3050.621
+#7 time cost = 41.417, calculated_shapes = 2000, time left (est) = 2547.151
+#0 time cost = 41.536, calculated_shapes = 2000, time left (est) = 2554.468
+#5 time cost = 42.912, calculated_shapes = 2000, time left (est) = 2639.091
+#4 time cost = 42.933, calculated_shapes = 2000, time left (est) = 2640.393
+#3 time cost = 42.984, calculated_shapes = 2000, time left (est) = 2643.497
+#6 time cost = 43.493, calculated_shapes = 2000, time left (est) = 2674.848
+#2 time cost = 43.964, calculated_shapes = 2000, time left (est) = 2703.772
+#1 time cost = 44.575, calculated_shapes = 2000, time left (est) = 2741.385
+#5 time cost = 60.597, calculated_shapes = 3000, time left (est) = 2464.292
+#0 time cost = 60.754, calculated_shapes = 3000, time left (est) = 2470.668
+#7 time cost = 61.747, calculated_shapes = 3000, time left (est) = 2511.056
+#6 time cost = 61.930, calculated_shapes = 3000, time left (est) = 2518.485
+#4 time cost = 62.054, calculated_shapes = 3000, time left (est) = 2523.514
+#3 time cost = 63.297, calculated_shapes = 3000, time left (est) = 2574.079
+#2 time cost = 63.487, calculated_shapes = 3000, time left (est) = 2581.820
+#1 time cost = 65.106, calculated_shapes = 3000, time left (est) = 2647.626
+#6 time cost = 80.657, calculated_shapes = 4000, time left (est) = 2439.878
+#0 time cost = 80.750, calculated_shapes = 4000, time left (est) = 2442.683
+#5 time cost = 81.255, calculated_shapes = 4000, time left (est) = 2457.953
+#7 time cost = 81.512, calculated_shapes = 4000, time left (est) = 2465.730
+#4 time cost = 81.533, calculated_shapes = 4000, time left (est) = 2466.385
+#2 time cost = 81.816, calculated_shapes = 4000, time left (est) = 2474.926
+#3 time cost = 84.696, calculated_shapes = 4000, time left (est) = 2562.044
+#1 time cost = 84.991, calculated_shapes = 4000, time left (est) = 2570.989
+#6 time cost = 100.392, calculated_shapes = 5000, time left (est) = 2409.417
+#2 time cost = 101.597, calculated_shapes = 5000, time left (est) = 2438.323
+#0 time cost = 101.644, calculated_shapes = 5000, time left (est) = 2439.463
+#7 time cost = 101.693, calculated_shapes = 5000, time left (est) = 2440.638
+#5 time cost = 101.778, calculated_shapes = 5000, time left (est) = 2442.684
+#4 time cost = 102.654, calculated_shapes = 5000, time left (est) = 2463.707
+#3 time cost = 105.159, calculated_shapes = 5000, time left (est) = 2523.817
+#1 time cost = 105.247, calculated_shapes = 5000, time left (est) = 2525.925
+#6 time cost = 118.919, calculated_shapes = 6000, time left (est) = 2358.568
+#5 time cost = 121.042, calculated_shapes = 6000, time left (est) = 2400.658
+#0 time cost = 121.369, calculated_shapes = 6000, time left (est) = 2407.159
+#7 time cost = 121.390, calculated_shapes = 6000, time left (est) = 2407.570
+#2 time cost = 121.996, calculated_shapes = 6000, time left (est) = 2419.580
+#4 time cost = 122.402, calculated_shapes = 6000, time left (est) = 2427.638
+#3 time cost = 124.385, calculated_shapes = 6000, time left (est) = 2466.964
+#1 time cost = 125.114, calculated_shapes = 6000, time left (est) = 2481.426
+#6 time cost = 139.893, calculated_shapes = 7000, time left (est) = 2358.190
+#0 time cost = 140.721, calculated_shapes = 7000, time left (est) = 2372.152
+#5 time cost = 140.890, calculated_shapes = 7000, time left (est) = 2375.003
+#7 time cost = 141.070, calculated_shapes = 7000, time left (est) = 2378.044
+#4 time cost = 141.374, calculated_shapes = 7000, time left (est) = 2383.161
+#2 time cost = 141.845, calculated_shapes = 7000, time left (est) = 2391.102
+#3 time cost = 143.941, calculated_shapes = 7000, time left (est) = 2426.433
+#1 time cost = 145.883, calculated_shapes = 7000, time left (est) = 2459.174
+#5 time cost = 159.738, calculated_shapes = 8000, time left (est) = 2336.166
+#6 time cost = 160.074, calculated_shapes = 8000, time left (est) = 2341.082
+#7 time cost = 161.061, calculated_shapes = 8000, time left (est) = 2355.510
+#0 time cost = 161.283, calculated_shapes = 8000, time left (est) = 2358.759
+#4 time cost = 161.597, calculated_shapes = 8000, time left (est) = 2363.351
+#2 time cost = 163.042, calculated_shapes = 8000, time left (est) = 2384.485
+#3 time cost = 163.397, calculated_shapes = 8000, time left (est) = 2389.678
+#1 time cost = 166.282, calculated_shapes = 8000, time left (est) = 2431.876
+#5 time cost = 179.183, calculated_shapes = 9000, time left (est) = 2309.472
+#0 time cost = 179.569, calculated_shapes = 9000, time left (est) = 2314.441
+#6 time cost = 180.711, calculated_shapes = 9000, time left (est) = 2329.170
+#4 time cost = 181.168, calculated_shapes = 9000, time left (est) = 2335.057
+#7 time cost = 181.729, calculated_shapes = 9000, time left (est) = 2342.283
+#2 time cost = 182.242, calculated_shapes = 9000, time left (est) = 2348.894
+#3 time cost = 183.350, calculated_shapes = 9000, time left (est) = 2363.175
+#1 time cost = 185.789, calculated_shapes = 9000, time left (est) = 2394.617
+#5 time cost = 198.124, calculated_shapes = 10000, time left (est) = 2278.421
+#0 time cost = 199.537, calculated_shapes = 10000, time left (est) = 2294.671
+#6 time cost = 200.782, calculated_shapes = 10000, time left (est) = 2308.991
+#7 time cost = 201.097, calculated_shapes = 10000, time left (est) = 2312.612
+#2 time cost = 201.825, calculated_shapes = 10000, time left (est) = 2320.984
+#4 time cost = 202.287, calculated_shapes = 10000, time left (est) = 2326.296
+#3 time cost = 204.266, calculated_shapes = 10000, time left (est) = 2349.062
+#1 time cost = 204.855, calculated_shapes = 10000, time left (est) = 2355.831
+#0 time cost = 218.265, calculated_shapes = 11000, time left (est) = 2262.021
+#5 time cost = 218.886, calculated_shapes = 11000, time left (est) = 2268.455
+#6 time cost = 220.491, calculated_shapes = 11000, time left (est) = 2285.092
+#2 time cost = 220.700, calculated_shapes = 11000, time left (est) = 2287.259
+#7 time cost = 221.188, calculated_shapes = 11000, time left (est) = 2292.311
+#4 time cost = 222.548, calculated_shapes = 11000, time left (est) = 2306.403
+#1 time cost = 224.928, calculated_shapes = 11000, time left (est) = 2331.075
+#3 time cost = 225.815, calculated_shapes = 11000, time left (est) = 2340.266
+#5 time cost = 237.651, calculated_shapes = 12000, time left (est) = 2237.876
+#0 time cost = 239.005, calculated_shapes = 12000, time left (est) = 2250.630
+#2 time cost = 239.111, calculated_shapes = 12000, time left (est) = 2251.633
+#6 time cost = 240.542, calculated_shapes = 12000, time left (est) = 2265.106
+#7 time cost = 241.048, calculated_shapes = 12000, time left (est) = 2269.870
+#4 time cost = 241.242, calculated_shapes = 12000, time left (est) = 2271.691
+#1 time cost = 243.997, calculated_shapes = 12000, time left (est) = 2297.641
+#3 time cost = 247.029, calculated_shapes = 12000, time left (est) = 2326.190
+#5 time cost = 258.038, calculated_shapes = 13000, time left (est) = 2223.096
+#0 time cost = 258.432, calculated_shapes = 13000, time left (est) = 2226.495
+#6 time cost = 259.764, calculated_shapes = 13000, time left (est) = 2237.970
+#2 time cost = 260.071, calculated_shapes = 13000, time left (est) = 2240.609
+#7 time cost = 260.471, calculated_shapes = 13000, time left (est) = 2244.062
+#4 time cost = 260.555, calculated_shapes = 13000, time left (est) = 2244.783
+#1 time cost = 263.123, calculated_shapes = 13000, time left (est) = 2266.905
+#3 time cost = 267.163, calculated_shapes = 13000, time left (est) = 2301.711
+#5 time cost = 277.340, calculated_shapes = 14000, time left (est) = 2198.909
+#0 time cost = 277.878, calculated_shapes = 14000, time left (est) = 2203.175
+#6 time cost = 279.349, calculated_shapes = 14000, time left (est) = 2214.838
+#7 time cost = 279.966, calculated_shapes = 14000, time left (est) = 2219.727
+#4 time cost = 280.442, calculated_shapes = 14000, time left (est) = 2223.506
+#2 time cost = 280.595, calculated_shapes = 14000, time left (est) = 2224.716
+#1 time cost = 282.788, calculated_shapes = 14000, time left (est) = 2242.105
+#3 time cost = 286.905, calculated_shapes = 14000, time left (est) = 2274.749
+#0 time cost = 297.177, calculated_shapes = 15000, time left (est) = 2179.296
+#5 time cost = 297.984, calculated_shapes = 15000, time left (est) = 2185.215
+#7 time cost = 299.796, calculated_shapes = 15000, time left (est) = 2198.503
+#2 time cost = 299.995, calculated_shapes = 15000, time left (est) = 2199.960
+#6 time cost = 300.188, calculated_shapes = 15000, time left (est) = 2201.378
+#4 time cost = 300.998, calculated_shapes = 15000, time left (est) = 2207.322
+#1 time cost = 302.236, calculated_shapes = 15000, time left (est) = 2216.399
+#3 time cost = 305.417, calculated_shapes = 15000, time left (est) = 2239.727
+#0 time cost = 316.830, calculated_shapes = 16000, time left (est) = 2158.403
+#5 time cost = 318.160, calculated_shapes = 16000, time left (est) = 2167.467
+#7 time cost = 319.514, calculated_shapes = 16000, time left (est) = 2176.687
+#2 time cost = 319.626, calculated_shapes = 16000, time left (est) = 2177.451
+#6 time cost = 319.626, calculated_shapes = 16000, time left (est) = 2177.451
+#4 time cost = 320.045, calculated_shapes = 16000, time left (est) = 2180.308
+#1 time cost = 322.547, calculated_shapes = 16000, time left (est) = 2197.353
+#3 time cost = 325.911, calculated_shapes = 16000, time left (est) = 2220.267
+#0 time cost = 336.438, calculated_shapes = 17000, time left (est) = 2137.371
+#5 time cost = 338.224, calculated_shapes = 17000, time left (est) = 2148.718
+#2 time cost = 338.362, calculated_shapes = 17000, time left (est) = 2149.595
+#7 time cost = 339.231, calculated_shapes = 17000, time left (est) = 2155.115
+#6 time cost = 340.021, calculated_shapes = 17000, time left (est) = 2160.135
+#4 time cost = 340.438, calculated_shapes = 17000, time left (est) = 2162.783
+#1 time cost = 342.091, calculated_shapes = 17000, time left (est) = 2173.285
+#3 time cost = 346.730, calculated_shapes = 17000, time left (est) = 2202.754
+#0 time cost = 356.410, calculated_shapes = 18000, time left (est) = 2118.662
+#2 time cost = 358.194, calculated_shapes = 18000, time left (est) = 2129.264
+#5 time cost = 358.874, calculated_shapes = 18000, time left (est) = 2133.306
+#7 time cost = 359.575, calculated_shapes = 18000, time left (est) = 2137.474
+#4 time cost = 360.469, calculated_shapes = 18000, time left (est) = 2142.789
+#6 time cost = 361.075, calculated_shapes = 18000, time left (est) = 2146.388
+#1 time cost = 361.521, calculated_shapes = 18000, time left (est) = 2149.042
+#3 time cost = 365.615, calculated_shapes = 18000, time left (est) = 2173.377
+#0 time cost = 377.020, calculated_shapes = 19000, time left (est) = 2103.373
+#7 time cost = 378.780, calculated_shapes = 19000, time left (est) = 2113.192
+#5 time cost = 379.004, calculated_shapes = 19000, time left (est) = 2114.441
+#2 time cost = 379.186, calculated_shapes = 19000, time left (est) = 2115.459
+#1 time cost = 380.740, calculated_shapes = 19000, time left (est) = 2124.131
+#4 time cost = 381.110, calculated_shapes = 19000, time left (est) = 2126.193
+#6 time cost = 382.387, calculated_shapes = 19000, time left (est) = 2133.319
+#3 time cost = 385.670, calculated_shapes = 19000, time left (est) = 2151.635
+#0 time cost = 396.908, calculated_shapes = 20000, time left (est) = 2083.769
+#5 time cost = 397.761, calculated_shapes = 20000, time left (est) = 2088.246
+#7 time cost = 398.976, calculated_shapes = 20000, time left (est) = 2094.626
+#2 time cost = 399.746, calculated_shapes = 20000, time left (est) = 2098.666
+#1 time cost = 399.801, calculated_shapes = 20000, time left (est) = 2098.956
+#4 time cost = 400.555, calculated_shapes = 20000, time left (est) = 2102.914
+#6 time cost = 403.365, calculated_shapes = 20000, time left (est) = 2117.668
+#3 time cost = 404.443, calculated_shapes = 20000, time left (est) = 2123.325
+#0 time cost = 417.613, calculated_shapes = 21000, time left (est) = 2068.177
+#5 time cost = 417.756, calculated_shapes = 21000, time left (est) = 2068.889
+#7 time cost = 418.707, calculated_shapes = 21000, time left (est) = 2073.599
+#1 time cost = 418.793, calculated_shapes = 21000, time left (est) = 2074.022
+#2 time cost = 419.921, calculated_shapes = 21000, time left (est) = 2079.608
+#4 time cost = 420.437, calculated_shapes = 21000, time left (est) = 2082.164
+#6 time cost = 422.809, calculated_shapes = 21000, time left (est) = 2093.913
+#3 time cost = 424.065, calculated_shapes = 21000, time left (est) = 2100.131
+#0 time cost = 437.529, calculated_shapes = 22000, time left (est) = 2048.429
+#5 time cost = 437.548, calculated_shapes = 22000, time left (est) = 2048.521
+#1 time cost = 438.470, calculated_shapes = 22000, time left (est) = 2052.835
+#7 time cost = 439.066, calculated_shapes = 22000, time left (est) = 2055.628
+#2 time cost = 439.606, calculated_shapes = 22000, time left (est) = 2058.158
+#4 time cost = 440.599, calculated_shapes = 22000, time left (est) = 2062.804
+#6 time cost = 443.239, calculated_shapes = 22000, time left (est) = 2075.163
+#3 time cost = 444.387, calculated_shapes = 22000, time left (est) = 2080.541
+#5 time cost = 457.595, calculated_shapes = 23000, time left (est) = 2029.335
+#0 time cost = 457.825, calculated_shapes = 23000, time left (est) = 2030.354
+#1 time cost = 458.965, calculated_shapes = 23000, time left (est) = 2035.411
+#2 time cost = 459.060, calculated_shapes = 23000, time left (est) = 2035.833
+#7 time cost = 459.234, calculated_shapes = 23000, time left (est) = 2036.601
+#4 time cost = 460.148, calculated_shapes = 23000, time left (est) = 2040.655
+#6 time cost = 462.657, calculated_shapes = 23000, time left (est) = 2051.785
+#3 time cost = 464.406, calculated_shapes = 23000, time left (est) = 2059.537
+#0 time cost = 477.204, calculated_shapes = 24000, time left (est) = 2008.234
+#5 time cost = 477.959, calculated_shapes = 24000, time left (est) = 2011.410
+#1 time cost = 478.136, calculated_shapes = 24000, time left (est) = 2012.156
+#7 time cost = 479.698, calculated_shapes = 24000, time left (est) = 2018.731
+#2 time cost = 479.944, calculated_shapes = 24000, time left (est) = 2019.766
+#4 time cost = 480.446, calculated_shapes = 24000, time left (est) = 2021.875
+#6 time cost = 483.065, calculated_shapes = 24000, time left (est) = 2032.899
+#3 time cost = 484.883, calculated_shapes = 24000, time left (est) = 2040.547
+#0 time cost = 496.764, calculated_shapes = 25000, time left (est) = 1987.057
+#5 time cost = 497.788, calculated_shapes = 25000, time left (est) = 1991.153
+#1 time cost = 497.823, calculated_shapes = 25000, time left (est) = 1991.293
+#7 time cost = 498.634, calculated_shapes = 25000, time left (est) = 1994.535
+#2 time cost = 499.239, calculated_shapes = 25000, time left (est) = 1996.958
+#4 time cost = 499.945, calculated_shapes = 25000, time left (est) = 1999.779
+#6 time cost = 502.544, calculated_shapes = 25000, time left (est) = 2010.176
+#3 time cost = 503.969, calculated_shapes = 25000, time left (est) = 2015.874
+#0 time cost = 515.986, calculated_shapes = 26000, time left (est) = 1964.717
+#5 time cost = 517.091, calculated_shapes = 26000, time left (est) = 1968.923
+#1 time cost = 517.527, calculated_shapes = 26000, time left (est) = 1970.582
+#7 time cost = 519.411, calculated_shapes = 26000, time left (est) = 1977.758
+#4 time cost = 520.191, calculated_shapes = 26000, time left (est) = 1980.728
+#2 time cost = 520.281, calculated_shapes = 26000, time left (est) = 1981.070
+#6 time cost = 523.121, calculated_shapes = 26000, time left (est) = 1991.882
+#3 time cost = 524.138, calculated_shapes = 26000, time left (est) = 1995.757
+#5 time cost = 536.680, calculated_shapes = 27000, time left (est) = 1947.949
+#0 time cost = 536.947, calculated_shapes = 27000, time left (est) = 1948.918
+#7 time cost = 537.200, calculated_shapes = 27000, time left (est) = 1949.837
+#1 time cost = 537.402, calculated_shapes = 27000, time left (est) = 1950.569
+#4 time cost = 539.059, calculated_shapes = 27000, time left (est) = 1956.586
+#2 time cost = 539.975, calculated_shapes = 27000, time left (est) = 1959.908
+#6 time cost = 541.701, calculated_shapes = 27000, time left (est) = 1966.174
+#3 time cost = 545.081, calculated_shapes = 27000, time left (est) = 1978.443
+#0 time cost = 556.001, calculated_shapes = 28000, time left (est) = 1926.145
+#5 time cost = 556.514, calculated_shapes = 28000, time left (est) = 1927.922
+#7 time cost = 556.827, calculated_shapes = 28000, time left (est) = 1929.006
+#1 time cost = 557.424, calculated_shapes = 28000, time left (est) = 1931.075
+#4 time cost = 558.608, calculated_shapes = 28000, time left (est) = 1935.177
+#2 time cost = 560.081, calculated_shapes = 28000, time left (est) = 1940.280
+#6 time cost = 561.727, calculated_shapes = 28000, time left (est) = 1945.983
+#3 time cost = 564.526, calculated_shapes = 28000, time left (est) = 1955.681
+#5 time cost = 575.935, calculated_shapes = 29000, time left (est) = 1906.543
+#7 time cost = 576.251, calculated_shapes = 29000, time left (est) = 1907.590
+#0 time cost = 576.612, calculated_shapes = 29000, time left (est) = 1908.786
+#1 time cost = 576.674, calculated_shapes = 29000, time left (est) = 1908.989
+#4 time cost = 578.385, calculated_shapes = 29000, time left (est) = 1914.655
+#6 time cost = 580.659, calculated_shapes = 29000, time left (est) = 1922.181
+#2 time cost = 580.813, calculated_shapes = 29000, time left (est) = 1922.692
+#3 time cost = 585.526, calculated_shapes = 29000, time left (est) = 1938.292
+#5 time cost = 595.632, calculated_shapes = 30000, time left (est) = 1886.168
+#1 time cost = 596.420, calculated_shapes = 30000, time left (est) = 1888.663
+#7 time cost = 596.543, calculated_shapes = 30000, time left (est) = 1889.052
+#0 time cost = 597.282, calculated_shapes = 30000, time left (est) = 1891.392
+#4 time cost = 598.349, calculated_shapes = 30000, time left (est) = 1894.772
+#6 time cost = 600.808, calculated_shapes = 30000, time left (est) = 1902.557
+#2 time cost = 601.250, calculated_shapes = 30000, time left (est) = 1903.958
+#3 time cost = 606.043, calculated_shapes = 30000, time left (est) = 1919.136
+#5 time cost = 615.320, calculated_shapes = 31000, time left (est) = 1865.809
+#7 time cost = 616.243, calculated_shapes = 31000, time left (est) = 1868.608
+#0 time cost = 616.890, calculated_shapes = 31000, time left (est) = 1870.571
+#1 time cost = 617.067, calculated_shapes = 31000, time left (est) = 1871.107
+#4 time cost = 617.632, calculated_shapes = 31000, time left (est) = 1872.820
+#6 time cost = 621.087, calculated_shapes = 31000, time left (est) = 1883.297
+#2 time cost = 621.167, calculated_shapes = 31000, time left (est) = 1883.537
+#3 time cost = 626.214, calculated_shapes = 31000, time left (est) = 1898.844
+#5 time cost = 635.204, calculated_shapes = 32000, time left (est) = 1846.062
+#7 time cost = 635.798, calculated_shapes = 32000, time left (est) = 1847.789
+#1 time cost = 636.011, calculated_shapes = 32000, time left (est) = 1848.406
+#0 time cost = 636.294, calculated_shapes = 32000, time left (est) = 1849.229
+#4 time cost = 638.776, calculated_shapes = 32000, time left (est) = 1856.443
+#2 time cost = 640.069, calculated_shapes = 32000, time left (est) = 1860.201
+#6 time cost = 641.342, calculated_shapes = 32000, time left (est) = 1863.899
+#3 time cost = 645.874, calculated_shapes = 32000, time left (est) = 1877.072
+#5 time cost = 653.865, calculated_shapes = 33000, time left (est) = 1822.897
+#1 time cost = 655.351, calculated_shapes = 33000, time left (est) = 1827.039
+#0 time cost = 655.949, calculated_shapes = 33000, time left (est) = 1828.706
+#7 time cost = 656.464, calculated_shapes = 33000, time left (est) = 1830.141
+#4 time cost = 658.759, calculated_shapes = 33000, time left (est) = 1836.541
+#2 time cost = 659.779, calculated_shapes = 33000, time left (est) = 1839.385
+#6 time cost = 662.085, calculated_shapes = 33000, time left (est) = 1845.813
+#3 time cost = 666.603, calculated_shapes = 33000, time left (est) = 1858.408
+#5 time cost = 674.644, calculated_shapes = 34000, time left (est) = 1805.666
+#1 time cost = 675.155, calculated_shapes = 34000, time left (est) = 1807.034
+#0 time cost = 675.455, calculated_shapes = 34000, time left (est) = 1807.835
+#7 time cost = 677.827, calculated_shapes = 34000, time left (est) = 1814.185
+#4 time cost = 679.848, calculated_shapes = 34000, time left (est) = 1819.592
+#2 time cost = 680.413, calculated_shapes = 34000, time left (est) = 1821.106
+#6 time cost = 681.583, calculated_shapes = 34000, time left (est) = 1824.237
+#3 time cost = 687.020, calculated_shapes = 34000, time left (est) = 1838.790
+#5 time cost = 694.945, calculated_shapes = 35000, time left (est) = 1787.002
+#1 time cost = 695.344, calculated_shapes = 35000, time left (est) = 1788.026
+#0 time cost = 695.878, calculated_shapes = 35000, time left (est) = 1789.401
+#7 time cost = 697.008, calculated_shapes = 35000, time left (est) = 1792.306
+#4 time cost = 700.161, calculated_shapes = 35000, time left (est) = 1800.414
+#2 time cost = 701.027, calculated_shapes = 35000, time left (est) = 1802.641
+#6 time cost = 702.096, calculated_shapes = 35000, time left (est) = 1805.389
+#3 time cost = 706.789, calculated_shapes = 35000, time left (est) = 1817.456
+#5 time cost = 715.084, calculated_shapes = 36000, time left (est) = 1767.847
+#1 time cost = 715.228, calculated_shapes = 36000, time left (est) = 1768.201
+#0 time cost = 715.993, calculated_shapes = 36000, time left (est) = 1770.093
+#7 time cost = 716.487, calculated_shapes = 36000, time left (est) = 1771.316
+#4 time cost = 719.762, calculated_shapes = 36000, time left (est) = 1779.411
+#2 time cost = 720.709, calculated_shapes = 36000, time left (est) = 1781.753
+#6 time cost = 721.861, calculated_shapes = 36000, time left (est) = 1784.600
+#3 time cost = 725.425, calculated_shapes = 36000, time left (est) = 1793.412
+#5 time cost = 735.315, calculated_shapes = 37000, time left (est) = 1748.857
+#1 time cost = 735.827, calculated_shapes = 37000, time left (est) = 1750.074
+#7 time cost = 736.201, calculated_shapes = 37000, time left (est) = 1750.964
+#0 time cost = 736.744, calculated_shapes = 37000, time left (est) = 1752.256
+#2 time cost = 739.926, calculated_shapes = 37000, time left (est) = 1759.825
+#4 time cost = 740.305, calculated_shapes = 37000, time left (est) = 1760.725
+#6 time cost = 742.372, calculated_shapes = 37000, time left (est) = 1765.641
+#3 time cost = 745.322, calculated_shapes = 37000, time left (est) = 1772.657
+#1 time cost = 754.601, calculated_shapes = 38000, time left (est) = 1727.640
+#5 time cost = 755.871, calculated_shapes = 38000, time left (est) = 1730.547
+#7 time cost = 756.073, calculated_shapes = 38000, time left (est) = 1731.009
+#0 time cost = 757.777, calculated_shapes = 38000, time left (est) = 1734.910
+#2 time cost = 760.610, calculated_shapes = 38000, time left (est) = 1741.396
+#4 time cost = 761.522, calculated_shapes = 38000, time left (est) = 1743.484
+#6 time cost = 762.990, calculated_shapes = 38000, time left (est) = 1746.844
+#3 time cost = 765.752, calculated_shapes = 38000, time left (est) = 1753.169
+#1 time cost = 772.683, calculated_shapes = 39000, time left (est) = 1703.865
+#7 time cost = 775.306, calculated_shapes = 39000, time left (est) = 1709.650
+#5 time cost = 776.123, calculated_shapes = 39000, time left (est) = 1711.451
+#0 time cost = 777.983, calculated_shapes = 39000, time left (est) = 1715.553
+#2 time cost = 780.228, calculated_shapes = 39000, time left (est) = 1720.503
+#4 time cost = 782.082, calculated_shapes = 39000, time left (est) = 1724.590
+#6 time cost = 783.270, calculated_shapes = 39000, time left (est) = 1727.210
+#3 time cost = 785.639, calculated_shapes = 39000, time left (est) = 1732.435
+#1 time cost = 792.388, calculated_shapes = 40000, time left (est) = 1683.825
+#5 time cost = 795.603, calculated_shapes = 40000, time left (est) = 1690.656
+#7 time cost = 795.709, calculated_shapes = 40000, time left (est) = 1690.881
+#0 time cost = 798.502, calculated_shapes = 40000, time left (est) = 1696.816
+#2 time cost = 800.107, calculated_shapes = 40000, time left (est) = 1700.228
+#4 time cost = 801.934, calculated_shapes = 40000, time left (est) = 1704.111
+#6 time cost = 803.499, calculated_shapes = 40000, time left (est) = 1707.436
+#3 time cost = 805.808, calculated_shapes = 40000, time left (est) = 1712.342
+#1 time cost = 812.498, calculated_shapes = 41000, time left (est) = 1664.631
+#5 time cost = 814.903, calculated_shapes = 41000, time left (est) = 1669.557
+#7 time cost = 815.694, calculated_shapes = 41000, time left (est) = 1671.178
+#0 time cost = 819.329, calculated_shapes = 41000, time left (est) = 1678.625
+#2 time cost = 820.987, calculated_shapes = 41000, time left (est) = 1682.022
+#6 time cost = 822.334, calculated_shapes = 41000, time left (est) = 1684.781
+#4 time cost = 823.220, calculated_shapes = 41000, time left (est) = 1686.598
+#3 time cost = 824.915, calculated_shapes = 41000, time left (est) = 1690.070
+#1 time cost = 832.901, calculated_shapes = 42000, time left (est) = 1645.971
+#5 time cost = 834.917, calculated_shapes = 42000, time left (est) = 1649.954
+#7 time cost = 836.747, calculated_shapes = 42000, time left (est) = 1653.572
+#0 time cost = 840.103, calculated_shapes = 42000, time left (est) = 1660.203
+#2 time cost = 840.489, calculated_shapes = 42000, time left (est) = 1660.967
+#6 time cost = 842.174, calculated_shapes = 42000, time left (est) = 1664.297
+#4 time cost = 843.740, calculated_shapes = 42000, time left (est) = 1667.391
+#3 time cost = 844.962, calculated_shapes = 42000, time left (est) = 1669.806
+#1 time cost = 851.204, calculated_shapes = 43000, time left (est) = 1623.226
+#7 time cost = 855.624, calculated_shapes = 43000, time left (est) = 1631.656
+#5 time cost = 856.457, calculated_shapes = 43000, time left (est) = 1633.243
+#0 time cost = 858.892, calculated_shapes = 43000, time left (est) = 1637.887
+#2 time cost = 859.111, calculated_shapes = 43000, time left (est) = 1638.305
+#6 time cost = 861.281, calculated_shapes = 43000, time left (est) = 1642.442
+#4 time cost = 864.131, calculated_shapes = 43000, time left (est) = 1647.878
+#3 time cost = 865.376, calculated_shapes = 43000, time left (est) = 1650.252
+#1 time cost = 870.574, calculated_shapes = 44000, time left (est) = 1602.648
+#7 time cost = 874.612, calculated_shapes = 44000, time left (est) = 1610.081
+#5 time cost = 874.853, calculated_shapes = 44000, time left (est) = 1610.525
+#0 time cost = 878.107, calculated_shapes = 44000, time left (est) = 1616.516
+#2 time cost = 878.406, calculated_shapes = 44000, time left (est) = 1617.066
+#6 time cost = 881.034, calculated_shapes = 44000, time left (est) = 1621.904
+#3 time cost = 884.965, calculated_shapes = 44000, time left (est) = 1629.140
+#4 time cost = 885.551, calculated_shapes = 44000, time left (est) = 1630.220
+#1 time cost = 889.826, calculated_shapes = 45000, time left (est) = 1581.912
+#5 time cost = 895.258, calculated_shapes = 45000, time left (est) = 1591.569
+#7 time cost = 896.312, calculated_shapes = 45000, time left (est) = 1593.444
+#2 time cost = 898.763, calculated_shapes = 45000, time left (est) = 1597.801
+#0 time cost = 898.998, calculated_shapes = 45000, time left (est) = 1598.218
+#6 time cost = 902.709, calculated_shapes = 45000, time left (est) = 1604.816
+#4 time cost = 905.171, calculated_shapes = 45000, time left (est) = 1609.193
+#3 time cost = 905.228, calculated_shapes = 45000, time left (est) = 1609.294
+#1 time cost = 909.234, calculated_shapes = 46000, time left (est) = 1561.511
+#5 time cost = 915.810, calculated_shapes = 46000, time left (est) = 1572.803
+#7 time cost = 916.864, calculated_shapes = 46000, time left (est) = 1574.614
+#0 time cost = 917.451, calculated_shapes = 46000, time left (est) = 1575.623
+#2 time cost = 918.071, calculated_shapes = 46000, time left (est) = 1576.688
+#6 time cost = 922.165, calculated_shapes = 46000, time left (est) = 1583.719
+#4 time cost = 924.278, calculated_shapes = 46000, time left (est) = 1587.348
+#3 time cost = 924.583, calculated_shapes = 46000, time left (est) = 1587.871
+#1 time cost = 929.531, calculated_shapes = 47000, time left (est) = 1542.626
+#5 time cost = 935.971, calculated_shapes = 47000, time left (est) = 1553.314
+#7 time cost = 936.016, calculated_shapes = 47000, time left (est) = 1553.388
+#0 time cost = 936.454, calculated_shapes = 47000, time left (est) = 1554.115
+#2 time cost = 938.420, calculated_shapes = 47000, time left (est) = 1557.378
+#6 time cost = 941.475, calculated_shapes = 47000, time left (est) = 1562.447
+#4 time cost = 942.951, calculated_shapes = 47000, time left (est) = 1564.897
+#3 time cost = 944.430, calculated_shapes = 47000, time left (est) = 1567.352
+#1 time cost = 948.872, calculated_shapes = 48000, time left (est) = 1522.148
+#7 time cost = 954.304, calculated_shapes = 48000, time left (est) = 1530.863
+#5 time cost = 956.615, calculated_shapes = 48000, time left (est) = 1534.571
+#0 time cost = 957.074, calculated_shapes = 48000, time left (est) = 1535.306
+#2 time cost = 957.351, calculated_shapes = 48000, time left (est) = 1535.751
+#6 time cost = 961.737, calculated_shapes = 48000, time left (est) = 1542.786
+#4 time cost = 962.811, calculated_shapes = 48000, time left (est) = 1544.509
+#3 time cost = 963.145, calculated_shapes = 48000, time left (est) = 1545.046
+#1 time cost = 969.066, calculated_shapes = 49000, time left (est) = 1503.041
+#7 time cost = 973.178, calculated_shapes = 49000, time left (est) = 1509.419
+#5 time cost = 977.315, calculated_shapes = 49000, time left (est) = 1515.836
+#2 time cost = 977.473, calculated_shapes = 49000, time left (est) = 1516.080
+#0 time cost = 978.491, calculated_shapes = 49000, time left (est) = 1517.660
+#6 time cost = 980.374, calculated_shapes = 49000, time left (est) = 1520.580
+#4 time cost = 981.918, calculated_shapes = 49000, time left (est) = 1522.974
+#3 time cost = 983.824, calculated_shapes = 49000, time left (est) = 1525.931
+#1 time cost = 988.813, calculated_shapes = 50000, time left (est) = 1483.219
+#7 time cost = 993.919, calculated_shapes = 50000, time left (est) = 1490.878
+#2 time cost = 997.470, calculated_shapes = 50000, time left (est) = 1496.205
+#5 time cost = 997.584, calculated_shapes = 50000, time left (est) = 1496.376
+#0 time cost = 999.413, calculated_shapes = 50000, time left (est) = 1499.119
+#4 time cost = 1000.251, calculated_shapes = 50000, time left (est) = 1500.377
+#6 time cost = 1002.084, calculated_shapes = 50000, time left (est) = 1503.126
+#3 time cost = 1004.453, calculated_shapes = 50000, time left (est) = 1506.680
+#1 time cost = 1008.383, calculated_shapes = 51000, time left (est) = 1463.144
+#7 time cost = 1015.453, calculated_shapes = 51000, time left (est) = 1473.402
+#2 time cost = 1017.120, calculated_shapes = 51000, time left (est) = 1475.822
+#5 time cost = 1018.488, calculated_shapes = 51000, time left (est) = 1477.805
+#0 time cost = 1019.295, calculated_shapes = 51000, time left (est) = 1478.977
+#4 time cost = 1020.271, calculated_shapes = 51000, time left (est) = 1480.393
+#6 time cost = 1021.338, calculated_shapes = 51000, time left (est) = 1481.942
+#3 time cost = 1023.900, calculated_shapes = 51000, time left (est) = 1485.659
+#1 time cost = 1028.447, calculated_shapes = 52000, time left (est) = 1443.781
+#7 time cost = 1036.009, calculated_shapes = 52000, time left (est) = 1454.398
+#2 time cost = 1036.521, calculated_shapes = 52000, time left (est) = 1455.115
+#4 time cost = 1039.154, calculated_shapes = 52000, time left (est) = 1458.812
+#5 time cost = 1039.485, calculated_shapes = 52000, time left (est) = 1459.277
+#0 time cost = 1039.770, calculated_shapes = 52000, time left (est) = 1459.677
+#6 time cost = 1040.667, calculated_shapes = 52000, time left (est) = 1460.936
+#3 time cost = 1042.815, calculated_shapes = 52000, time left (est) = 1463.952
+#1 time cost = 1048.789, calculated_shapes = 53000, time left (est) = 1424.770
+#7 time cost = 1056.200, calculated_shapes = 53000, time left (est) = 1434.837
+#2 time cost = 1058.414, calculated_shapes = 53000, time left (est) = 1437.846
+#4 time cost = 1058.597, calculated_shapes = 53000, time left (est) = 1438.094
+#0 time cost = 1058.645, calculated_shapes = 53000, time left (est) = 1438.159
+#5 time cost = 1060.408, calculated_shapes = 53000, time left (est) = 1440.554
+#6 time cost = 1060.968, calculated_shapes = 53000, time left (est) = 1441.315
+#3 time cost = 1062.369, calculated_shapes = 53000, time left (est) = 1443.218
+#1 time cost = 1068.431, calculated_shapes = 54000, time left (est) = 1404.788
+#7 time cost = 1074.622, calculated_shapes = 54000, time left (est) = 1412.929
+#2 time cost = 1077.188, calculated_shapes = 54000, time left (est) = 1416.303
+#0 time cost = 1078.595, calculated_shapes = 54000, time left (est) = 1418.153
+#4 time cost = 1079.026, calculated_shapes = 54000, time left (est) = 1418.719
+#5 time cost = 1079.685, calculated_shapes = 54000, time left (est) = 1419.586
+#6 time cost = 1080.162, calculated_shapes = 54000, time left (est) = 1420.213
+#3 time cost = 1081.667, calculated_shapes = 54000, time left (est) = 1422.192
+#1 time cost = 1087.705, calculated_shapes = 55000, time left (est) = 1384.352
+#7 time cost = 1094.409, calculated_shapes = 55000, time left (est) = 1392.884
+#2 time cost = 1095.865, calculated_shapes = 55000, time left (est) = 1394.737
+#0 time cost = 1097.853, calculated_shapes = 55000, time left (est) = 1397.267
+#4 time cost = 1098.959, calculated_shapes = 55000, time left (est) = 1398.676
+#5 time cost = 1100.018, calculated_shapes = 55000, time left (est) = 1400.023
+#6 time cost = 1100.559, calculated_shapes = 55000, time left (est) = 1400.711
+#3 time cost = 1103.099, calculated_shapes = 55000, time left (est) = 1403.945
+#1 time cost = 1107.081, calculated_shapes = 56000, time left (est) = 1364.082
+#2 time cost = 1115.409, calculated_shapes = 56000, time left (est) = 1374.343
+#7 time cost = 1115.477, calculated_shapes = 56000, time left (est) = 1374.427
+#0 time cost = 1117.693, calculated_shapes = 56000, time left (est) = 1377.158
+#5 time cost = 1119.340, calculated_shapes = 56000, time left (est) = 1379.187
+#4 time cost = 1119.975, calculated_shapes = 56000, time left (est) = 1379.969
+#6 time cost = 1120.467, calculated_shapes = 56000, time left (est) = 1380.575
+#3 time cost = 1123.015, calculated_shapes = 56000, time left (est) = 1383.715
+#1 time cost = 1126.940, calculated_shapes = 57000, time left (est) = 1344.420
+#7 time cost = 1134.626, calculated_shapes = 57000, time left (est) = 1353.589
+#2 time cost = 1135.364, calculated_shapes = 57000, time left (est) = 1354.469
+#0 time cost = 1138.052, calculated_shapes = 57000, time left (est) = 1357.676
+#4 time cost = 1139.067, calculated_shapes = 57000, time left (est) = 1358.887
+#5 time cost = 1139.751, calculated_shapes = 57000, time left (est) = 1359.703
+#6 time cost = 1140.602, calculated_shapes = 57000, time left (est) = 1360.718
+#3 time cost = 1142.130, calculated_shapes = 57000, time left (est) = 1362.541
+#1 time cost = 1146.058, calculated_shapes = 58000, time left (est) = 1323.895
+#7 time cost = 1152.977, calculated_shapes = 58000, time left (est) = 1331.888
+#2 time cost = 1156.512, calculated_shapes = 58000, time left (est) = 1335.970
+#5 time cost = 1157.388, calculated_shapes = 58000, time left (est) = 1336.982
+#4 time cost = 1158.564, calculated_shapes = 58000, time left (est) = 1338.341
+#6 time cost = 1159.278, calculated_shapes = 58000, time left (est) = 1339.166
+#0 time cost = 1159.447, calculated_shapes = 58000, time left (est) = 1339.361
+#3 time cost = 1162.638, calculated_shapes = 58000, time left (est) = 1343.047
+#1 time cost = 1165.646, calculated_shapes = 59000, time left (est) = 1303.943
+#7 time cost = 1173.508, calculated_shapes = 59000, time left (est) = 1312.738
+#2 time cost = 1176.271, calculated_shapes = 59000, time left (est) = 1315.828
+#5 time cost = 1177.645, calculated_shapes = 59000, time left (est) = 1317.366
+#4 time cost = 1178.710, calculated_shapes = 59000, time left (est) = 1318.557
+#6 time cost = 1179.067, calculated_shapes = 59000, time left (est) = 1318.956
+#0 time cost = 1179.478, calculated_shapes = 59000, time left (est) = 1319.416
+#3 time cost = 1182.385, calculated_shapes = 59000, time left (est) = 1322.668
+#1 time cost = 1184.694, calculated_shapes = 60000, time left (est) = 1283.419
+#7 time cost = 1192.901, calculated_shapes = 60000, time left (est) = 1292.309
+#2 time cost = 1196.550, calculated_shapes = 60000, time left (est) = 1296.262
+#5 time cost = 1198.345, calculated_shapes = 60000, time left (est) = 1298.208
+#6 time cost = 1199.176, calculated_shapes = 60000, time left (est) = 1299.107
+#4 time cost = 1199.268, calculated_shapes = 60000, time left (est) = 1299.207
+#0 time cost = 1199.580, calculated_shapes = 60000, time left (est) = 1299.545
+#3 time cost = 1201.744, calculated_shapes = 60000, time left (est) = 1301.890
+#1 time cost = 1204.479, calculated_shapes = 61000, time left (est) = 1263.716
+#7 time cost = 1212.438, calculated_shapes = 61000, time left (est) = 1272.066
+#2 time cost = 1216.212, calculated_shapes = 61000, time left (est) = 1276.026
+#4 time cost = 1218.237, calculated_shapes = 61000, time left (est) = 1278.150
+#5 time cost = 1218.895, calculated_shapes = 61000, time left (est) = 1278.841
+#0 time cost = 1219.051, calculated_shapes = 61000, time left (est) = 1279.004
+#6 time cost = 1219.262, calculated_shapes = 61000, time left (est) = 1279.225
+#3 time cost = 1221.955, calculated_shapes = 61000, time left (est) = 1282.051
+#1 time cost = 1224.784, calculated_shapes = 62000, time left (est) = 1244.538
+#7 time cost = 1232.900, calculated_shapes = 62000, time left (est) = 1252.785
+#2 time cost = 1237.112, calculated_shapes = 62000, time left (est) = 1257.066
+#0 time cost = 1237.587, calculated_shapes = 62000, time left (est) = 1257.548
+#4 time cost = 1238.286, calculated_shapes = 62000, time left (est) = 1258.258
+#5 time cost = 1239.294, calculated_shapes = 62000, time left (est) = 1259.283
+#3 time cost = 1240.157, calculated_shapes = 62000, time left (est) = 1260.159
+#6 time cost = 1240.488, calculated_shapes = 62000, time left (est) = 1260.496
+#1 time cost = 1245.493, calculated_shapes = 63000, time left (est) = 1225.724
+#7 time cost = 1252.477, calculated_shapes = 63000, time left (est) = 1232.597
+#0 time cost = 1257.174, calculated_shapes = 63000, time left (est) = 1237.219
+#4 time cost = 1258.297, calculated_shapes = 63000, time left (est) = 1238.324
+#5 time cost = 1259.117, calculated_shapes = 63000, time left (est) = 1239.131
+#6 time cost = 1259.148, calculated_shapes = 63000, time left (est) = 1239.161
+#2 time cost = 1259.874, calculated_shapes = 63000, time left (est) = 1239.876
+#3 time cost = 1260.187, calculated_shapes = 63000, time left (est) = 1240.184
+#1 time cost = 1265.228, calculated_shapes = 64000, time left (est) = 1205.921
+#7 time cost = 1271.792, calculated_shapes = 64000, time left (est) = 1212.176
+#0 time cost = 1276.958, calculated_shapes = 64000, time left (est) = 1217.100
+#4 time cost = 1277.622, calculated_shapes = 64000, time left (est) = 1217.733
+#6 time cost = 1278.848, calculated_shapes = 64000, time left (est) = 1218.902
+#2 time cost = 1279.324, calculated_shapes = 64000, time left (est) = 1219.355
+#5 time cost = 1279.477, calculated_shapes = 64000, time left (est) = 1219.501
+#3 time cost = 1280.905, calculated_shapes = 64000, time left (est) = 1220.863
+#1 time cost = 1286.319, calculated_shapes = 65000, time left (est) = 1187.371
+#7 time cost = 1291.549, calculated_shapes = 65000, time left (est) = 1192.199
+#0 time cost = 1297.596, calculated_shapes = 65000, time left (est) = 1197.781
+#4 time cost = 1298.193, calculated_shapes = 65000, time left (est) = 1198.332
+#6 time cost = 1299.278, calculated_shapes = 65000, time left (est) = 1199.333
+#5 time cost = 1299.315, calculated_shapes = 65000, time left (est) = 1199.368
+#2 time cost = 1300.137, calculated_shapes = 65000, time left (est) = 1200.126
+#3 time cost = 1300.339, calculated_shapes = 65000, time left (est) = 1200.313
+#1 time cost = 1307.480, calculated_shapes = 66000, time left (est) = 1168.808
+#7 time cost = 1311.780, calculated_shapes = 66000, time left (est) = 1172.652
+#0 time cost = 1317.652, calculated_shapes = 66000, time left (est) = 1177.901
+#4 time cost = 1317.724, calculated_shapes = 66000, time left (est) = 1177.965
+#6 time cost = 1319.330, calculated_shapes = 66000, time left (est) = 1179.401
+#5 time cost = 1319.708, calculated_shapes = 66000, time left (est) = 1179.739
+#2 time cost = 1319.937, calculated_shapes = 66000, time left (est) = 1179.943
+#3 time cost = 1319.958, calculated_shapes = 66000, time left (est) = 1179.963
+#1 time cost = 1328.001, calculated_shapes = 67000, time left (est) = 1149.613
+#7 time cost = 1332.285, calculated_shapes = 67000, time left (est) = 1153.322
+#4 time cost = 1336.540, calculated_shapes = 67000, time left (est) = 1157.005
+#0 time cost = 1338.267, calculated_shapes = 67000, time left (est) = 1158.500
+#6 time cost = 1338.417, calculated_shapes = 67000, time left (est) = 1158.629
+#3 time cost = 1339.343, calculated_shapes = 67000, time left (est) = 1159.431
+#2 time cost = 1339.373, calculated_shapes = 67000, time left (est) = 1159.457
+#5 time cost = 1339.966, calculated_shapes = 67000, time left (est) = 1159.971
+#1 time cost = 1347.587, calculated_shapes = 68000, time left (est) = 1129.595
+#7 time cost = 1351.649, calculated_shapes = 68000, time left (est) = 1133.000
+#4 time cost = 1357.372, calculated_shapes = 68000, time left (est) = 1137.797
+#0 time cost = 1357.626, calculated_shapes = 68000, time left (est) = 1138.010
+#6 time cost = 1358.294, calculated_shapes = 68000, time left (est) = 1138.570
+#2 time cost = 1358.609, calculated_shapes = 68000, time left (est) = 1138.834
+#3 time cost = 1360.144, calculated_shapes = 68000, time left (est) = 1140.121
+#5 time cost = 1361.147, calculated_shapes = 68000, time left (est) = 1140.961
+#1 time cost = 1368.110, calculated_shapes = 69000, time left (est) = 1110.350
+#7 time cost = 1371.383, calculated_shapes = 69000, time left (est) = 1113.006
+#0 time cost = 1376.832, calculated_shapes = 69000, time left (est) = 1117.429
+#2 time cost = 1377.569, calculated_shapes = 69000, time left (est) = 1118.027
+#4 time cost = 1377.924, calculated_shapes = 69000, time left (est) = 1118.315
+#6 time cost = 1378.588, calculated_shapes = 69000, time left (est) = 1118.854
+#3 time cost = 1378.897, calculated_shapes = 69000, time left (est) = 1119.105
+#5 time cost = 1381.201, calculated_shapes = 69000, time left (est) = 1120.974
+#1 time cost = 1388.725, calculated_shapes = 70000, time left (est) = 1091.141
+#7 time cost = 1391.455, calculated_shapes = 70000, time left (est) = 1093.286
+#2 time cost = 1396.911, calculated_shapes = 70000, time left (est) = 1097.573
+#0 time cost = 1396.957, calculated_shapes = 70000, time left (est) = 1097.609
+#6 time cost = 1397.396, calculated_shapes = 70000, time left (est) = 1097.954
+#4 time cost = 1397.856, calculated_shapes = 70000, time left (est) = 1098.316
+#3 time cost = 1399.551, calculated_shapes = 70000, time left (est) = 1099.647
+#5 time cost = 1401.315, calculated_shapes = 70000, time left (est) = 1101.033
+#1 time cost = 1408.259, calculated_shapes = 71000, time left (est) = 1071.070
+#7 time cost = 1412.512, calculated_shapes = 71000, time left (est) = 1074.305
+#4 time cost = 1416.007, calculated_shapes = 71000, time left (est) = 1076.963
+#6 time cost = 1416.463, calculated_shapes = 71000, time left (est) = 1077.310
+#2 time cost = 1416.473, calculated_shapes = 71000, time left (est) = 1077.317
+#0 time cost = 1417.712, calculated_shapes = 71000, time left (est) = 1078.260
+#3 time cost = 1419.055, calculated_shapes = 71000, time left (est) = 1079.282
+#5 time cost = 1421.063, calculated_shapes = 71000, time left (est) = 1080.809
+#1 time cost = 1428.735, calculated_shapes = 72000, time left (est) = 1051.707
+#7 time cost = 1431.221, calculated_shapes = 72000, time left (est) = 1053.538
+#2 time cost = 1435.386, calculated_shapes = 72000, time left (est) = 1056.603
+#4 time cost = 1435.459, calculated_shapes = 72000, time left (est) = 1056.658
+#6 time cost = 1436.971, calculated_shapes = 72000, time left (est) = 1057.770
+#0 time cost = 1437.350, calculated_shapes = 72000, time left (est) = 1058.050
+#3 time cost = 1438.319, calculated_shapes = 72000, time left (est) = 1058.763
+#5 time cost = 1442.010, calculated_shapes = 72000, time left (est) = 1061.479
+#1 time cost = 1448.816, calculated_shapes = 73000, time left (est) = 1032.034
+#7 time cost = 1451.544, calculated_shapes = 73000, time left (est) = 1033.977
+#4 time cost = 1454.272, calculated_shapes = 73000, time left (est) = 1035.920
+#2 time cost = 1455.409, calculated_shapes = 73000, time left (est) = 1036.730
+#6 time cost = 1457.128, calculated_shapes = 73000, time left (est) = 1037.954
+#3 time cost = 1457.163, calculated_shapes = 73000, time left (est) = 1037.979
+#0 time cost = 1459.478, calculated_shapes = 73000, time left (est) = 1039.628
+#5 time cost = 1462.512, calculated_shapes = 73000, time left (est) = 1041.789
+#1 time cost = 1468.251, calculated_shapes = 74000, time left (est) = 1011.903
+#7 time cost = 1471.662, calculated_shapes = 74000, time left (est) = 1014.254
+#4 time cost = 1473.259, calculated_shapes = 74000, time left (est) = 1015.354
+#2 time cost = 1475.009, calculated_shapes = 74000, time left (est) = 1016.560
+#3 time cost = 1476.285, calculated_shapes = 74000, time left (est) = 1017.440
+#6 time cost = 1477.397, calculated_shapes = 74000, time left (est) = 1018.206
+#0 time cost = 1478.546, calculated_shapes = 74000, time left (est) = 1018.998
+#5 time cost = 1483.200, calculated_shapes = 74000, time left (est) = 1022.205
+#1 time cost = 1486.110, calculated_shapes = 75000, time left (est) = 990.740
+#7 time cost = 1490.372, calculated_shapes = 75000, time left (est) = 993.582
+#4 time cost = 1493.435, calculated_shapes = 75000, time left (est) = 995.623
+#2 time cost = 1495.897, calculated_shapes = 75000, time left (est) = 997.265
+#3 time cost = 1496.977, calculated_shapes = 75000, time left (est) = 997.985
+#6 time cost = 1498.134, calculated_shapes = 75000, time left (est) = 998.756
+#0 time cost = 1499.192, calculated_shapes = 75000, time left (est) = 999.461
+#5 time cost = 1502.536, calculated_shapes = 75000, time left (est) = 1001.690
+#1 time cost = 1506.897, calculated_shapes = 76000, time left (est) = 971.552
+#7 time cost = 1511.509, calculated_shapes = 76000, time left (est) = 974.525
+#4 time cost = 1512.878, calculated_shapes = 76000, time left (est) = 975.408
+#2 time cost = 1515.848, calculated_shapes = 76000, time left (est) = 977.323
+#3 time cost = 1517.394, calculated_shapes = 76000, time left (est) = 978.320
+#6 time cost = 1517.449, calculated_shapes = 76000, time left (est) = 978.355
+#0 time cost = 1519.290, calculated_shapes = 76000, time left (est) = 979.542
+#5 time cost = 1523.306, calculated_shapes = 76000, time left (est) = 982.131
+#1 time cost = 1527.069, calculated_shapes = 77000, time left (est) = 951.939
+#7 time cost = 1531.350, calculated_shapes = 77000, time left (est) = 954.608
+#4 time cost = 1532.843, calculated_shapes = 77000, time left (est) = 955.538
+#2 time cost = 1535.374, calculated_shapes = 77000, time left (est) = 957.116
+#3 time cost = 1536.846, calculated_shapes = 77000, time left (est) = 958.034
+#6 time cost = 1537.654, calculated_shapes = 77000, time left (est) = 958.537
+#0 time cost = 1538.457, calculated_shapes = 77000, time left (est) = 959.038
+#5 time cost = 1543.609, calculated_shapes = 77000, time left (est) = 962.250
+#1 time cost = 1546.326, calculated_shapes = 78000, time left (est) = 931.760
+#7 time cost = 1551.555, calculated_shapes = 78000, time left (est) = 934.911
+#4 time cost = 1552.634, calculated_shapes = 78000, time left (est) = 935.561
+#2 time cost = 1554.300, calculated_shapes = 78000, time left (est) = 936.565
+#3 time cost = 1557.181, calculated_shapes = 78000, time left (est) = 938.301
+#6 time cost = 1557.563, calculated_shapes = 78000, time left (est) = 938.531
+#0 time cost = 1557.990, calculated_shapes = 78000, time left (est) = 938.789
+#5 time cost = 1562.566, calculated_shapes = 78000, time left (est) = 941.546
+#1 time cost = 1565.839, calculated_shapes = 79000, time left (est) = 911.755
+#7 time cost = 1571.302, calculated_shapes = 79000, time left (est) = 914.936
+#4 time cost = 1572.182, calculated_shapes = 79000, time left (est) = 915.448
+#2 time cost = 1574.189, calculated_shapes = 79000, time left (est) = 916.616
+#6 time cost = 1577.614, calculated_shapes = 79000, time left (est) = 918.611
+#0 time cost = 1578.256, calculated_shapes = 79000, time left (est) = 918.984
+#3 time cost = 1578.463, calculated_shapes = 79000, time left (est) = 919.105
+#5 time cost = 1582.160, calculated_shapes = 79000, time left (est) = 921.257
+#1 time cost = 1587.934, calculated_shapes = 80000, time left (est) = 893.213
+#4 time cost = 1590.443, calculated_shapes = 80000, time left (est) = 894.624
+#7 time cost = 1591.130, calculated_shapes = 80000, time left (est) = 895.011
+#2 time cost = 1594.306, calculated_shapes = 80000, time left (est) = 896.797
+#6 time cost = 1597.154, calculated_shapes = 80000, time left (est) = 898.399
+#0 time cost = 1597.590, calculated_shapes = 80000, time left (est) = 898.644
+#3 time cost = 1598.180, calculated_shapes = 80000, time left (est) = 898.976
+#5 time cost = 1602.517, calculated_shapes = 80000, time left (est) = 901.416
+#1 time cost = 1608.217, calculated_shapes = 81000, time left (est) = 873.599
+#4 time cost = 1610.187, calculated_shapes = 81000, time left (est) = 874.670
+#7 time cost = 1611.857, calculated_shapes = 81000, time left (est) = 875.576
+#2 time cost = 1614.033, calculated_shapes = 81000, time left (est) = 876.759
+#6 time cost = 1617.255, calculated_shapes = 81000, time left (est) = 878.509
+#0 time cost = 1618.141, calculated_shapes = 81000, time left (est) = 878.990
+#3 time cost = 1618.516, calculated_shapes = 81000, time left (est) = 879.194
+#5 time cost = 1622.063, calculated_shapes = 81000, time left (est) = 881.121
+#1 time cost = 1628.779, calculated_shapes = 82000, time left (est) = 854.116
+#4 time cost = 1630.193, calculated_shapes = 82000, time left (est) = 854.857
+#7 time cost = 1632.394, calculated_shapes = 82000, time left (est) = 856.011
+#2 time cost = 1633.843, calculated_shapes = 82000, time left (est) = 856.771
+#6 time cost = 1636.540, calculated_shapes = 82000, time left (est) = 858.186
+#0 time cost = 1637.456, calculated_shapes = 82000, time left (est) = 858.666
+#3 time cost = 1638.024, calculated_shapes = 82000, time left (est) = 858.964
+#5 time cost = 1641.326, calculated_shapes = 82000, time left (est) = 860.695
+#1 time cost = 1649.607, calculated_shapes = 83000, time left (est) = 834.741
+#4 time cost = 1650.444, calculated_shapes = 83000, time left (est) = 835.164
+#7 time cost = 1651.724, calculated_shapes = 83000, time left (est) = 835.812
+#2 time cost = 1653.463, calculated_shapes = 83000, time left (est) = 836.692
+#6 time cost = 1656.859, calculated_shapes = 83000, time left (est) = 838.411
+#3 time cost = 1657.110, calculated_shapes = 83000, time left (est) = 838.538
+#0 time cost = 1657.132, calculated_shapes = 83000, time left (est) = 838.549
+#5 time cost = 1662.209, calculated_shapes = 83000, time left (est) = 841.118
+#1 time cost = 1669.873, calculated_shapes = 84000, time left (est) = 815.057
+#4 time cost = 1670.733, calculated_shapes = 84000, time left (est) = 815.477
+#7 time cost = 1672.230, calculated_shapes = 84000, time left (est) = 816.208
+#2 time cost = 1673.338, calculated_shapes = 84000, time left (est) = 816.748
+#6 time cost = 1676.277, calculated_shapes = 84000, time left (est) = 818.183
+#3 time cost = 1676.948, calculated_shapes = 84000, time left (est) = 818.510
+#0 time cost = 1677.498, calculated_shapes = 84000, time left (est) = 818.779
+#5 time cost = 1682.046, calculated_shapes = 84000, time left (est) = 820.998
+#1 time cost = 1688.957, calculated_shapes = 85000, time left (est) = 794.803
+#4 time cost = 1690.382, calculated_shapes = 85000, time left (est) = 795.474
+#7 time cost = 1690.751, calculated_shapes = 85000, time left (est) = 795.647
+#2 time cost = 1692.987, calculated_shapes = 85000, time left (est) = 796.700
+#6 time cost = 1695.505, calculated_shapes = 85000, time left (est) = 797.885
+#3 time cost = 1695.800, calculated_shapes = 85000, time left (est) = 798.023
+#0 time cost = 1697.491, calculated_shapes = 85000, time left (est) = 798.819
+#5 time cost = 1701.926, calculated_shapes = 85000, time left (est) = 800.906
+#1 time cost = 1708.977, calculated_shapes = 86000, time left (est) = 775.001
+#4 time cost = 1710.713, calculated_shapes = 86000, time left (est) = 775.788
+#7 time cost = 1710.821, calculated_shapes = 86000, time left (est) = 775.838
+#2 time cost = 1714.660, calculated_shapes = 86000, time left (est) = 777.579
+#6 time cost = 1715.565, calculated_shapes = 86000, time left (est) = 777.989
+#3 time cost = 1716.755, calculated_shapes = 86000, time left (est) = 778.528
+#0 time cost = 1718.651, calculated_shapes = 86000, time left (est) = 779.388
+#5 time cost = 1722.592, calculated_shapes = 86000, time left (est) = 781.175
+#1 time cost = 1729.134, calculated_shapes = 87000, time left (est) = 755.254
+#4 time cost = 1730.255, calculated_shapes = 87000, time left (est) = 755.744
+#7 time cost = 1731.885, calculated_shapes = 87000, time left (est) = 756.455
+#2 time cost = 1734.344, calculated_shapes = 87000, time left (est) = 757.529
+#6 time cost = 1735.811, calculated_shapes = 87000, time left (est) = 758.170
+#3 time cost = 1736.716, calculated_shapes = 87000, time left (est) = 758.566
+#0 time cost = 1738.754, calculated_shapes = 87000, time left (est) = 759.456
+#5 time cost = 1743.021, calculated_shapes = 87000, time left (est) = 761.320
+#1 time cost = 1749.454, calculated_shapes = 88000, time left (est) = 735.566
+#4 time cost = 1750.409, calculated_shapes = 88000, time left (est) = 735.967
+#7 time cost = 1750.530, calculated_shapes = 88000, time left (est) = 736.018
+#2 time cost = 1754.544, calculated_shapes = 88000, time left (est) = 737.706
+#3 time cost = 1755.461, calculated_shapes = 88000, time left (est) = 738.091
+#6 time cost = 1757.363, calculated_shapes = 88000, time left (est) = 738.891
+#0 time cost = 1758.643, calculated_shapes = 88000, time left (est) = 739.430
+#5 time cost = 1762.808, calculated_shapes = 88000, time left (est) = 741.180
+#1 time cost = 1768.362, calculated_shapes = 89000, time left (est) = 715.293
+#4 time cost = 1768.509, calculated_shapes = 89000, time left (est) = 715.352
+#7 time cost = 1769.256, calculated_shapes = 89000, time left (est) = 715.654
+#2 time cost = 1773.912, calculated_shapes = 89000, time left (est) = 717.537
+#3 time cost = 1775.347, calculated_shapes = 89000, time left (est) = 718.118
+#6 time cost = 1777.937, calculated_shapes = 89000, time left (est) = 719.165
+#0 time cost = 1778.600, calculated_shapes = 89000, time left (est) = 719.434
+#5 time cost = 1782.254, calculated_shapes = 89000, time left (est) = 720.912
+#1 time cost = 1787.963, calculated_shapes = 90000, time left (est) = 695.319
+#4 time cost = 1788.136, calculated_shapes = 90000, time left (est) = 695.386
+#7 time cost = 1789.929, calculated_shapes = 90000, time left (est) = 696.083
+#2 time cost = 1792.683, calculated_shapes = 90000, time left (est) = 697.154
+#3 time cost = 1795.300, calculated_shapes = 90000, time left (est) = 698.172
+#0 time cost = 1797.402, calculated_shapes = 90000, time left (est) = 698.990
+#6 time cost = 1798.362, calculated_shapes = 90000, time left (est) = 699.363
+#5 time cost = 1800.828, calculated_shapes = 90000, time left (est) = 700.322
+#1 time cost = 1806.934, calculated_shapes = 91000, time left (est) = 675.118
+#4 time cost = 1807.611, calculated_shapes = 91000, time left (est) = 675.371
+#7 time cost = 1809.929, calculated_shapes = 91000, time left (est) = 676.237
+#2 time cost = 1812.826, calculated_shapes = 91000, time left (est) = 677.320
+#3 time cost = 1814.439, calculated_shapes = 91000, time left (est) = 677.922
+#0 time cost = 1817.811, calculated_shapes = 91000, time left (est) = 679.182
+#6 time cost = 1817.944, calculated_shapes = 91000, time left (est) = 679.232
+#5 time cost = 1821.412, calculated_shapes = 91000, time left (est) = 680.528
+#1 time cost = 1827.428, calculated_shapes = 92000, time left (est) = 655.490
+#4 time cost = 1828.826, calculated_shapes = 92000, time left (est) = 655.992
+#7 time cost = 1829.693, calculated_shapes = 92000, time left (est) = 656.303
+#2 time cost = 1832.406, calculated_shapes = 92000, time left (est) = 657.276
+#3 time cost = 1833.733, calculated_shapes = 92000, time left (est) = 657.752
+#0 time cost = 1837.158, calculated_shapes = 92000, time left (est) = 658.981
+#6 time cost = 1837.283, calculated_shapes = 92000, time left (est) = 659.025
+#5 time cost = 1841.905, calculated_shapes = 92000, time left (est) = 660.683
+#1 time cost = 1847.793, calculated_shapes = 93000, time left (est) = 635.800
+#4 time cost = 1849.092, calculated_shapes = 93000, time left (est) = 636.247
+#7 time cost = 1849.576, calculated_shapes = 93000, time left (est) = 636.413
+#3 time cost = 1851.431, calculated_shapes = 93000, time left (est) = 637.051
+#2 time cost = 1852.286, calculated_shapes = 93000, time left (est) = 637.346
+#0 time cost = 1856.628, calculated_shapes = 93000, time left (est) = 638.840
+#6 time cost = 1858.241, calculated_shapes = 93000, time left (est) = 639.395
+#5 time cost = 1861.492, calculated_shapes = 93000, time left (est) = 640.513
+#1 time cost = 1867.227, calculated_shapes = 94000, time left (est) = 615.788
+#7 time cost = 1868.289, calculated_shapes = 94000, time left (est) = 616.138
+#4 time cost = 1868.778, calculated_shapes = 94000, time left (est) = 616.299
+#3 time cost = 1871.847, calculated_shapes = 94000, time left (est) = 617.311
+#2 time cost = 1872.756, calculated_shapes = 94000, time left (est) = 617.611
+#0 time cost = 1876.877, calculated_shapes = 94000, time left (est) = 618.970
+#6 time cost = 1879.314, calculated_shapes = 94000, time left (est) = 619.774
+#5 time cost = 1882.143, calculated_shapes = 94000, time left (est) = 620.707
+#1 time cost = 1886.761, calculated_shapes = 95000, time left (est) = 595.819
+#7 time cost = 1888.412, calculated_shapes = 95000, time left (est) = 596.341
+#4 time cost = 1888.859, calculated_shapes = 95000, time left (est) = 596.482
+#3 time cost = 1891.495, calculated_shapes = 95000, time left (est) = 597.314
+#2 time cost = 1892.136, calculated_shapes = 95000, time left (est) = 597.517
+#0 time cost = 1896.402, calculated_shapes = 95000, time left (est) = 598.864
+#6 time cost = 1900.728, calculated_shapes = 95000, time left (est) = 600.230
+#5 time cost = 1903.072, calculated_shapes = 95000, time left (est) = 600.970
+#1 time cost = 1906.315, calculated_shapes = 96000, time left (est) = 575.866
+#7 time cost = 1908.287, calculated_shapes = 96000, time left (est) = 576.462
+#4 time cost = 1909.716, calculated_shapes = 96000, time left (est) = 576.893
+#2 time cost = 1911.289, calculated_shapes = 96000, time left (est) = 577.369
+#3 time cost = 1911.966, calculated_shapes = 96000, time left (est) = 577.573
+#0 time cost = 1917.110, calculated_shapes = 96000, time left (est) = 579.127
+#6 time cost = 1921.070, calculated_shapes = 96000, time left (est) = 580.323
+#5 time cost = 1921.570, calculated_shapes = 96000, time left (est) = 580.474
+#1 time cost = 1926.068, calculated_shapes = 97000, time left (est) = 555.978
+#7 time cost = 1927.189, calculated_shapes = 97000, time left (est) = 556.302
+#4 time cost = 1929.295, calculated_shapes = 97000, time left (est) = 556.910
+#2 time cost = 1931.603, calculated_shapes = 97000, time left (est) = 557.576
+#3 time cost = 1931.706, calculated_shapes = 97000, time left (est) = 557.606
+#0 time cost = 1935.207, calculated_shapes = 97000, time left (est) = 558.616
+#6 time cost = 1939.545, calculated_shapes = 97000, time left (est) = 559.869
+#5 time cost = 1940.512, calculated_shapes = 97000, time left (est) = 560.148
+#1 time cost = 1945.833, calculated_shapes = 98000, time left (est) = 536.097
+#7 time cost = 1947.592, calculated_shapes = 98000, time left (est) = 536.581
+#4 time cost = 1948.629, calculated_shapes = 98000, time left (est) = 536.867
+#2 time cost = 1951.600, calculated_shapes = 98000, time left (est) = 537.686
+#3 time cost = 1952.890, calculated_shapes = 98000, time left (est) = 538.041
+#0 time cost = 1955.706, calculated_shapes = 98000, time left (est) = 538.817
+#6 time cost = 1960.362, calculated_shapes = 98000, time left (est) = 540.100
+#5 time cost = 1963.078, calculated_shapes = 98000, time left (est) = 540.848
+#1 time cost = 1965.217, calculated_shapes = 99000, time left (est) = 516.118
+#7 time cost = 1967.747, calculated_shapes = 99000, time left (est) = 516.782
+#4 time cost = 1970.073, calculated_shapes = 99000, time left (est) = 517.393
+#3 time cost = 1972.194, calculated_shapes = 99000, time left (est) = 517.950
+#2 time cost = 1972.330, calculated_shapes = 99000, time left (est) = 517.986
+#0 time cost = 1976.089, calculated_shapes = 99000, time left (est) = 518.973
+#6 time cost = 1979.618, calculated_shapes = 99000, time left (est) = 519.900
+#5 time cost = 1983.075, calculated_shapes = 99000, time left (est) = 520.808
+#1 time cost = 1984.316, calculated_shapes = 100000, time left (est) = 496.079
+#7 time cost = 1985.264, calculated_shapes = 100000, time left (est) = 496.316
+#4 time cost = 1991.052, calculated_shapes = 100000, time left (est) = 497.763
+#2 time cost = 1991.723, calculated_shapes = 100000, time left (est) = 497.931
+#3 time cost = 1991.754, calculated_shapes = 100000, time left (est) = 497.939
+#0 time cost = 1996.293, calculated_shapes = 100000, time left (est) = 499.073
+#6 time cost = 1999.411, calculated_shapes = 100000, time left (est) = 499.853
+#5 time cost = 2003.091, calculated_shapes = 100000, time left (est) = 500.773
+#7 time cost = 2003.335, calculated_shapes = 101000, time left (est) = 476.040
+#1 time cost = 2003.536, calculated_shapes = 101000, time left (est) = 476.088
+#3 time cost = 2011.930, calculated_shapes = 101000, time left (est) = 478.082
+#4 time cost = 2012.111, calculated_shapes = 101000, time left (est) = 478.125
+#2 time cost = 2012.553, calculated_shapes = 101000, time left (est) = 478.230
+#0 time cost = 2015.632, calculated_shapes = 101000, time left (est) = 478.962
+#6 time cost = 2018.974, calculated_shapes = 101000, time left (est) = 479.756
+#7 time cost = 2022.213, calculated_shapes = 102000, time left (est) = 455.989
+#1 time cost = 2022.559, calculated_shapes = 102000, time left (est) = 456.067
+#5 time cost = 2023.543, calculated_shapes = 101000, time left (est) = 480.842
+#4 time cost = 2032.291, calculated_shapes = 102000, time left (est) = 458.262
+#3 time cost = 2032.386, calculated_shapes = 102000, time left (est) = 458.283
+#2 time cost = 2032.429, calculated_shapes = 102000, time left (est) = 458.293
+#0 time cost = 2035.286, calculated_shapes = 102000, time left (est) = 458.937
+#6 time cost = 2038.949, calculated_shapes = 102000, time left (est) = 459.763
+#7 time cost = 2041.266, calculated_shapes = 103000, time left (est) = 435.999
+#1 time cost = 2042.858, calculated_shapes = 103000, time left (est) = 436.339
+#5 time cost = 2043.900, calculated_shapes = 102000, time left (est) = 460.879
+#2 time cost = 2051.766, calculated_shapes = 103000, time left (est) = 438.241
+#4 time cost = 2052.064, calculated_shapes = 103000, time left (est) = 438.305
+#3 time cost = 2052.252, calculated_shapes = 103000, time left (est) = 438.345
+#0 time cost = 2056.014, calculated_shapes = 103000, time left (est) = 439.149
+#6 time cost = 2058.521, calculated_shapes = 103000, time left (est) = 439.684
+#7 time cost = 2060.880, calculated_shapes = 104000, time left (est) = 416.139
+#1 time cost = 2063.985, calculated_shapes = 104000, time left (est) = 416.766
+#5 time cost = 2064.217, calculated_shapes = 103000, time left (est) = 440.901
+#2 time cost = 2071.978, calculated_shapes = 104000, time left (est) = 418.380
+#3 time cost = 2072.067, calculated_shapes = 104000, time left (est) = 418.398
+#4 time cost = 2073.108, calculated_shapes = 104000, time left (est) = 418.608
+#0 time cost = 2076.170, calculated_shapes = 104000, time left (est) = 419.227
+#6 time cost = 2078.455, calculated_shapes = 104000, time left (est) = 419.688
+#7 time cost = 2082.002, calculated_shapes = 105000, time left (est) = 396.572
+#5 time cost = 2083.862, calculated_shapes = 104000, time left (est) = 420.780
+#1 time cost = 2084.538, calculated_shapes = 105000, time left (est) = 397.055
+#3 time cost = 2091.475, calculated_shapes = 105000, time left (est) = 398.376
+#2 time cost = 2091.772, calculated_shapes = 105000, time left (est) = 398.433
+#4 time cost = 2092.507, calculated_shapes = 105000, time left (est) = 398.573
+#0 time cost = 2095.862, calculated_shapes = 105000, time left (est) = 399.212
+#6 time cost = 2098.702, calculated_shapes = 105000, time left (est) = 399.753
+#7 time cost = 2102.580, calculated_shapes = 106000, time left (est) = 376.878
+#5 time cost = 2104.105, calculated_shapes = 105000, time left (est) = 400.782
+#1 time cost = 2104.848, calculated_shapes = 106000, time left (est) = 377.284
+#3 time cost = 2110.792, calculated_shapes = 106000, time left (est) = 378.349
+#2 time cost = 2111.205, calculated_shapes = 106000, time left (est) = 378.424
+#4 time cost = 2112.293, calculated_shapes = 106000, time left (est) = 378.619
+#0 time cost = 2115.643, calculated_shapes = 106000, time left (est) = 379.219
+#6 time cost = 2119.963, calculated_shapes = 106000, time left (est) = 379.993
+#7 time cost = 2122.391, calculated_shapes = 107000, time left (est) = 357.038
+#5 time cost = 2123.381, calculated_shapes = 106000, time left (est) = 380.606
+#1 time cost = 2124.061, calculated_shapes = 107000, time left (est) = 357.319
+#3 time cost = 2131.489, calculated_shapes = 107000, time left (est) = 358.568
+#2 time cost = 2131.816, calculated_shapes = 107000, time left (est) = 358.623
+#4 time cost = 2133.660, calculated_shapes = 107000, time left (est) = 358.933
+#0 time cost = 2136.392, calculated_shapes = 107000, time left (est) = 359.393
+#6 time cost = 2139.728, calculated_shapes = 107000, time left (est) = 359.954
+#7 time cost = 2142.032, calculated_shapes = 108000, time left (est) = 337.172
+#5 time cost = 2142.509, calculated_shapes = 107000, time left (est) = 360.422
+#1 time cost = 2144.185, calculated_shapes = 108000, time left (est) = 337.511
+#3 time cost = 2150.990, calculated_shapes = 108000, time left (est) = 338.582
+#4 time cost = 2152.203, calculated_shapes = 108000, time left (est) = 338.773
+#2 time cost = 2152.791, calculated_shapes = 108000, time left (est) = 338.865
+#0 time cost = 2155.718, calculated_shapes = 108000, time left (est) = 339.326
+#6 time cost = 2159.440, calculated_shapes = 108000, time left (est) = 339.912
+#7 time cost = 2161.721, calculated_shapes = 109000, time left (est) = 317.317
+#5 time cost = 2161.984, calculated_shapes = 108000, time left (est) = 340.312
+#1 time cost = 2164.099, calculated_shapes = 109000, time left (est) = 317.666
+#3 time cost = 2170.210, calculated_shapes = 109000, time left (est) = 318.563
+#4 time cost = 2172.125, calculated_shapes = 109000, time left (est) = 318.844
+#2 time cost = 2173.544, calculated_shapes = 109000, time left (est) = 319.052
+#0 time cost = 2176.078, calculated_shapes = 109000, time left (est) = 319.424
+#6 time cost = 2179.190, calculated_shapes = 109000, time left (est) = 319.881
+#7 time cost = 2181.423, calculated_shapes = 110000, time left (est) = 297.467
+#5 time cost = 2182.332, calculated_shapes = 109000, time left (est) = 320.342
+#1 time cost = 2183.111, calculated_shapes = 110000, time left (est) = 297.697
+#3 time cost = 2190.538, calculated_shapes = 110000, time left (est) = 298.710
+#4 time cost = 2192.276, calculated_shapes = 110000, time left (est) = 298.947
+#2 time cost = 2192.907, calculated_shapes = 110000, time left (est) = 299.033
+#0 time cost = 2196.574, calculated_shapes = 110000, time left (est) = 299.533
+#6 time cost = 2199.281, calculated_shapes = 110000, time left (est) = 299.902
+#7 time cost = 2200.879, calculated_shapes = 111000, time left (est) = 277.588
+#5 time cost = 2201.047, calculated_shapes = 110000, time left (est) = 300.143
+#1 time cost = 2203.625, calculated_shapes = 111000, time left (est) = 277.935
+#3 time cost = 2211.604, calculated_shapes = 111000, time left (est) = 278.941
+#4 time cost = 2211.730, calculated_shapes = 111000, time left (est) = 278.957
+#2 time cost = 2212.690, calculated_shapes = 111000, time left (est) = 279.078
+#0 time cost = 2216.171, calculated_shapes = 111000, time left (est) = 279.517
+#6 time cost = 2218.742, calculated_shapes = 111000, time left (est) = 279.841
+#7 time cost = 2220.009, calculated_shapes = 112000, time left (est) = 257.680
+#5 time cost = 2221.631, calculated_shapes = 111000, time left (est) = 280.206
+#1 time cost = 2222.616, calculated_shapes = 112000, time left (est) = 257.982
+#3 time cost = 2231.804, calculated_shapes = 112000, time left (est) = 259.049
+#4 time cost = 2231.911, calculated_shapes = 112000, time left (est) = 259.061
+#2 time cost = 2232.649, calculated_shapes = 112000, time left (est) = 259.147
+#0 time cost = 2234.970, calculated_shapes = 112000, time left (est) = 259.416
+#7 time cost = 2238.483, calculated_shapes = 113000, time left (est) = 237.715
+#6 time cost = 2239.012, calculated_shapes = 112000, time left (est) = 259.885
+#1 time cost = 2240.705, calculated_shapes = 113000, time left (est) = 237.951
+#5 time cost = 2241.140, calculated_shapes = 112000, time left (est) = 260.132
+#3 time cost = 2251.403, calculated_shapes = 113000, time left (est) = 239.087
+#2 time cost = 2253.416, calculated_shapes = 113000, time left (est) = 239.301
+#4 time cost = 2253.785, calculated_shapes = 113000, time left (est) = 239.340
+#0 time cost = 2255.004, calculated_shapes = 113000, time left (est) = 239.469
+#7 time cost = 2257.435, calculated_shapes = 114000, time left (est) = 217.823
+#6 time cost = 2259.191, calculated_shapes = 113000, time left (est) = 239.914
+#1 time cost = 2259.871, calculated_shapes = 114000, time left (est) = 218.058
+#5 time cost = 2261.858, calculated_shapes = 113000, time left (est) = 240.197
+#3 time cost = 2271.042, calculated_shapes = 114000, time left (est) = 219.136
+#0 time cost = 2274.570, calculated_shapes = 114000, time left (est) = 219.476
+#2 time cost = 2274.648, calculated_shapes = 114000, time left (est) = 219.484
+#4 time cost = 2274.690, calculated_shapes = 114000, time left (est) = 219.488
+#7 time cost = 2276.968, calculated_shapes = 115000, time left (est) = 197.997
+#6 time cost = 2278.472, calculated_shapes = 114000, time left (est) = 219.853
+#1 time cost = 2280.741, calculated_shapes = 115000, time left (est) = 198.325
+#5 time cost = 2281.166, calculated_shapes = 114000, time left (est) = 220.113
+#3 time cost = 2290.748, calculated_shapes = 115000, time left (est) = 199.195
+#0 time cost = 2294.295, calculated_shapes = 115000, time left (est) = 199.504
+#2 time cost = 2294.779, calculated_shapes = 115000, time left (est) = 199.546
+#4 time cost = 2295.281, calculated_shapes = 115000, time left (est) = 199.590
+#7 time cost = 2296.729, calculated_shapes = 116000, time left (est) = 178.194
+#6 time cost = 2298.196, calculated_shapes = 115000, time left (est) = 199.843
+#1 time cost = 2299.144, calculated_shapes = 116000, time left (est) = 178.382
+#5 time cost = 2300.078, calculated_shapes = 115000, time left (est) = 200.007
+#3 time cost = 2310.794, calculated_shapes = 116000, time left (est) = 179.286
+#0 time cost = 2313.975, calculated_shapes = 116000, time left (est) = 179.533
+#2 time cost = 2314.495, calculated_shapes = 116000, time left (est) = 179.573
+#4 time cost = 2315.237, calculated_shapes = 116000, time left (est) = 179.630
+#7 time cost = 2316.880, calculated_shapes = 117000, time left (est) = 158.419
+#1 time cost = 2318.438, calculated_shapes = 117000, time left (est) = 158.526
+#6 time cost = 2318.624, calculated_shapes = 116000, time left (est) = 179.893
+#5 time cost = 2320.141, calculated_shapes = 116000, time left (est) = 180.011
+#3 time cost = 2331.771, calculated_shapes = 117000, time left (est) = 159.437
+#0 time cost = 2334.187, calculated_shapes = 117000, time left (est) = 159.603
+#4 time cost = 2334.334, calculated_shapes = 117000, time left (est) = 159.613
+#2 time cost = 2334.842, calculated_shapes = 117000, time left (est) = 159.647
+#7 time cost = 2337.541, calculated_shapes = 118000, time left (est) = 138.668
+#1 time cost = 2337.727, calculated_shapes = 118000, time left (est) = 138.679
+#6 time cost = 2338.110, calculated_shapes = 117000, time left (est) = 159.871
+#5 time cost = 2340.299, calculated_shapes = 117000, time left (est) = 160.020
+#3 time cost = 2350.616, calculated_shapes = 118000, time left (est) = 139.443
+#0 time cost = 2353.507, calculated_shapes = 118000, time left (est) = 139.615
+#4 time cost = 2353.541, calculated_shapes = 118000, time left (est) = 139.617
+#2 time cost = 2354.931, calculated_shapes = 118000, time left (est) = 139.699
+#7 time cost = 2356.687, calculated_shapes = 119000, time left (est) = 118.825
+#1 time cost = 2357.304, calculated_shapes = 119000, time left (est) = 118.856
+#6 time cost = 2358.273, calculated_shapes = 118000, time left (est) = 139.898
+#5 time cost = 2359.543, calculated_shapes = 118000, time left (est) = 139.973
+#3 time cost = 2370.366, calculated_shapes = 119000, time left (est) = 119.514
+#4 time cost = 2373.272, calculated_shapes = 119000, time left (est) = 119.661
+#0 time cost = 2373.507, calculated_shapes = 119000, time left (est) = 119.673
+#2 time cost = 2374.372, calculated_shapes = 119000, time left (est) = 119.716
+#7 time cost = 2375.199, calculated_shapes = 120000, time left (est) = 98.967
+#1 time cost = 2377.071, calculated_shapes = 120000, time left (est) = 99.045
+#6 time cost = 2378.740, calculated_shapes = 119000, time left (est) = 119.936
+#5 time cost = 2379.193, calculated_shapes = 119000, time left (est) = 119.959
+#3 time cost = 2391.860, calculated_shapes = 120000, time left (est) = 99.661
+#0 time cost = 2392.158, calculated_shapes = 120000, time left (est) = 99.673
+#4 time cost = 2392.731, calculated_shapes = 120000, time left (est) = 99.697
+#2 time cost = 2393.854, calculated_shapes = 120000, time left (est) = 99.744
+#7 time cost = 2394.256, calculated_shapes = 121000, time left (est) = 79.149
+#6 time cost = 2397.693, calculated_shapes = 120000, time left (est) = 99.904
+#1 time cost = 2398.283, calculated_shapes = 121000, time left (est) = 79.282
+#5 time cost = 2399.616, calculated_shapes = 120000, time left (est) = 99.984
+#0 time cost = 2411.177, calculated_shapes = 121000, time left (est) = 79.708
+#3 time cost = 2412.253, calculated_shapes = 121000, time left (est) = 79.744
+#4 time cost = 2412.708, calculated_shapes = 121000, time left (est) = 79.759
+#7 time cost = 2414.557, calculated_shapes = 122000, time left (est) = 59.374
+#2 time cost = 2414.625, calculated_shapes = 121000, time left (est) = 79.822
+#1 time cost = 2417.398, calculated_shapes = 122000, time left (est) = 59.444
+#5 time cost = 2418.734, calculated_shapes = 121000, time left (est) = 79.958
+#6 time cost = 2419.345, calculated_shapes = 121000, time left (est) = 79.978
+#0 time cost = 2431.117, calculated_shapes = 122000, time left (est) = 59.782
+#3 time cost = 2431.888, calculated_shapes = 122000, time left (est) = 59.801
+#4 time cost = 2431.947, calculated_shapes = 122000, time left (est) = 59.802
+#2 time cost = 2433.498, calculated_shapes = 122000, time left (est) = 59.840
+#7 time cost = 2435.195, calculated_shapes = 123000, time left (est) = 39.597
+#1 time cost = 2437.010, calculated_shapes = 123000, time left (est) = 39.626
+#6 time cost = 2438.455, calculated_shapes = 122000, time left (est) = 59.962
+#5 time cost = 2438.975, calculated_shapes = 122000, time left (est) = 59.975
+#0 time cost = 2450.035, calculated_shapes = 123000, time left (est) = 39.838
+#3 time cost = 2450.992, calculated_shapes = 123000, time left (est) = 39.854
+#4 time cost = 2451.999, calculated_shapes = 123000, time left (est) = 39.870
+#2 time cost = 2453.592, calculated_shapes = 123000, time left (est) = 39.896
+#7 time cost = 2454.549, calculated_shapes = 124000, time left (est) = 19.795
+#1 time cost = 2457.682, calculated_shapes = 124000, time left (est) = 19.820
+#5 time cost = 2458.366, calculated_shapes = 123000, time left (est) = 39.973
+#6 time cost = 2458.713, calculated_shapes = 123000, time left (est) = 39.979
+#0 time cost = 2470.242, calculated_shapes = 124000, time left (est) = 19.921
+#3 time cost = 2471.045, calculated_shapes = 124000, time left (est) = 19.928
+#4 time cost = 2472.144, calculated_shapes = 124000, time left (est) = 19.937
+#2 time cost = 2473.410, calculated_shapes = 124000, time left (est) = 19.947
+#7 time cost = 2473.999, calculated_shapes = 125000, time left (est) = 0.000
+#7 Exceptions: {}
+[W ProcessGroupNCCL.cpp:1618] Rank 7 using best-guess GPU 7 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device.
+#1 time cost = 2477.547, calculated_shapes = 125000, time left (est) = 0.000
+#1 Exceptions: {}
+[W ProcessGroupNCCL.cpp:1618] Rank 1 using best-guess GPU 1 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device.
+#6 time cost = 2478.070, calculated_shapes = 124000, time left (est) = 19.984
+#5 time cost = 2478.300, calculated_shapes = 124000, time left (est) = 19.986
+#3 time cost = 2489.730, calculated_shapes = 125000, time left (est) = 0.000
+#3 Exceptions: {}
+[W ProcessGroupNCCL.cpp:1618] Rank 3 using best-guess GPU 3 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device.
+#0 time cost = 2490.488, calculated_shapes = 125000, time left (est) = 0.000
+#0 Exceptions: {}
+[W ProcessGroupNCCL.cpp:1618] Rank 0 using best-guess GPU 0 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device.
+#4 time cost = 2491.821, calculated_shapes = 125000, time left (est) = 0.000
+#4 Exceptions: {}
+[W ProcessGroupNCCL.cpp:1618] Rank 4 using best-guess GPU 4 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device.
+#2 time cost = 2492.443, calculated_shapes = 125000, time left (est) = 0.000
+#2 Exceptions: {}
+[W ProcessGroupNCCL.cpp:1618] Rank 2 using best-guess GPU 2 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device.
+#5 time cost = 2497.942, calculated_shapes = 125000, time left (est) = 0.000
+#5 Exceptions: {}
+[W ProcessGroupNCCL.cpp:1618] Rank 5 using best-guess GPU 5 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device.
+#6 time cost = 2498.703, calculated_shapes = 125000, time left (est) = 0.000
+#6 Exceptions: {}
+[W ProcessGroupNCCL.cpp:1618] Rank 6 using best-guess GPU 6 to perform barrier as devices used by this process are currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect.Specify device_ids in barrier() to force use of a particular device.
+Traceback (most recent call last):
+  File "random_shapes.py", line 139, in <module>
+    main(args.local_rank, args.total_shapes // dist.get_world_size())
+  File "random_shapes.py", line 118, in main
+    dist.barrier()
+  File "/opt/pytorch/pytorch/torch/distributed/distributed_c10d.py", line 2543, in barrier
+    work = default_pg.barrier(opts=opts)
+RuntimeError: NCCL error in: ../torch/lib/c10d/ProcessGroupNCCL.cpp:911, unhandled cuda error, NCCL version 20.9.9
+ncclUnhandledCudaError: Call to CUDA function failed.
+ERROR:torch.distributed.elastic.multiprocessing.api:failed (exitcode: 1) local_rank: 6 (pid: 62403) of binary: /opt/conda/bin/python
+ERROR:torch.distributed.elastic.agent.server.local_elastic_agent:[default] Worker group failed
+INFO:torch.distributed.elastic.agent.server.api:[default] Worker group FAILED. 3/3 attempts left; will restart worker group
+INFO:torch.distributed.elastic.agent.server.api:[default] Stopping worker group
+INFO:torch.distributed.elastic.agent.server.api:[default] Rendezvous'ing worker group
+INFO:torch.distributed.elastic.agent.server.api:[default] Rendezvous complete for workers. Result:
+  restart_count=1
+  master_addr=127.0.0.1
+  master_port=29500
+  group_rank=0
+  group_world_size=1
+  local_ranks=[0, 1, 2, 3, 4, 5, 6, 7]
+  role_ranks=[0, 1, 2, 3, 4, 5, 6, 7]
+  global_ranks=[0, 1, 2, 3, 4, 5, 6, 7]
+  role_world_sizes=[8, 8, 8, 8, 8, 8, 8, 8]
+  global_world_sizes=[8, 8, 8, 8, 8, 8, 8, 8]
+
+INFO:torch.distributed.elastic.agent.server.api:[default] Starting worker group
+INFO:torch.distributed.elastic.multiprocessing:Setting worker0 reply file to: /tmp/torchelastic_teinayuk/none_8383jd10/attempt_1/0/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker1 reply file to: /tmp/torchelastic_teinayuk/none_8383jd10/attempt_1/1/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker2 reply file to: /tmp/torchelastic_teinayuk/none_8383jd10/attempt_1/2/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker3 reply file to: /tmp/torchelastic_teinayuk/none_8383jd10/attempt_1/3/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker4 reply file to: /tmp/torchelastic_teinayuk/none_8383jd10/attempt_1/4/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker5 reply file to: /tmp/torchelastic_teinayuk/none_8383jd10/attempt_1/5/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker6 reply file to: /tmp/torchelastic_teinayuk/none_8383jd10/attempt_1/6/error.json
+INFO:torch.distributed.elastic.multiprocessing:Setting worker7 reply file to: /tmp/torchelastic_teinayuk/none_8383jd10/attempt_1/7/error.json
+Namespace(local_rank=1, total_shapes=1000000)
+Namespace(local_rank=3, total_shapes=1000000)
+Namespace(local_rank=6, total_shapes=1000000)
+Namespace(local_rank=2, total_shapes=1000000)
+Namespace(local_rank=0, total_shapes=1000000)
+Namespace(local_rank=7, total_shapes=1000000)
+Namespace(local_rank=5, total_shapes=1000000)
+Namespace(local_rank=4, total_shapes=1000000)
