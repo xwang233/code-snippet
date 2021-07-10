@@ -80,6 +80,8 @@ cd $WORKSPACE
 cd code-snippet/$PROFILE_PYTHON_DIR
 python calculate.py
 
+pip install seaborn
+
 tmpdir=`date +%s`
 mkdir -p $tmpdir
 cd $tmpdir
