@@ -84,7 +84,7 @@ cd $tmpdir
 mv ../*.json .
 mv ../data-* .
 ln -s ../compare.py .
-python compare.py
+python compare.py | tee readme.txt
 cd ..
 
 # copy this $tmpdir to save the benchmark results
