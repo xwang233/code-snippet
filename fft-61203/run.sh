@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -ex
+
 PYTORCH=/opt/pytorch/pytorch
 WORKSPACE=/workspace
 DESTINATION=/docker
