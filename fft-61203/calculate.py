@@ -22,7 +22,7 @@ torch.cuda.manual_seed(SEED)
 
 device = 'cuda'
 
-DTYPES = [torch.float, torch.double]
+DTYPES = [torch.float, torch.double, torch.complex64, torch.complex128]
 MAX_DIMS = 6
 
 idx = 0
@@ -32,6 +32,11 @@ NITER = 200
 d_shapes = {}
 
 for dtype in DTYPES:
+    if dtype.is_complex:
+        func = torch.fft.irfftn
+    else:
+        func = torch.fft.rfftn
+
     for tensor_dim in range(1, MAX_DIMS + 1):
         dims = list(range(tensor_dim))
         x0 = torch.randn(*([4]*tensor_dim), dtype=dtype, device=device)
@@ -45,17 +50,17 @@ for dtype in DTYPES:
             for fft_dim in itertools.combinations(dims, fft_dim_size):
                 # print(tensor_dim, fft_dim_size, fft_dim)
 
-                y = torch.fft.rfftn(x0, dim=fft_dim)
+                y = func(x0, dim=fft_dim)
                 torch.save(y, f'{data_path}/data-{idx}-0.pt')
-                y = torch.fft.rfftn(x1, dim=fft_dim)
+                y = func(x1, dim=fft_dim)
                 torch.save(y, f'{data_path}/data-{idx}-1.pt')
 
                 # warmup
-                for _ in range(NITER): torch.fft.rfftn(x_perf, dim=fft_dim)
+                for _ in range(NITER): func(x_perf, dim=fft_dim)
 
                 torch.cuda.synchronize()
                 t_start = time.time()
-                for _ in range(NITER): torch.fft.rfftn(x_perf, dim=fft_dim)
+                for _ in range(NITER): func(x_perf, dim=fft_dim)
                 torch.cuda.synchronize()
                 t_end = time.time()
 
