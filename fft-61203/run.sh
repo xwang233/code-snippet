@@ -11,7 +11,7 @@ unset PYTORCH_VERSION
 unset PYTORCH_BUILD_VERSION
 
 MASTER_COMMIT='6bb33d93ab94bb268d7cfb600c700585720bcdde'
-PR_COMMIT='eddb291bc3977241a1dbdb3fa06956fde4d3cfe5'
+PR_COMMIT='b6979be024492430dbd1d13c3e1f6a1d18ea9714'
 
 function build {
     pushd $PYTORCH;
@@ -90,8 +90,9 @@ mv ../data-* .
 ln -s ../compare.py .
 python compare.py | tee readme.txt
 cd ..
+cp -r $tmpdir $DESTINATION
 
-# copy this $tmpdir to save the benchmark results
-# cp -r $tmpdir $DESTINATION
-cd $WORKSPACE/code-snippet
-cp -r $PROFILE_PYTHON_DIR $DESTINATION
+# # copy this $tmpdir to save the benchmark results
+# # cp -r $tmpdir $DESTINATION
+# cd $WORKSPACE/code-snippet
+# cp -r $PROFILE_PYTHON_DIR $DESTINATION
