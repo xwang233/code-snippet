@@ -54,7 +54,7 @@ function ccache {
     which gcc;
 }
 
-ccache
+# ccache
 
 cd $PYTORCH
 git remote add gh https://github.com/pytorch/pytorch
