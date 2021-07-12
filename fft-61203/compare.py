@@ -77,6 +77,7 @@ for idx in d_shapes:
     l_perf_compare.append(perf_master / perf_pr)
 
 sns.displot(l_perf_compare)
+plt.ylim(0, 50)
 plt.savefig('a.png')
 
 l_prt.sort(reverse=True)
