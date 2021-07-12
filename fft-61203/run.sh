@@ -82,7 +82,8 @@ python calculate.py
 
 pip install seaborn
 
-tmpdir=`date +%s`
+first_device_name=`nvidia-smi -L | cut -d '(' -f 1 | cut -d ':' -f 2 | head -n 1 | xargs | tr -s ' ' '_'`
+tmpdir=`date +%s`-$first_device_name
 mkdir -p $tmpdir
 cd $tmpdir
 mv ../*.json .
