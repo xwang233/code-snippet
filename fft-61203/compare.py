@@ -65,7 +65,7 @@ l_perf_compare = []
 
 l_prt = []
 
-print('idx, time_master (us), time_pr (us), speed_up, shape')
+print('time_master (us), time_pr (us), speed_up, shape')
 for idx in d_shapes:
     perf_pr = d_perf['PR'][idx]
     perf_master = d_perf['master'][idx]
