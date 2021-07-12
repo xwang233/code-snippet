@@ -11,7 +11,7 @@ DTYPE_PRECISIONS = torch.testing._asserts._DTYPE_PRECISIONS
 
 commits = {
     'master': 'git6bb33d9',
-    'PR':     'giteddb291'
+    'PR':     'gitb6979be'
 }
 
 d = {}
@@ -63,15 +63,22 @@ else:
 
 l_perf_compare = []
 
+l_prt = []
+
 print('idx, time_master (us), time_pr (us), speed_up, shape')
-for idx in d_perf['master']:
+for idx in d_shapes:
     perf_pr = d_perf['PR'][idx]
     perf_master = d_perf['master'][idx]
 
     perf_x = perf_master / perf_pr
-    if perf_x > 1.05 or perf_x < 0.95:
-        print(f'{idx: >3}, {perf_master: 11.3f}, {perf_pr : 11.3f}, {perf_x : 7.3f}, {d_shapes[idx]}')
+    # prt_value = f'{idx: >3}, {perf_master: 11.3f}, {perf_pr : 11.3f}, {perf_x : 7.3f}, {d_shapes[idx]}'
+    prt_value = f'{perf_master: 11.3f}, {perf_pr : 11.3f}, {perf_x : 7.3f}, {d_shapes[idx]}'
+    l_prt.append((perf_x, prt_value))
     l_perf_compare.append(perf_master / perf_pr)
 
 sns.displot(l_perf_compare)
 plt.savefig('a.png')
+
+l_prt.sort(reverse=True)
+for x in l_prt:
+    print(x[1])
