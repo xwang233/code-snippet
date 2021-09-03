@@ -4,8 +4,10 @@ import itertools
 import gc
 import json
 
-nb = 100
-# nb = 1
+from torch.testing._core import _compare_tensors_internal
+
+# nb = 100
+nb = 1
 
 def compare(x, y, *, rtol, atol):
     if isinstance(x, torch.Tensor) and isinstance(y, torch.Tensor):
@@ -13,7 +15,7 @@ def compare(x, y, *, rtol, atol):
             x = x.cuda()
         if not y.is_cuda:
             raise RuntimeError("y tensor should be cuda, but it's not")
-        return torch.testing._compare_tensors_internal(x, y, rtol=rtol, atol=atol, equal_nan=False)
+        return _compare_tensors_internal(x, y, rtol=rtol, atol=atol, equal_nan=False)
     
     a = True
     b = {}
@@ -28,7 +30,7 @@ def compare(x, y, *, rtol, atol):
 
 
 def main(s: str):
-    def prof(b_, n_, dtype=torch.float, p=None, flag=None):
+    def prof(b_, n_, dtype=torch.complex64, p=None, flag=None, is_linalg=False):
         # gc.collect()
         # torch.cuda.empty_cache()
         if p is None:
@@ -91,7 +93,18 @@ def main(s: str):
             print(f)
             raise RuntimeError('non-deterministic output')
 
-        reconstruct = torch.matmul(y.U, torch.diag_embed(y.S)).matmul(y.V.transpose(-1, -2))
+        # Note that the reconstruct is `A = U @ S @ V^H`
+        if is_linalg:
+            # torch.linalg.svd returns U, S, V^H
+            reconstruct = torch.matmul(y[0],
+                                       torch.diag_embed(y[1]).to(dtype=dtype))\
+                                .matmul(y[2])
+        else:
+            # torch.svd returns U, S, V
+            reconstruct = torch.matmul(y.U,
+                                       torch.diag_embed(y.S).to(dtype=dtype))\
+                                .matmul(y.V.conj().transpose(-1, -2))
+
         a, b = compare(x, reconstruct, rtol=1e-3, atol=1e-3)
         # a, b = compare(yc, y, rtol=1e-3, atol=1e-3)
         if not a:
@@ -99,14 +112,14 @@ def main(s: str):
             print(b)
             # raise RuntimeError()
 
-        print(f'{b_} {n_} {dtype}'.ljust(35) + f'{cpu_time : .3f}  {gpu_time : .3f}')
+        print(f'{b_} {n_} {dtype}'.ljust(35) + f'{cpu_time : .3f}  {gpu_time : .3f}' + f'     {is_linalg}')
         # f.write(f'{b_} {n_} {dtype}; ' + f'{cpu_time : .3e}, {gpu_time : .3e}\n')
         torch.cuda.synchronize()
     
     print(s)
     print(torch.__version__)
     print()
-    print('batch_size, matrix_size, dtype'.ljust(35) + 'cpu_time(ms), gpu_time(ms)')
+    print('batch_size, matrix_size, dtype'.ljust(35) + 'cpu_time(ms), gpu_time(ms), is_linalg')
 
     # p1 = torch.svd
     # for dtype in [torch.float, torch.double]:
@@ -125,7 +138,8 @@ def main(s: str):
     ):
         if b and b[0] * n >= 2**12:
             continue
-        prof(b, n, p=torch.svd)
+        prof(b, n, p=torch.linalg.svd, is_linalg=True)
+        prof(b, n, p=torch.svd, is_linalg=False)
 
     # prof([], 1536, p=torch.svd)
     # prof([], 2048, p=torch.svd)
