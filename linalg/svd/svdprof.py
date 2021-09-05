@@ -30,91 +30,95 @@ def compare(x, y, *, rtol, atol):
 
 
 def main(s: str):
-    def prof(b_, n_, dtype=torch.complex64, p=None, flag=None, is_linalg=False):
+    def prof(b_, n_, dtype=torch.float, p=None, flag=None, is_linalg=False):
         # gc.collect()
         # torch.cuda.empty_cache()
         if p is None:
             p = lambda x: x
 
         # print(b_, n_)
-        x = torch.randn(*b_, n_, n_, device='cuda', dtype=dtype)
 
-        xc = x.clone().cpu()
+        def _prof(x: torch.Tensor):
+            xc = x.clone().cpu()
 
-        # cpu timing
-        t1 = time.time()
-        for _ in range(nb):
-            yc = p(xc)
-        t2 = time.time()
-        cpu_time = (t2-t1)/nb*1e3
-        # print('cpu', cpu_time, 'ms')
+            # cpu timing
+            t1 = time.time()
+            for _ in range(nb):
+                yc = p(xc)
+            t2 = time.time()
+            cpu_time = (t2-t1)/nb*1e3
+            # print('cpu', cpu_time, 'ms')
 
-        # warmup
-        for _ in range(nb):
-            y_warmup = p(x)
-        torch.cuda.synchronize()
-
-        # torch.cuda.nvtx.range_push('checking if async')
-        # big = torch.randn(1, 1000, 1000, 1000, dtype=torch.half, device='cuda')
-        # torch.exp(big)
-        # y = p(x)
-        # torch.exp(big)
-        # torch.cuda.nvtx.range_pop()
-
-        c, d = compare(xc, x, rtol=1e-7, atol=1e-7)
-        if not c:
-            print('original matrix compare')
-            print(d)
-            raise RuntimeError('original value modified')
-        
-        # with torch.autograd.profiler.profile(use_cuda=True, record_shapes=True) as profx:
-        with torch.autograd.profiler.emit_nvtx(record_shapes=True):
-            y = p(x)
+            # warmup
+            for _ in range(nb):
+                y_warmup = p(x)
             torch.cuda.synchronize()
-        # if b_[0] == 4:
-        #     print(profx.table())
-        #     profx.export_chrome_trace('./chrome.ctr')
 
-        torch.cuda.synchronize()
+            # torch.cuda.nvtx.range_push('checking if async')
+            # big = torch.randn(1, 1000, 1000, 1000, dtype=torch.half, device='cuda')
+            # torch.exp(big)
+            # y = p(x)
+            # torch.exp(big)
+            # torch.cuda.nvtx.range_pop()
 
-        # gpu timing
-        t1 = time.time()
-        for _ in range(nb):
-            # y = torch.svd(x)
-            y = p(x)
-        torch.cuda.synchronize()
-        t2 = time.time()
-        gpu_time = (t2-t1)/nb*1e3
-        # print('gpu', gpu_time, 'ms')
+            c, d = compare(xc, x, rtol=1e-7, atol=1e-7)
+            if not c:
+                print('original matrix compare')
+                print(d)
+                raise RuntimeError('original value modified')
+        
+            # with torch.autograd.profiler.profile(use_cuda=True, record_shapes=True) as profx:
+            with torch.autograd.profiler.emit_nvtx(record_shapes=True):
+                y = p(x)
+                torch.cuda.synchronize()
+            # if b_[0] == 4:
+            #     print(profx.table())
+            #     profx.export_chrome_trace('./chrome.ctr')
 
-        e, f = compare(y_warmup, y, rtol=0, atol=0)
-        if not e:
-            print('non-determinism: svd value output')
-            print(f)
-            raise RuntimeError('non-deterministic output')
+            torch.cuda.synchronize()
 
-        # Note that the reconstruct is `A = U @ S @ V^H`
-        if is_linalg:
-            # torch.linalg.svd returns U, S, V^H
-            reconstruct = torch.matmul(y[0],
-                                       torch.diag_embed(y[1]).to(dtype=dtype))\
-                                .matmul(y[2])
-        else:
-            # torch.svd returns U, S, V
-            reconstruct = torch.matmul(y.U,
-                                       torch.diag_embed(y.S).to(dtype=dtype))\
-                                .matmul(y.V.conj().transpose(-1, -2))
+            # gpu timing
+            t1 = time.time()
+            for _ in range(nb):
+                # y = torch.svd(x)
+                y = p(x)
+            torch.cuda.synchronize()
+            t2 = time.time()
+            gpu_time = (t2-t1)/nb*1e3
+            # print('gpu', gpu_time, 'ms')
 
-        a, b = compare(x, reconstruct, rtol=1e-3, atol=1e-3)
-        # a, b = compare(yc, y, rtol=1e-3, atol=1e-3)
-        if not a:
-            print('numerical mismatch: svd value compare')
-            print(b)
-            # raise RuntimeError()
+            e, f = compare(y_warmup, y, rtol=0, atol=0)
+            if not e:
+                print('non-determinism: svd value output')
+                print(f)
+                raise RuntimeError('non-deterministic output')
 
-        print(f'{b_} {n_} {dtype}'.ljust(35) + f'{cpu_time : .3f}  {gpu_time : .3f}' + f'     {is_linalg}')
-        # f.write(f'{b_} {n_} {dtype}; ' + f'{cpu_time : .3e}, {gpu_time : .3e}\n')
-        torch.cuda.synchronize()
+            # Note that the reconstruct is `A = U @ S @ V^H`
+            if is_linalg:
+                # torch.linalg.svd returns U, S, V^H
+                reconstruct = torch.matmul(y[0],
+                                           torch.diag_embed(y[1]).to(dtype=dtype))\
+                                    .matmul(y[2])
+            else:
+                # torch.svd returns U, S, V
+                reconstruct = torch.matmul(y.U,
+                                           torch.diag_embed(y.S).to(dtype=dtype))\
+                                    .matmul(y.V.conj().transpose(-1, -2))
+
+            a, b = compare(x, reconstruct, rtol=1e-3, atol=1e-3)
+            # a, b = compare(yc, y, rtol=1e-3, atol=1e-3)
+            if not a:
+                print('numerical mismatch: svd value compare')
+                print(b)
+                # raise RuntimeError()
+
+            print(f'{b_} {x.size(-2)} {x.size(-1)} {dtype}'.ljust(35) + f'{cpu_time : .3f}  {gpu_time : .3f}' + f'     {is_linalg}')
+            # f.write(f'{b_} {n_} {dtype}; ' + f'{cpu_time : .3e}, {gpu_time : .3e}\n')
+            torch.cuda.synchronize()
+        
+        _prof(torch.randn(*b_, n_, n_, device='cuda', dtype=dtype))
+        _prof(torch.randn(*b_, 2*n_, n_, device='cuda', dtype=dtype))
+        _prof(torch.randn(*b_, n_, 2*n_, device='cuda', dtype=dtype))
     
     print(s)
     print(torch.__version__)
@@ -138,7 +142,7 @@ def main(s: str):
     ):
         if b and b[0] * n >= 2**12:
             continue
-        prof(b, n, p=torch.linalg.svd, is_linalg=True)
+        prof(b, n, p=lambda x: torch.linalg.svd(x, full_matrices=False), is_linalg=True)
         prof(b, n, p=torch.svd, is_linalg=False)
 
     # prof([], 1536, p=torch.svd)
