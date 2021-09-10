@@ -30,7 +30,7 @@ def compare(x, y, *, rtol, atol):
 
 
 def main(s: str):
-    def prof(b_, n_, dtype=torch.float, p=None, flag=None, is_linalg=False):
+    def prof(b_, n_, dtype=torch.complex64, p=None, flag=None, is_linalg=False):
         # gc.collect()
         # torch.cuda.empty_cache()
         if p is None:
